@@ -1,0 +1,201 @@
+.play-button {
+  height: 84px;
+  width: 90px;
+  position: relative;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.play-button-top {
+  cursor: pointer;
+  width: 80px;
+  height: 70px;
+  border-radius: 100%;
+  border: 4px solid var(--color-button-border);
+  position: absolute;
+  z-index: 2;
+  align-self: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+
+  --btn-transition: border 0.1s ease-out, transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.1s ease-out;
+  transition: var(--btn-transition);
+  will-change: transform, box-shadow;
+}
+
+.play-button-text {
+  font-size: 50px;
+  color: transparent;
+  text-shadow: 0 2px 0 var(--color-text);
+  -webkit-background-clip: text;
+  background-clip: text;
+  background-color: var(--color-button-text-shadow);
+  position: absolute;
+  align-self: flex-start;
+  font-family: var(--font-family-basic);
+}
+
+.play-button-base {
+  width: 98%;
+  height: 76px;
+  background-color: #E2E8F0;
+  border-radius: 100%;
+  border: 1px solid #FFFFFF30;
+  box-shadow: var(--shadow-md) var(--color-button-base-shadow);
+  position: absolute;
+  z-index: 1;
+  align-self: flex-end;
+}
+
+.cta-button {
+  cursor: pointer;
+  min-height: 30px;
+  max-width: 100%;
+  background-color: var(--color-button);
+  box-shadow: var(--shadow-md) var(--color-button-base-shadow);
+  border-radius: 9999px;
+  border: 4px solid var(--color-button-border);
+  font-size: var(--font-size-small);
+  font-family: var(--font-family-accent);
+  font-weight: bold;
+  color: var(--color-background);
+  text-transform: uppercase;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+
+  --btn-transition: border 0.1s ease-out, transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.1s ease-out, opacity 0.3s ease;
+  transition: var(--btn-transition);
+  will-change: transform, box-shadow;
+}
+
+.cta-button.fixed-width {
+  width: 100px;
+}
+
+.cta-button:hover {
+  background-color: var(--color-button-active);
+}
+
+.gold-button {
+  background-color: var(--color-button-gold);
+  box-shadow: var(--shadow-button) var(--color-button-gold-shadow);
+}
+
+.blue-button {
+  background-color: var(--color-primary);
+  box-shadow: var(--shadow-button) var(--color-primary-shadow);
+}
+
+.pressed {
+  border: 4px solid var(--color-button-border-active);
+  transform: translateY(8px);
+  box-shadow: 0 var(--color-button-border);
+  background-color: var(--color-button-active)
+}
+
+.gold-button:hover {
+  background-color: var(--color-accent-highlight);
+}
+
+.blue-button:hover {
+  background-color: var(--color-primary-highlight);
+}
+
+.button-icon {
+  object-fit: cover;
+  height: 25px;
+  transform: translateY(-1px);
+}
+
+.button-icon.small {
+  height: 18px;
+  width: 18px;
+  transform: translateY(0);
+}
+
+.nav-button {
+  cursor: pointer;
+  height: 44px;
+  min-width: 44px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 4px;
+}
+
+.nav-button.text {
+  padding: 0 14px;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.nav-button.menu-fix-width {
+  min-width: 134px;
+}
+
+.nav-button.language-fix-width {
+  min-width: 68px;
+  justify-content: center;
+}
+
+.nav-button.social {
+  text-transform: none;
+  gap: 10px;
+  padding: 10px 14px;
+  min-width: 130px;
+  justify-content: center;
+}
+
+.info-button {
+  cursor: pointer;
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-small);
+  font-weight: bold;
+  text-transform: lowercase;
+  background-color: transparent;
+  border-radius: 9999px;
+  border: 2px solid var(--color-border-shadow);
+  color: var(--color-border-shadow);
+  padding-top: 2px;
+}
+
+.info-button:hover {
+  background-color: var(--color-button-hover);
+}
+
+.return-to-top-container {
+  position: fixed;
+  bottom: 20px;
+  right: 14px;
+  z-index: 100;
+}
+
+.return-to-top {
+  opacity: 1;
+  pointer-events: auto;
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.return-to-top.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(100px);
+}
+
+@supports (-webkit-touch-callout: none) {
+  .play-button-text {
+    transform: translateY(-0.05em);
+  }
+}

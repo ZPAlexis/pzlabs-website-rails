@@ -1,0 +1,137 @@
+.fade-up, .fade-right, .fade-left {
+  opacity: 0;
+  transition: opacity .6s ease, transform .6s ease;
+}
+
+.fade-up {
+  transform: translateY(100px);
+}
+
+.fade-right {
+  transform: translateX(-20px);
+}
+
+.fade-left {
+  transform: translateX(20px);
+}
+
+.fade-up.visible, .fade-right.visible, .fade-left.visible {
+  opacity: 1;
+  transform: translateY(0) translateX(0);
+}
+
+.fade-in {
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes fadeUpInOut {
+  15% {
+    transform: translateY(-6px);
+    opacity: 0.4;
+  }
+  80% {
+    transform: translateY(-10px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-12px);
+    opacity: 0;
+  }
+}
+
+@keyframes fadeUpIn {
+  15% {
+    transform: translateY(-2px);
+    opacity: 0.4;
+  }
+  80% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-5px);
+    opacity: 1;
+  }
+}
+
+@keyframes bumpRight {
+  0%, 100% {
+    transform: translateX(0) translateY(-2px);
+  }
+  50% {
+    transform: translateX(10px) translateY(-2px);
+  }
+  90% {
+    transform: translateX(-2px) translateY(-2px);
+  }
+}
+
+@keyframes borderHighlight {
+  0%, 10%, 100% {
+    background-color: var(--color-button);
+    border-color: var(--color-button-border);
+    box-shadow: var(--shadow-md) var(--color-button-base-shadow);
+    transform: rotate(0deg);
+  }
+  1%  { transform: rotate(-1.0deg); }
+  2%  { transform: rotate(1.0deg);  }
+  3%  { transform: rotate(-0.5deg);   }
+  4%  { transform: rotate(0.5deg);    }
+  5% { transform: rotate(0deg);    }
+  5%, 15% {
+    background-color: var(--color-button-gold-active);
+    border-color: var(--color-button-gold);
+    box-shadow: var(--shadow-tab) var(--color-button-gold);
+  }
+}
+
+@keyframes hoverIdle {
+  0% {transform: translateY(0) scale(1);}
+  10% {transform: translateY(1px) scale(1.01, 0.99);}
+  20% {transform: translateY(-20px) scale(0.98, 1.02);}
+  30% {transform: translateY(-24px) scale(0.99, 1.01);}
+  40% {transform: translateY(0) scale(1.01, 0.99);}
+  45%, 100% {transform: translateY(0) scale(1);}
+}
+
+@keyframes coinHoverIdle {
+  0%, 100% { transform: scale(1) rotateX(0) rotateY(0) rotateZ(0);}
+  40%      { transform: scale(1.1) rotateX(-8deg) rotateY(8deg) rotateZ(0);}
+}
+
+@keyframes boxOpen {
+  0% {
+    scale: 1;
+    opacity: 1;
+  }
+  10% {
+    scale: 0.9;
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    scale: 1.1;
+    opacity: 0;
+  }
+}
+
+@keyframes coinSpin {
+  50% {
+    transform: scale(1.1) rotateX(10deg) rotateY(180deg) rotateZ(-10deg);
+  }
+  to {
+    transform: scale(1) rotateX(0) rotateY(360deg) rotateZ(0);
+  }
+}

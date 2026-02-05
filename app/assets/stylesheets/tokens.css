@@ -1,0 +1,100 @@
+:root {
+  /* Colors */
+  --color-text: #e2e8f0;
+  --color-text-dark: #1a202c;
+  --color-text-shadow: #e2e8f020;
+  --color-text-accent: #e2e8f0;
+  --color-text-inactive: #818181;
+  --color-accent: #FAC036;
+  --color-accent-highlight: #f5cd6f;
+  --color-accent-shadow: #FAC03690;
+  --color-background: #1a202c;
+  --color-link: #e2e8f0;
+  --color-shadow: #02154080;
+  --color-primary: #3670FA;
+  --color-primary-highlight: #5386fd;
+  --color-primary-shadow: #2955bb;
+  --color-primary-shade: #114ec0;
+  --color-primary-dark: #07307d;
+  --color-primary-dark80: #07307d80;
+  --color-primary-dark99: #07307df6;
+  --color-primary-darker: #021540;
+  --color-primary-darker99: #021540e3;
+  --color-primary-tabs: #002D94;
+  --color-border: #e2e8f0;
+  --color-border-shadow: #d0d7df;
+  --color-overlay: rgba(2, 2, 2, 0.637);
+  --color-overlay-hover: rgba(0, 0, 0, 0.801);
+  --color-button: #e2e8f0;
+  --color-button-active: #FFFFFF;
+  --color-button-locked: #C1C6CC;
+  --color-button-hover: #fcfcfc20;
+  --color-button-border-active: #fcfcfc60;
+  --color-button-gold: #FAC036;
+  --color-button-gold-shadow: #CA9B2A;
+  --color-button-gold-active: #f5d282;
+  --color-button-base-shadow: #C1C6CC;
+  --color-button-text-shadow: #00000025;
+  --color-button-border: #FFFFFF20;
+  --color-mobile-nav-shadow: #02154050;
+
+  /* Gradients */
+  --gradient-gold-button: linear-gradient(
+    to bottom,
+    #fff3cc,
+    #fac036 30%,
+    #ca9b2a 70%,
+    #a97f22
+  );
+
+  /* Typography */
+  --font-family-base: "Fira Code", monospace, 'Courier New', Courier, monospace;
+  --font-family-accent: "Roboto", "Helvetica Neue", Arial, sans-serif;
+  --font-family-basic: Arial, Helvetica, sans-serif;
+  --font-size-h1: 2.25rem;
+  --font-size-h2: 1.75rem;
+  --font-size-h3: 1.25rem;
+  --font-size-body: 1.125rem;
+  --font-size-medium: 1rem;
+  --font-size-small: 0.875rem;
+  --font-size-xsmall: 0.75rem;
+
+  /* Layout */
+  --max-width-container: 800px;
+  --max-width-mobile-container: 320px;
+  --min-width-container: 320px;
+
+  /* Spacing scale */
+  --space-xs: 4px;
+  --space-sm: 8px;
+  --space-md: 20px;
+  --space-lg: 40px;
+
+  /* Borders & radius */
+  --radius-md: 14px;
+
+  /* Shadows */
+  --shadow-0: 0 0 0 0;
+  --shadow-xsm: 0 1px 0 0;
+  --shadow-sm: 0 2px 0 0;
+  --shadow-md: 0 4px 0 0;
+  --shadow-lg: 0 6px 0 0;
+  --shadow-button: 0 8px 0 0;
+  --shadow-spread: 0 0 10px 0;
+  --shadow-mobile-nav: 0 -4px 10px 0;
+  --shadow-tab: 0 4px 4px 0;
+
+  /* Text Shadows */
+  --text-shadow-sm: 0 2px 0;
+  --text-shadow-md: 0 4px 0;
+  --text-shadow-lg: 0 6px 0;
+  --text-shadow-button: 0 8px 0;
+  --text-shadow-spread: 0 2px 4px;
+
+  /* Breakpoints */
+  --bp-mobile: 720px;
+
+  /* Icons */
+  --icon-light-white: 1;
+  --icon-light-black: 0;
+}

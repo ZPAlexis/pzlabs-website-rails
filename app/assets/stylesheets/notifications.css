@@ -1,0 +1,50 @@
+.notification-container {
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  text-align: center;
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-body);
+  background-color: var(--color-button);
+  color: var(--color-text-dark);
+  box-shadow: var(--shadow-spread) var(--color-shadow);
+  border-radius: 20px;
+  width: 240px;
+  padding: 20px;
+  gap: 4px;
+  opacity: 1;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.notification-container.closed {
+  transform: translateX(300px);
+  opacity: 0;
+}
+
+.notification-title {
+  font-weight: bold;
+}
+
+.notification-close-btn-container {
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  flex: 1;
+
+  justify-content: end;
+  margin-top: 0px;
+  margin-left: 0px;
+}
+
+.notification-close-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: none;
+  background-color: transparent;
+}

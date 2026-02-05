@@ -1,0 +1,45 @@
+.tutorial-hint {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+
+  animation: subtleClick 4s ease-in-out infinite;
+  user-select: none;
+}
+
+.tutorial-hint.up {
+  margin-top: 6px;
+}
+
+.tutorial-text {
+  position: inherit;
+  background-color: var(--color-primary-dark);
+  padding: 5px 16px;
+  border-radius: 9999px;
+  font-size: var(--font-size-small);
+  z-index: 5;
+  text-align: center;
+}
+
+.tutorial-box-arrow {
+  position: absolute;
+  width: 50px;
+  transform: translateY(-8px);
+}
+
+@keyframes subtleClick {
+  0%, 70%, 100% {
+    transform: scale(1);
+  }
+  75% {
+    transform: scale(0.95);
+  }
+  80% {
+    transform: scale(1.02);
+  }
+  85% {
+    transform: scale(1);
+  }
+}

@@ -1,0 +1,206 @@
+.fill-bar-section {
+  height: 100%;
+  background-color: var(--color-primary-shade);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow-spread) var(--color-shadow);
+  gap: 40px;
+  padding: 120px 40px;
+  margin: 60px 0;
+}
+
+.fill-bar-container-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+
+  width: 324px;
+  height: 60px;
+  border-radius: 9999px;
+  background-color: var(--color-button-base-shadow);
+  box-shadow: var(--shadow-sm) var(--color-button-base-shadow);
+}
+
+.fill-bar-container {
+  background-color: var(--color-primary-dark);
+  height: 58px;
+  width: 99%;
+  max-width: 680px;
+  border-radius: 9999px;
+  box-shadow: inset var(--shadow-md) var(--color-shadow);
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  outline: 3px solid var(--color-border);
+  overflow: hidden;
+  transition: outline 0.3s linear;
+}
+
+.fill-bar-container.highlight {
+  outline: 3px solid var(--color-button-gold-active);
+}
+
+.fill-bar-fill {
+  position: absolute;
+  width: 0%;
+  height: 100%;
+  border-radius: 4px;
+  background-color: var(--color-accent);
+  transition: width 0.3s linear;
+  box-shadow: inset 0 -4px 4px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.fill-bar-fill::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 50%;
+  width: 100%;
+  border-radius: inherit;
+  background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+  pointer-events: none;
+}
+
+.fill-bar-text {
+  display: flex;
+  padding: 0 0 0 20px;
+  align-items: center;
+  flex: 1;
+  gap: 10px;
+  font-size: var(--font-size-body);
+  font-family: var(--font-family-accent);
+  color: var(--color-text);
+  transform: translateY(-2px);
+}
+
+.fill-bar-text.show {
+  color: var(--color-text-dark);
+  z-index: 2;
+  font-weight: 500;
+  font-size: var(--font-size-body);
+  animation: bumpRight 0.3s ease;
+}
+
+.fill-bar-arrow {
+  width: 20px;
+}
+
+.fill-bar-coin {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 58px;
+  position: relative;
+  
+  transition: opacity 0.2s ease;
+}
+
+.fill-bar-coin-image, .fill-bar-collected-coin-image {
+  flex: 1;
+  height: 50px;
+  object-fit: cover;
+  position: absolute;
+  z-index: 0;
+}
+
+.fill-bar-collected-coin-image {
+  z-index: 2;
+  transform: scale(0.8);
+  top: 2px;
+}
+
+.fill-bar-collected-coin-image.spin {
+  animation: coinSpin 0.5s ease forwards;
+}
+
+.fill-bar-button-timer-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  width: 320px;
+  gap: 40px;
+}
+
+.fill-bar-timer-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-medium);
+  color: var(--color-text);
+  font-weight: 400;
+  transition: opacity 0.5s ease;
+  width: 60px;
+}
+
+.fill-bar-best-text {
+  position: absolute;
+  text-align: center;
+  top: 0;
+  left: auto;
+
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-medium);
+  color: var(--color-text);
+  font-weight: 400;
+
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+
+  opacity: 0;
+}
+
+.fill-bar-best-text.best {
+  animation: fadeUpIn 1s linear forwards;
+}
+
+.fill-bar-timer-icon {
+  object-fit: cover;
+  height: 30px;
+  transform: translateY(-1px);
+  opacity: 1;
+}
+
+.fill-bar-reset-button-wrapper {
+  width: 60px;
+  user-select: none;
+  -webkit-user-select: none;
+  -webkit-touch-callout: none;
+}
+
+.fill-bar-reset-button-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  border: 3px solid var(--color-text);
+  box-shadow: var(--shadow-sm) var(--color-border-shadow);
+
+  transition: opacity 0.5s ease;
+}
+
+.fill-bar-reset-button {
+  object-fit: cover;
+  height: 30px;
+  opacity: 0.5;
+  transform: translateY(-2px);
+}
+
+
+@media (max-width: 720px) {
+  .fill-bar-section {
+    margin: 40px 0 60px 0;
+  }
+}
