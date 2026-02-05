@@ -1,5 +1,5 @@
-import { buttonActions } from './actions.js';
-import { mobileNavSelect } from './mobile-nav.js';
+import { buttonActions } from 'logic/actions';
+import { mobileNavSelect } from 'logic/mobile-nav';
 
 export const ButtonManager = {
   init() {

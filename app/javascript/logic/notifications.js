@@ -1,4 +1,4 @@
-import { Elements } from './uiElements.js';
+import { Elements } from 'logic/uiElements';
 
 export const NotificationManager = {
   notificationTime: 10000,

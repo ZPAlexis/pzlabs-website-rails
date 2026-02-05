@@ -1,5 +1,5 @@
-import { trackEvent } from './utils.js';
-import { NotificationManager } from './notifications.js';
+import { trackEvent } from 'logic/utils';
+import { NotificationManager } from 'logic/notifications';
 
 const defaultCoinFlags = {
   cover: false,

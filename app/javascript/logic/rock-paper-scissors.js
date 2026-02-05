@@ -1,6 +1,7 @@
-import { collectRPSCoin } from './index.js';
-import { Animations } from './animations.js';
-import { Elements } from './uiElements.js';
+import { collectRPSCoin } from 'index';
+import { Animations } from 'logic/animations';
+import { Elements } from 'logic/uiElements';
+import i18next from "i18next"
 
 export const RPSGame = {
   score: JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0, ties: 0 },

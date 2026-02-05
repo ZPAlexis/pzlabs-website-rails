@@ -20,13 +20,7 @@ i18next
     updateContent();
   });
   
-document.addEventListener("turbo:load", () => {
-  if (!i18next.isInitialized) {
-    initI18n();
-  } else {
-    updateContent();
-  }
-});
+
 
 function updateContent() {
   // Text

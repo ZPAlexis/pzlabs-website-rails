@@ -9,6 +9,7 @@ import { FillBarGame } from 'logic/fillBar';
 import { AutoText } from 'logic/autoText';
 import { fetchAndDisplayMetrics } from 'logic/api';
 import { NotificationManager } from 'logic/notifications';
+import i18next from "i18next"
 
 const App = {
   coinIsSpinning: false,
@@ -32,7 +33,7 @@ const App = {
       i18next.on('initialized', () => this.refreshApp());
     }
 
-    fetchAndDisplayMetrics(); //better if moved to refreshApp() but will use more server calls
+    //fetchAndDisplayMetrics(); //better if moved to refreshApp() but will use more server calls
   },
 
   refreshApp() {

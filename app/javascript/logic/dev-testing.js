@@ -1,5 +1,5 @@
 /*
-import { recordCoinCollected } from './api.js';
+import { recordCoinCollected } from 'logic/api';
 
 document.addEventListener('DOMContentLoaded', () => {
     const button = document.getElementById('apiTest');

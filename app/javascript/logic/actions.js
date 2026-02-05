@@ -1,14 +1,14 @@
-import { trackEvent } from './utils.js';
+import { trackEvent } from 'logic/utils';
 
 export const buttonActions = {
   fillBar: async (el) => {
-    const { FillBarGame } = await import('./fillBar.js');
+    const { FillBarGame } = await import('logic/fillBar');
     const value = parseInt(el.dataset.value, 10);
     FillBarGame.increment(value);
   },
 
   rps: async (el) => {
-    const { RPSGame } = await import('./rock-paper-scissors.js');
+    const { RPSGame } = await import('logic/rock-paper-scissors');
     const move = el.dataset.value;
     RPSGame.playGame(move);
   },

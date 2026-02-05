@@ -1,5 +1,5 @@
-import { Animations } from './animations.js';
-import { ButtonManager } from './buttons.js';
+import { Animations } from 'logic/animations';
+import { ButtonManager } from 'logic/buttons';
 
 const CommonInit = {
   init() {

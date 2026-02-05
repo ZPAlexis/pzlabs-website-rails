@@ -1,4 +1,4 @@
-import { recordCoinCollected } from './api.js';
+import { recordCoinCollected } from 'logic/api';
 
 export const trackEvent = (eventName, options = { syncToApi: false }) => {
   if (typeof window.clarity === "function") window.clarity('event', eventName);
