@@ -1,11 +1,10 @@
 Rails.application.routes.draw do
-  #get "pages/index"
-  get "pages/about"
-  get "pages/born_survivor"
-  get "pages/dev"
-  get "pages/flappy_astronaut"
-  get "pages/projects"
-  get "pages/trofy"
+  get "about", to: "pages#about"
+  get "projects", to: "pages#projects"
+  get "dev", to: "pages#dev"
+  get "projects/born_survivor", to: "pages#born_survivor"
+  get "projects/flappy_astronaut", to: "pages#flappy_astronaut"
+  get "projects/trofy", to: "pages#trofy"
   root "pages#index"
   # Define your application routes per the DSL in https://guides.rubyonrails.org/routing.html
 

@@ -38,12 +38,12 @@
             </button>
 
             <div class="js-header-drawer header-menu-nav-drawer">
-              <button class="js-animated-button cta-button nav-button menu-fix-width text" data-action="navigate" data-target="/projects.html">
+              <button class="js-animated-button cta-button nav-button menu-fix-width text" data-action="navigate" data-target="<%= projects_path %>">
                 <p class="small" data-i18n="header.projects"></p>
                 <img class="button-icon small" src="icons/icon_right_dark.png">
               </button>
               
-              <button class="js-animated-button cta-button nav-button menu-fix-width text" data-action="navigate" data-target="/about.html" data-tracking="aboutClick">
+              <button class="js-animated-button cta-button nav-button menu-fix-width text" data-action="navigate" data-target="<%= about_path %>" data-tracking="aboutClick">
                 <p class="small" data-i18n="header.about"></p>
                 <img class="button-icon small" src="icons/icon_right_dark.png">
               </button>
@@ -82,21 +82,21 @@
 
     <nav class="mobile-nav">
       <div class="mobile-nav-container">
-        <button class="mobile-nav-button">
+        <button class="js-mobile-nav-button mobile-nav-button" data-action="navigate" data-target="<%= root_path %>">
           <div class="mobile-nav-icon-container">
             <img class="mobile-nav-icon" src="icons/icon_mobile_nav_home_light.png"> 
             <img class="js-nav-active mobile-nav-icon" src="icons/icon_mobile_nav_home_dark.png"> 
           </div>
           <div class="js-nav-active mobile-nav-text" data-i18n="mobile-nav.home-nav">Home</div>
         </button>
-        <button class="js-mobile-nav-button mobile-nav-button" data-action="navigate" data-target="/projects.html">
+        <button class="js-mobile-nav-button mobile-nav-button" data-action="navigate" data-target="<%= projects_path %>">
           <div class="mobile-nav-icon-container">
             <img class="mobile-nav-icon" src="icons/icon_mobile_nav_app_light.png">
             <img class="js-nav mobile-nav-icon inactive" src="icons/icon_mobile_nav_app_dark.png">
           </div>
           <div class="js-nav mobile-nav-text inactive" data-i18n="mobile-nav.projects-nav">Projects</div>
         </button>
-        <button class="js-mobile-nav-button mobile-nav-button" data-action="navigate" data-target="/about.html" data-tracking="aboutClick">
+        <button class="js-mobile-nav-button mobile-nav-button" data-action="navigate" data-target="<%= about_path %>" data-tracking="aboutClick">
           <div class="mobile-nav-icon-container">
             <img class="mobile-nav-icon" src="icons/icon_mobile_nav_about_light.png"> 
             <img class="js-nav mobile-nav-icon inactive" src="icons/icon_mobile_nav_about_dark.png">

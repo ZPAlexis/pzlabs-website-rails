@@ -10,6 +10,7 @@ import { AutoText } from 'logic/autoText';
 import { fetchAndDisplayMetrics } from 'logic/api';
 import { NotificationManager } from 'logic/notifications';
 import i18next from "i18next"
+import { changeLanguage } from "i18next"
 
 const App = {
   coinIsSpinning: false,

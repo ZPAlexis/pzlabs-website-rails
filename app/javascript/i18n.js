@@ -23,6 +23,7 @@ i18next
 
 
 function updateContent() {
+  console.log("Starting to update content with i18n")
   // Text
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
@@ -56,10 +57,7 @@ function updateContent() {
   });
 }
 
-const languageBtnPT = document.querySelector('.js-pt-locale');
-const languageBtnEN = document.querySelector('.js-en-locale');
-  
-function changeLanguage(lng) {
+export function changeLanguage(lng) {
   return new Promise(resolve => {
     i18next.changeLanguage(lng, () => {
       updateContent();
@@ -68,10 +66,12 @@ function changeLanguage(lng) {
   });
 }
 
-languageBtnEN.addEventListener('click', async () => {
-  await changeLanguage('en');
-});
-
-languageBtnPT.addEventListener('click', async () => {
-  await changeLanguage('pt');
-});
+const languageBtnPT = document.querySelector('.js-pt-locale');
+const languageBtnEN = document.querySelector('.js-en-locale');
+  
+if (languageBtnEN) {
+  languageBtnEN.addEventListener('click', () => changeLanguage('en'));
+}
+if (languageBtnPT) {
+  languageBtnPT.addEventListener('click', () => changeLanguage('pt'));
+}
