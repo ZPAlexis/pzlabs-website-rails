@@ -3,7 +3,6 @@ import { Elements } from 'logic/uiElements';
 import { TabManager } from 'logic/tabManager';
 import { TutorialManager } from 'logic/tutorialManager';
 import { Animations } from 'logic/animations';
-import { ButtonManager } from 'logic/buttons';
 import { RPSGame } from 'logic/rock-paper-scissors';
 import { FillBarGame } from 'logic/fillBar';
 import { AutoText } from 'logic/autoText';
@@ -16,9 +15,16 @@ const App = {
   coinIsSpinning: false,
   
   init() {
-    Animations.initScrollReveals();
-    ButtonManager.init();
-    GameState.load();
+    if (typeof i18next !== 'undefined' && i18next.isInitialized) {
+      this.startLanguageDependentLogic();
+    } else {
+      i18next.on('initialized', () => this.startLanguageDependentLogic());
+    }
+
+    //fetchAndDisplayMetrics(); //better if moved to refreshApp() but will use more server calls
+  },
+
+  startLanguageDependentLogic() {
     AutoText.init();
     TabManager.init();
     TutorialManager.init();
@@ -26,15 +32,7 @@ const App = {
     FillBarGame.init();
     
     this.setupEventListeners();
-    this.setupScrollObservers();
-    
-    if (typeof i18next !== 'undefined' && i18next.isInitialized) {
-      this.refreshApp();
-    } else {
-      i18next.on('initialized', () => this.refreshApp());
-    }
-
-    //fetchAndDisplayMetrics(); //better if moved to refreshApp() but will use more server calls
+    this.refreshApp();
   },
 
   refreshApp() {

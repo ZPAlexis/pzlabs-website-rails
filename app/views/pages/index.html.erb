@@ -1,3 +1,7 @@
+<% content_for :page_specific_js do %>
+  <%= javascript_import_module_tag "index" %>
+<% end %>
+
 <nav class="js-summary-menu-overlay summary-menu-section hidden">
   <div class="summary-menu-container">
     <div class="summary-menu-top-container">
@@ -202,66 +206,7 @@
   </section>
 
   <section class="projects-section">
-    <div class="projects-container">
-      <div class="project-container fade-right">
-        <div class="project-container-top">
-          <div class="project-image-container">
-            <img class="project-image" src="images/projects/trofy/Trofy_AppIcon.png">
-          </div>
-          <div class="project-summary">
-            <div class="project-summary-container">
-              <h1 class="project-title-text">Trofy</h1>
-              <div class="project-summary-tags">
-                <div class="stack-tag">C#</div>
-                <div class="stack-tag">Unity</div>
-                <div class="stack-tag">iOS</div>
-                <div class="stack-tag">Android</div>
-              </div>
-              <button class="js-animated-button cta-button project-cta" data-action="navigate" data-target="<%= projects_trofy_path %>" data-i18n="index.learn-more-btn"></button>
-            </div>
-          </div>
-        </div>
-        <p class="project-description-text" data-i18n="projects.trofy-project-description"></p> 
-      </div>
-
-      <div class="project-container fade-right">
-        <div class="project-container-top">
-          <div class="project-image-container">
-            <img class="project-image" src="images/projects/born_survivor/BornSurvivor_AppIcon.png">
-          </div>
-          <div class="project-summary">
-            <div class="project-summary-container">
-              <h1 class="project-title-text">Born Survivor</h1>
-              <div class="project-summary-tags">
-                <div class="stack-tag">C#</div>
-                <div class="stack-tag">Unity</div>
-              </div>
-              <button class="js-animated-button project-cta cta-button"  data-action="navigate" data-target="<%= projects_born_survivor_path %>" data-i18n="index.learn-more-btn"></button>
-            </div>
-          </div>
-        </div>
-        <p class="project-description-text" data-i18n="projects.bs-project-description"></p> 
-      </div>
-
-      <div class="project-container fade-right">
-        <div class="project-container-top">
-          <div class="project-image-container">
-            <img class="project-image" src="images/projects/flappy_astronaut/FlappyAstronaut_AppIcon.png">
-          </div>
-          <div class="project-summary">
-            <div class="project-summary-container">
-              <h1 class="project-title-text">Flappy Astronaut</h1>
-              <div class="project-summary-tags">
-                <div class="stack-tag">C#</div>
-                <div class="stack-tag">Unity</div>
-              </div>
-              <button class="js-animated-button project-cta cta-button"  data-action="navigate" data-target="<%= projects_flappy_astronaut_path %>" data-i18n="index.learn-more-btn"></button>
-            </div>
-          </div>
-        </div>
-        <p class="project-description-text" data-i18n="projects.fa-project-description"></p> 
-      </div>
-    </div>
+    <%= render "shared/projects_list" %>
   </section>
 
   <section class="rock-paper-scissors-section js-trigger-coin-summary">

@@ -1,0 +1,34 @@
+<nav class="mobile-nav">
+  <div class="mobile-nav-container">
+    
+    <%# --- Home Button --- %>
+    <button class="js-mobile-nav-button mobile-nav-button" data-action="navigate" data-target="<%= root_path %>">
+      <div class="mobile-nav-icon-container">
+        <img class="mobile-nav-icon" src="/icons/icon_mobile_nav_home_light.png"> 
+        <img class="js-nav-toggle mobile-nav-icon <%= 'inactive' unless current_page?(root_path) %>" src="/icons/icon_mobile_nav_home_dark.png"> 
+      </div>
+      <div class="js-nav-toggle mobile-nav-text <%= 'inactive' unless current_page?(root_path) %>" data-i18n="mobile-nav.home-nav">Home</div>
+    </button>
+
+    <%# --- Projects Button --- %>
+    <%# Note: We use a custom check for projects so it stays active on sub-pages %>
+    <% is_projects = request.path.start_with?('/projects') %>
+    <button class="js-mobile-nav-button mobile-nav-button" data-action="navigate" data-target="<%= projects_path %>">
+      <div class="mobile-nav-icon-container">
+        <img class="mobile-nav-icon" src="/icons/icon_mobile_nav_app_light.png">
+        <img class="js-nav-toggle mobile-nav-icon <%= 'inactive' unless is_projects %>" src="/icons/icon_mobile_nav_app_dark.png">
+      </div>
+      <div class="js-nav-toggle mobile-nav-text <%= 'inactive' unless is_projects %>" data-i18n="mobile-nav.projects-nav">Projects</div>
+    </button>
+
+    <%# --- About Button --- %>
+    <button class="js-mobile-nav-button mobile-nav-button" data-action="navigate" data-target="<%= about_path %>">
+      <div class="mobile-nav-icon-container">
+        <img class="mobile-nav-icon" src="/icons/icon_mobile_nav_about_light.png"> 
+        <img class="js-nav-toggle mobile-nav-icon <%= 'inactive' unless current_page?(about_path) %>" src="/icons/icon_mobile_nav_about_dark.png">
+      </div>
+      <div class="js-nav-toggle mobile-nav-text <%= 'inactive' unless current_page?(about_path) %>" data-i18n="mobile-nav.about-nav">About</div>
+    </button>
+
+  </div>
+</nav>

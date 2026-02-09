@@ -154,9 +154,9 @@
   "portfolio": {
     "fa": {
       "images": {
-        "concepts": "images/projects/flappy_astronaut/PZLabs_Portfolio_FlappyAstronaut_3_CoreConcepts.png",
-        "logic": "images/projects/flappy_astronaut/PZLabs_Portfolio_FlappyAstronaut_4_GameLogic.png",
-        "design": "images/projects/flappy_astronaut/PZLabs_Portfolio_FlappyAstronaut_5_DesignSystem.png"
+        "concepts": "/images/projects/flappy_astronaut/PZLabs_Portfolio_FlappyAstronaut_3_CoreConcepts.png",
+        "logic": "/images/projects/flappy_astronaut/PZLabs_Portfolio_FlappyAstronaut_4_GameLogic.png",
+        "design": "/images/projects/flappy_astronaut/PZLabs_Portfolio_FlappyAstronaut_5_DesignSystem.png"
       },
       "category": "<span class='text-highlight'>Category:<br></span>Demo Unity Game",
       "stack": "<span class='text-highlight'>Tech Stack:<br></span>C#, Unity",
@@ -200,9 +200,9 @@
     },
     "bs": {
       "images": {
-        "concepts": "images/projects/born_survivor/PZLabs_Portfolio_BornSurvivor_3_CoreConcepts.png",
-        "logic": "images/projects/born_survivor/PZLabs_Portfolio_BornSurvivor_4_GameLogic.png",
-        "design": "images/projects/born_survivor/PZLabs_Portfolio_BornSurvivor_5_DesignSystem.png"
+        "concepts": "/images/projects/born_survivor/PZLabs_Portfolio_BornSurvivor_3_CoreConcepts.png",
+        "logic": "/images/projects/born_survivor/PZLabs_Portfolio_BornSurvivor_4_GameLogic.png",
+        "design": "/images/projects/born_survivor/PZLabs_Portfolio_BornSurvivor_5_DesignSystem.png"
       },
       "category": "<span class='text-highlight'>Category:<br></span>Demo Unity Game",
       "stack": "<span class='text-highlight'>Tech Stack:<br></span>C#, Unity",
@@ -218,11 +218,11 @@
       "concepts-4": "Each level gained stops the game to give the player the ability to pick 1 of 3 different power-up options. These options include a variety of improvements to the player’s abilities, such as increased damage for attacks, running speed, and life.",
       "concepts-5": "By combining different power options this specific mechanic provides a vast range of combinations, keeping the experience fresh and exciting for a longer time.",
       "tech": "Tech Stack",
-      "tech-1": "Unity is a game engine platform that offers a complete package of all the tools needed to create a game or app. After our <a class='link' href='/flappy_astronaut.html' target='_blank'>previous project</a> with Unity, the platform was the logical decision to develop the mechanics proposed by this project. It was a great opportunity to test some of the limitations related to the amount of objects instantiated at the same time.",
+      "tech-1": "Unity is a game engine platform that offers a complete package of all the tools needed to create a game or app. After our <a class='link' href='/projects/flappy_astronaut.html' target='_blank'>previous project</a> with Unity, the platform was the logical decision to develop the mechanics proposed by this project. It was a great opportunity to test some of the limitations related to the amount of objects instantiated at the same time.",
       "tech-2": "C# is the primary programming language used in Unity. In this project the focus was to apply more complex and modular logic with the language.",
       "logic": "Game Logic",
       "logic-1": "The logic diagram is a summarized representation of the controlling scripts attached to Unity’s game objects. As a simple experiement, this project’s focus was mainly on the correct implementation of the power-up controller and it’s relation to other scripts. The main complexity was around creating a player controller that is influenced by the power-ups choosen by the user.",
-      "logic-2": "While our <a class='link' href='/flappy_astronaut.html' target='_blank'>previous project</a> kept a lean file structure, this time the “Pick 1 of 3” design and Unity’s game object structure forced the creation of a separate script files for each PowerUp.",
+      "logic-2": "While our <a class='link' href='/projects/flappy_astronaut.html' target='_blank'>previous project</a> kept a lean file structure, this time the “Pick 1 of 3” design and Unity’s game object structure forced the creation of a separate script files for each PowerUp.",
       "logic-3": "Here is a brief snippet from PowerUp_DamagePercent.cs to showcase how the player data was manipulated.",
       "logic-4": "This next script is from PowerUpPool.cs. This logic randomly chooses three power ups from the available list and generates the game objects as options for the user to choose from with the GeneratePowerUpOptions function.",
       "logic-5": "More details can be explored in the source code available in <a class='link' href='https://github.com/ZPAlexis/BornSurvivor' target='_blank'>this project's directory</a> on GitHub.",
@@ -233,7 +233,7 @@
       "demo-btn": "Download Demo",
       "dir-btn": "Check Source Code",
       "learnings": "Learnings",
-      "learnings-1": "This project had a narrower focus than our <a class='link' href='/flappy_astronaut.html' target='_blank'>previous venture</a> into game development. While our previous project was aimed at understanding the complexities of the whole process, this time the focus was on the specific complexities involved in developing interesting game mechanics.",
+      "learnings-1": "This project had a narrower focus than our <a class='link' href='/projects/flappy_astronaut.html' target='_blank'>previous venture</a> into game development. While our previous project was aimed at understanding the complexities of the whole process, this time the focus was on the specific complexities involved in developing interesting game mechanics.",
       "learnings-2": "These are the most significant learnings and insights from this project:",
       "learnings-li-1": "<span class='text-highlight'>Interesting game mechanics take time polish.</span><p class='post-text'>Creating a simple game mechanic can be quick and easy to implement, however, getting it to a point that is engaging and truly rewarding takes time and polish. Born Survival included several game mechanics to highlight the main focus with the powerups, but getting other fundamental pillars like combat, enemy behaviour, and variety would have taken a much longer time to refine and reach an acceptable quality level for an end product.</p>",
       "learnings-li-2": "<span class='text-highlight'>“Pick 1 of 3” is a great way to add replayability.</span><p class='post-text'>The main objective proved the hypothesis that even a very simple implementation of a “Pick 1 of 3” mechanic can have notable impacts on user experience. The promise of variety creates a sense of possibilities and drives experimentation and increased engagement by the end user. In Born Survivor this potential was kept purposefuly limited, but with the proper investment on a complete experience this mechanic could have impressive positive results.</p>",
@@ -243,14 +243,14 @@
     },
     "trofy": {
       "images": {
-        "concepts": "images/projects/trofy/Trofy_3_CoreConcepts_PZLabs_Portfolio.png",
-        "gamification": "images/projects/trofy/Trofy_3_1_Gamification_PZLabs_Portfolio.png",
-        "user": "images/projects/trofy/Trofy_4_GameLogic_PZLabs_Portfolio.png",
-        "logic": "images/projects/trofy/Trofy_5_Logic_PZLabs_Portfolio.png",
-        "notifications": "images/projects/trofy/Trofy_6_NotificationSystem_PZLabs_Portfolio.png",
-        "design": "images/projects/trofy/Trofy_7_Design_PZLabs_Portfolio.png",
-        "wireframe": "images/projects/trofy/Trofy_8_Ideation_PZLabs_Portfolio.png",
-        "roadmap": "images/projects/trofy/Trofy_9_MVPRoadmap_PZLabs_Portfolio.png"
+        "concepts": "/images/projects/trofy/Trofy_3_CoreConcepts_PZLabs_Portfolio.png",
+        "gamification": "/images/projects/trofy/Trofy_3_1_Gamification_PZLabs_Portfolio.png",
+        "user": "/images/projects/trofy/Trofy_4_GameLogic_PZLabs_Portfolio.png",
+        "logic": "/images/projects/trofy/Trofy_5_Logic_PZLabs_Portfolio.png",
+        "notifications": "/images/projects/trofy/Trofy_6_NotificationSystem_PZLabs_Portfolio.png",
+        "design": "/images/projects/trofy/Trofy_7_Design_PZLabs_Portfolio.png",
+        "wireframe": "/images/projects/trofy/Trofy_8_Ideation_PZLabs_Portfolio.png",
+        "roadmap": "/images/projects/trofy/Trofy_9_MVPRoadmap_PZLabs_Portfolio.png"
       },
       "category": "<span class='text-highlight'>Category:<br></span>Productivity Mobile App",
       "stack": "<span class='text-highlight'>Tech Stack:<br></span>C#, Unity, iOS and Android",

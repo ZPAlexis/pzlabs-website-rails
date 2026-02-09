@@ -1,13 +1,13 @@
 export function mobileNavSelect(button) {
-  const activeButton = document.querySelectorAll('.js-nav-active');
-
-  activeButton.forEach((el) => {
+  const currentActiveElements = document.querySelectorAll('.js-nav-toggle:not(.inactive)');
+  
+  currentActiveElements.forEach((el) => {
     el.classList.add('inactive');
   });
+  
+  const elementsToActivate = button.querySelectorAll('.inactive');
 
-  const selectedButton = button.querySelectorAll('.js-nav');
-
-  selectedButton.forEach((el) => {
+  elementsToActivate.forEach((el) => {
     el.classList.remove('inactive');
   });
 }

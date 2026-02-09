@@ -3,10 +3,22 @@ import { mobileNavSelect } from 'logic/mobile-nav';
 
 export const ButtonManager = {
   init() {
+    this.setupButtons();
     this.setupAnimatedButtons();
     this.setupMobileNav();
     this.setupDropdownMenus();
     this.setupScrollToTop();
+  },
+
+  setupButtons() {
+    const buttons = document.querySelectorAll('.js-button');
+
+    buttons.forEach((button) => {
+      button.addEventListener('pointerdown', () => {
+        if (button.disabled) return;
+        this.executeAction(button);
+      });
+    });
   },
 
   setupAnimatedButtons() {

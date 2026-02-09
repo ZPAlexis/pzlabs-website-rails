@@ -154,9 +154,9 @@
   "portfolio": {
     "fa": {
       "images": {
-        "concepts": "images/projects/flappy_astronaut/PZLabs_Portfolio_FlappyAstronaut_3_CoreConcepts_PT.png",
-        "logic": "images/projects/flappy_astronaut/PZLabs_Portfolio_FlappyAstronaut_4_GameLogic_PT.png",
-        "design": "images/projects/flappy_astronaut/PZLabs_Portfolio_FlappyAstronaut_5_DesignSystem_PT.png"
+        "concepts": "/images/projects/flappy_astronaut/PZLabs_Portfolio_FlappyAstronaut_3_CoreConcepts_PT.png",
+        "logic": "/images/projects/flappy_astronaut/PZLabs_Portfolio_FlappyAstronaut_4_GameLogic_PT.png",
+        "design": "/images/projects/flappy_astronaut/PZLabs_Portfolio_FlappyAstronaut_5_DesignSystem_PT.png"
       },
       "category": "<span class='text-highlight'>Categoria:<br></span>Jogo Demo em Unity",
       "stack": "<span class='text-highlight'>Tech Stack:<br></span>C#, Unity",
@@ -200,9 +200,9 @@
     },
     "bs": {
       "images": {
-        "concepts": "images/projects/born_survivor/PZLabs_Portfolio_BornSurvivor_3_CoreConcepts_PT.png",
-        "logic": "images/projects/born_survivor/PZLabs_Portfolio_BornSurvivor_4_GameLogic_PT.png",
-        "design": "images/projects/born_survivor/PZLabs_Portfolio_BornSurvivor_5_DesignSystem_PT.png"
+        "concepts": "/images/projects/born_survivor/PZLabs_Portfolio_BornSurvivor_3_CoreConcepts_PT.png",
+        "logic": "/images/projects/born_survivor/PZLabs_Portfolio_BornSurvivor_4_GameLogic_PT.png",
+        "design": "/images/projects/born_survivor/PZLabs_Portfolio_BornSurvivor_5_DesignSystem_PT.png"
       },
       "category": "<span class='text-highlight'>Categoria:<br></span>Jogo Demo em Unity",
       "stack": "<span class='text-highlight'>Tech Stack:<br></span>C#, Unity",
@@ -218,11 +218,11 @@
       "concepts-4": "A cada novo nível, o jogo é pausado para que o jogador possa escolher 1 entre 3 diferentes opções de poderes. Essas opções incluem diversas melhorias nas habilidades do personagem, como aumento de dano, velocidade de movimento e pontos de vida.",
       "concepts-5": "Ao combinar diferentes opções de poder, essa mecânica oferece uma ampla variedade de combinações possíveis, mantendo a experiência dinâmica e empolgante por mais tempo.",
       "tech": "Tech Stack",
-      "tech-1": "Unity é uma plataforma de desenvolvimento de jogos e oferece um ambiente completo com todas as ferramentas necessárias para criação de jogos e aplicativos. Após nosso <a class='link' href='/flappy_astronaut.html' target='_blank'>projeto anterior</a> com o Unity, a plataforma foi a decisão lógica para desenvolver as mecânicas propostas neste projeto. Foi uma ótima oportunidade para testar algumas limitações relacionadas à quantidade de objetos instanciados ao mesmo tempo.",
+      "tech-1": "Unity é uma plataforma de desenvolvimento de jogos e oferece um ambiente completo com todas as ferramentas necessárias para criação de jogos e aplicativos. Após nosso <a class='link' href='/projects/flappy_astronaut.html' target='_blank'>projeto anterior</a> com o Unity, a plataforma foi a decisão lógica para desenvolver as mecânicas propostas neste projeto. Foi uma ótima oportunidade para testar algumas limitações relacionadas à quantidade de objetos instanciados ao mesmo tempo.",
       "tech-2": "C# é a principal linguagem de programação usada no Unity. Nesse projeto o foco foi aplicar lógicas mais complexas e modulares com a linguagem.",
       "logic": "Lógica de Jogo",
       "logic-1": "O diagrama lógico é uma representação resumida dos scripts de controle anexados aos objetos do jogo no Unity. Como experimento simples, o foco deste projeto estava principalmente na implementação correta do controlador de poderes e sua relação com outros scripts. A principal complexidade estava em criar um controlador do jogador que fosse influenciado pelos poderes escolhidos pelo usuário.",
-      "logic-2": "Enquanto nosso <a class='link' href='/flappy_astronaut.html' target='_blank'>projeto anterior</a> mantinha uma estrutura de arquivos simples, desta vez o design ‘Escolha 1 entre 3’ e a estrutura de objetos do Unity exigiram a criação de arquivos de script separados para cada poder.",
+      "logic-2": "Enquanto nosso <a class='link' href='/projects/flappy_astronaut.html' target='_blank'>projeto anterior</a> mantinha uma estrutura de arquivos simples, desta vez o design ‘Escolha 1 entre 3’ e a estrutura de objetos do Unity exigiram a criação de arquivos de script separados para cada poder.",
       "logic-3": "Aqui está um pequeno trecho do script PowerUp_DamagePercent.cs para mostrar como os dados do jogador são manipulados.",
       "logic-4": "O próximo script é o PowerUpPool.cs. Essa lógica escolhe aleatoriamente três poderes da lista disponível e gera os objetos do jogo como opções para o usuário escolher, usando a função GeneratePowerUpOptions.",
       "logic-5": "Mais detalhes podem ser explorados nos arquivos fonte disponíveis no <a class='link' href='https://github.com/ZPAlexis/BornSurvivor' target='_blank'>diretório desse projeto</a> no GitHub.",
@@ -233,7 +233,7 @@
       "demo-btn": "Baixar Demo",
       "dir-btn": "Ver Código Fonte",
       "learnings": "Aprendizados",
-      "learnings-1": "Este projeto teve um foco mais restrito do que nossa <a class='link' href='/flappy_astronaut.html' target='_blank'>experiência anterior</a> com desenvolvimento de jogos. Enquanto o projeto anterior buscava entender as complexidades de todo o processo, desta vez o foco foi aprofundar nas complexidades específicas envolvidas em criar mecânicas de jogo interessantes.",
+      "learnings-1": "Este projeto teve um foco mais restrito do que nossa <a class='link' href='/projects/flappy_astronaut.html' target='_blank'>experiência anterior</a> com desenvolvimento de jogos. Enquanto o projeto anterior buscava entender as complexidades de todo o processo, desta vez o foco foi aprofundar nas complexidades específicas envolvidas em criar mecânicas de jogo interessantes.",
       "learnings-2": "Esses são os aprendizados e observações mais importantes deste projeto:",
       "learnings-li-1": "<span class='text-highlight'>Mecânicas de jogo interessantes levam tempo para serem refinadas.</span><p class='post-text'>Criar uma mecânica de jogo simples pode ser rápido e fácil, mas torná-la envolvente e realmente gratificante exige tempo e refinamento. Born Survivor incluíu mecânicas para destacar o foco principal nos poderes, mas desenvolver outros pilares fundamentais, como combate, comportamento dos inimigos e variedade, teria levado muito mais tempo para atingir um nível de qualidade aceitável para um produto final.</p>",
       "learnings-li-2": "<span class='text-highlight'>‘Escolha 1 entre 3’ é uma ótima forma de aumentar a rejogabilidade.</span><p class='post-text'>O objetivo principal confirmou a hipótese de que mesmo uma implementação simples da mecânica ‘Escolha 1 entre 3’ pode ter impactos notáveis na experiência do usuário. A promessa de variedade cria um senso de possibilidades, incentivando experimentação e maior engajamento. Em Born Survivor esse potencial foi mantido propositalmente limitado, mas com investimento adequado em uma experiência completa, essa mecânica poderia gerar resultados positivos impressionantes.</p>",
@@ -243,14 +243,14 @@
     },
     "trofy": {
       "images": {
-        "concepts": "images/projects/trofy/Trofy_3_CoreConcepts_PZLabs_Portfolio_PT.png",
-        "gamification": "images/projects/trofy/Trofy_3_1_Gamification_PZLabs_Portfolio_PT.png",
-        "user": "images/projects/trofy/Trofy_4_GameLogic_PZLabs_Portfolio_PT.png",
-        "logic": "images/projects/trofy/Trofy_5_Logic_PZLabs_Portfolio_PT.png",
-        "notifications": "images/projects/trofy/Trofy_6_NotificationSystem_PZLabs_Portfolio_PT.png",
-        "design": "images/projects/trofy/Trofy_7_Design_PZLabs_Portfolio_PT.png",
-        "wireframe": "images/projects/trofy/Trofy_8_Ideation_PZLabs_Portfolio_PT.png",
-        "roadmap": "images/projects/trofy/Trofy_9_MVPRoadmap_PZLabs_Portfolio_PT.png"
+        "concepts": "/images/projects/trofy/Trofy_3_CoreConcepts_PZLabs_Portfolio_PT.png",
+        "gamification": "/images/projects/trofy/Trofy_3_1_Gamification_PZLabs_Portfolio_PT.png",
+        "user": "/images/projects/trofy/Trofy_4_GameLogic_PZLabs_Portfolio_PT.png",
+        "logic": "/images/projects/trofy/Trofy_5_Logic_PZLabs_Portfolio_PT.png",
+        "notifications": "/images/projects/trofy/Trofy_6_NotificationSystem_PZLabs_Portfolio_PT.png",
+        "design": "/images/projects/trofy/Trofy_7_Design_PZLabs_Portfolio_PT.png",
+        "wireframe": "/images/projects/trofy/Trofy_8_Ideation_PZLabs_Portfolio_PT.png",
+        "roadmap": "/images/projects/trofy/Trofy_9_MVPRoadmap_PZLabs_Portfolio_PT.png"
       },
       "category": "<span class='text-highlight'>Categoria:<br></span>App de Produtividade Gamificado",
       "stack": "<span class='text-highlight'>Tech Stack:<br></span>C#, Unity, iOS e Android",

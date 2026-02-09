@@ -1,0 +1,55 @@
+<header class="header">
+  <nav class="header-nav">
+    <div class="header-menu-container">
+      <div class="js-header-menu">
+        <button class="js-animated-button js-menu-toggle cta-button nav-button desktop-nav">
+          <img class="button-icon" src="/icons/icon_menu_dark.png">
+        </button>
+
+        <div class="js-header-drawer header-menu-nav-drawer">
+          <button class="js-animated-button cta-button nav-button menu-fix-width text" data-action="navigate" data-target="<%= root_path %>">
+            <p class="small" data-i18n="header.home"></p>
+            <img class="button-icon small" src="/icons/icon_right_dark.png">
+          </button>  
+        
+          <button class="js-animated-button cta-button nav-button menu-fix-width text" data-action="navigate" data-target="<%= projects_path %>">
+            <p class="small" data-i18n="header.projects"></p>
+            <img class="button-icon small" src="/icons/icon_right_dark.png">
+          </button>
+          
+          <button class="js-animated-button cta-button nav-button menu-fix-width text" data-action="navigate" data-target="<%= about_path %>" data-tracking="aboutClick">
+            <p class="small" data-i18n="header.about"></p>
+            <img class="button-icon small" src="/icons/icon_right_dark.png">
+          </button>
+        </div>
+      </div>
+      <div class="js-header-menu">
+        <button class="js-animated-button js-menu-toggle cta-button language-fix-width nav-button">
+          <img class="button-icon" src="/icons/icon_language_dark.png">
+          <img class="button-icon small" src="/icons/icon_down_dark.png">
+        </button>
+
+        <div class="js-header-drawer header-menu-nav-drawer">
+          <button class="js-pt-locale js-animated-button cta-button nav-button language-fix-width text">PT</button>
+
+          <button class="js-en-locale js-animated-button cta-button nav-button language-fix-width text">EN</button>
+        </div>
+      </div>
+    </div>
+    <div class="header-menu-container column">
+      <button class="js-animated-button js-coin-summary coin-summary cta-button fixed-width hidden">
+        <div class="gold-coin-container">
+          <img class="summary-icon" src="/icons/coin-gold.svg">
+        </div>
+        <div class="js-coin-amount coin-amount"></div>
+      </button>
+      <div class="js-notification-container notification-container closed">
+        <div class="js-notification-close-btn notification-close-btn-container">
+          <button class="notification-close-btn"><img class="button-icon small" src="/icons/icon_x_dark_thin.png"></button>
+        </div>
+        <p class="js-notification-title notification-title"></p>
+        <p class="js-notification-description"></p>
+      </div>
+    </div>
+  </nav>
+</header>

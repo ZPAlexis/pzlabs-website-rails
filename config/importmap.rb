@@ -10,4 +10,5 @@ pin "i18next-browser-languagedetector" # @8.2.0
 pin "cross-fetch" # @4.0.0
 pin "i18n", to: "i18n.js"
 pin "index", to: "index.js"
+pin "common", to: "common.js"
 pin_all_from "app/javascript/logic", under: "logic"

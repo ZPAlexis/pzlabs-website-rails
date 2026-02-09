@@ -1,6 +1,10 @@
+<% content_for :page_specific_js do %>
+  <%= render "shared/prism_loader", languages: ["csharp"] %>
+<% end %>
+
 <main class="main-container">
   <section class="post-section">
-    <img class="post-banner-image cover" src="images/projects/born_survivor/Portfolio_Enemy_BornSurvivor.jpg">
+    <img class="post-banner-image cover" src="/images/projects/born_survivor/Portfolio_Enemy_BornSurvivor.jpg">
     <div class="post-container">
       <h1 class="post-heading title center">Born Survivor</h1>
       <div class="post-intro-wrapper">
@@ -26,9 +30,9 @@
 
       <h2 class="post-heading" id="objective" data-i18n="portfolio.bs.objective"></h2>
       <p class="post-text" data-i18n="portfolio.bs.objective-1"></p>
-      <a href="images/projects/born_survivor/Portfolio_Cover_StartScreen_BornSurvivor.jpg" target="_blank"><img class="post-image shadow" src="images/projects/born_survivor/Portfolio_Cover_StartScreen_BornSurvivor.jpg"></a>
+      <a href="/images/projects/born_survivor/Portfolio_Cover_StartScreen_BornSurvivor.jpg" target="_blank"><img class="post-image shadow" src="/images/projects/born_survivor/Portfolio_Cover_StartScreen_BornSurvivor.jpg"></a>
       <p class="post-text" data-i18n="portfolio.bs.objective-2"></p>
-      <a href="images/projects/born_survivor/Portfolio_Choices_BornSurvivor_zoom.png" target="_blank"><img class="post-image shadow center" src="images/projects/born_survivor/Portfolio_Choices_BornSurvivor_zoom.png"></a>
+      <a href="/images/projects/born_survivor/Portfolio_Choices_BornSurvivor_zoom.png" target="_blank"><img class="post-image shadow center" src="/images/projects/born_survivor/Portfolio_Choices_BornSurvivor_zoom.png"></a>
       
 
       <div class="post-line"></div>
@@ -40,14 +44,14 @@
       <p class="post-text" data-i18n="portfolio.bs.concepts-3"></p>
       <p class="post-text" data-i18n="portfolio.bs.concepts-4"></p>
       <p class="post-text" data-i18n="portfolio.bs.concepts-5"></p>
-      <a href="images/projects/born_survivor/Portfolio_Choices_BornSurvivor.jpg" target="_blank"><img class="post-image shadow" src="images/projects/born_survivor/Portfolio_Choices_BornSurvivor.jpg"></a>
+      <a href="/images/projects/born_survivor/Portfolio_Choices_BornSurvivor.jpg" target="_blank"><img class="post-image shadow" src="/images/projects/born_survivor/Portfolio_Choices_BornSurvivor.jpg"></a>
 
       <div class="post-line"></div>
 
       <h2 class="post-heading" id="stack" data-i18n="portfolio.bs.tech">Tech Stack</h2>
-      <a class="post-logo-link" href="https://unity.com/" target="_blank"><img class="post-logo" src="images/unity_logo_white.png"></a>
+      <a class="post-logo-link" href="https://unity.com/" target="_blank"><img class="post-logo" src="/images/unity_logo_white.png"></a>
       <p class="post-text" data-i18n-html="portfolio.bs.tech-1"></p>
-      <a class="post-logo-link" href="https://www.w3schools.com/cs/index.php" target="_blank"><img class="post-logo" src="images/csharp_logo_white.png"></a>
+      <a class="post-logo-link" href="https://www.w3schools.com/cs/index.php" target="_blank"><img class="post-logo" src="/images/csharp_logo_white.png"></a>
       <p class="post-text" data-i18n="portfolio.bs.tech-2"></p>
 
       <div class="post-line"></div>
@@ -56,37 +60,35 @@
       <a data-i18n-href="portfolio.bs.images.logic" target="_blank"><img class="post-image shadow" data-i18n-img="portfolio.bs.images.logic"></a>
       <p class="post-text" data-i18n="portfolio.bs.logic-1"></p>
       <p class="post-text" data-i18n-html="portfolio.bs.logic-2"></p>
-      <a href="images/projects/born_survivor/Portfolio_BornSurvivor_FolderStructure.png" target="_blank"><img class="post-image half center shadow" src="images/projects/born_survivor/Portfolio_BornSurvivor_FolderStructure.png"></a>
+      <a href="/images/projects/born_survivor/Portfolio_BornSurvivor_FolderStructure.png" target="_blank"><img class="post-image half center shadow" src="/images/projects/born_survivor/Portfolio_BornSurvivor_FolderStructure.png"></a>
       <p class="post-text" data-i18n="portfolio.bs.logic-3"></p>
-      <pre><code class="language-javascript"> //Increase Player Damage Percentage Snippet
-        target.GetComponent<PlayerController>().data.attackDMG *= (1 + (amount/100));
-              </code></pre>
-              <p class="post-text" data-i18n="portfolio.bs.logic-4"></p>
-              <pre><code class="language-javascript">
-        //Powerup Options Generation Snippet
-        public void GeneratePowerUpOptions() {
-        List<int> list = new List<int>();
-        for(int i = 0; i < powerUpList.Count; i++)
-        {
-            list.Add(i);
-        }
+      <pre><code class="language-javascript">//Increase Player Damage Percentage Snippet
 
-        int rand1 = Random.Range(0, list.Count);
-        int value1 = list[rand1];
-        list.RemoveAt(rand1);
-        InstantiatePowerUp(value1, choice1, cardPrefab, gameObject.transform);
+target.GetComponent<PlayerController>().data.attackDMG *= (1 + (amount/100));</code></pre>
+      <p class="post-text" data-i18n="portfolio.bs.logic-4"></p>
+      <pre><code class="language-javascript">//Powerup Options Generation Snippet
 
-        int rand2 = Random.Range(0, list.Count);
-        int value2 = list[rand2];
-        list.RemoveAt(rand2);
-        InstantiatePowerUp(value2, choice2, cardPrefab, gameObject.transform);
+public void GeneratePowerUpOptions() {
+  List<int> list = new List<int>();
+  for(int i = 0; i < powerUpList.Count; i++) {
+    list.Add(i);
+  }
 
-        int rand3 = Random.Range(0, list.Count);
-        int value3 = list[rand3];
-        list.RemoveAt(rand3);
-        InstantiatePowerUp(value3, choice3, cardPrefab, gameObject.transform);
-        }
-      </code></pre>
+  int rand1 = Random.Range(0, list.Count);
+  int value1 = list[rand1];
+  list.RemoveAt(rand1);
+  InstantiatePowerUp(value1, choice1, cardPrefab, gameObject.transform);
+
+  int rand2 = Random.Range(0, list.Count);
+  int value2 = list[rand2];
+  list.RemoveAt(rand2);
+  InstantiatePowerUp(value2, choice2, cardPrefab, gameObject.transform);
+
+  int rand3 = Random.Range(0, list.Count);
+  int value3 = list[rand3];
+  list.RemoveAt(rand3);
+  InstantiatePowerUp(value3, choice3, cardPrefab, gameObject.transform);
+}</code></pre>
       <p class="post-text" data-i18n-html="portfolio.bs.logic-5"></p>
 
       <div class="post-line"></div>
@@ -102,7 +104,8 @@
         <iframe 
           src="https://www.youtube-nocookie.com/embed/D0cnr842wTY?si=epOZK1sm1zW1oUrX"
           title="YouTube video player"
-          frameborder="0"
+          loading="lazy"
+          style="border: 0; border-radius: 20px;"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           referrerpolicy="strict-origin-when-cross-origin"
           allowfullscreen>
@@ -110,14 +113,14 @@
       </div>
       <div class="post-spacing"></div>
       <p class="post-text half center" data-i18n="portfolio.bs.demo-1"></p>
-      <img class="post-image half center" src="images/projects/born_survivor/Born_Survivor_exe_icon.png">
-      <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/BornSurvivor-V0.1.0-PC-Demo" data-i18n="portfolio.bs.demo-btn"></button>
-      <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/BornSurvivor" data-i18n="portfolio.bs.dir-btn"></button>
+      <img class="post-image half center" src="/images/projects/born_survivor/Born_Survivor_exe_icon.png">
+      <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/BornSurvivor-V0.1.0-PC-Demo" data-i18n="portfolio.bs.demo-btn" data-new-tab="true"></button>
+      <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/BornSurvivor" data-i18n="portfolio.bs.dir-btn" data-new-tab="true"></button>
 
       <div class="post-line"></div>
 
       <h2 class="post-heading" id="learnings" data-i18n="portfolio.bs.learnings"></h2>
-      <a href="images/projects/born_survivor/Portfolio_Death_BornSurvivor.jpg" target="_blank"><img class="post-image shadow" src="images/projects/born_survivor/Portfolio_Death_BornSurvivor.jpg"></a>
+      <a href="/images/projects/born_survivor/Portfolio_Death_BornSurvivor.jpg" target="_blank"><img class="post-image shadow" src="/images/projects/born_survivor/Portfolio_Death_BornSurvivor.jpg"></a>
       <p class="post-text" data-i18n-html="portfolio.bs.learnings-1"></p>
       <p class="post-text" data-i18n="portfolio.bs.learnings-2"></p>
       <ol type="1" class="post-text">
@@ -126,7 +129,7 @@
         <li data-i18n-html="portfolio.bs.learnings-li-3"></li>
         <li data-i18n-html="portfolio.bs.learnings-li-4"></li>
       </ol>
-      <img class="post-image half center" src="images/projects/born_survivor/Born_Survivor_demo_cutout.png">
+      <img class="post-image half center" src="/images/projects/born_survivor/Born_Survivor_demo_cutout.png">
       <p class="post-text center"  data-i18n="portfolio.bs.closing"></p>
       <div class="post-spacing"></div>
       <div class="post-line"></div>
@@ -136,45 +139,7 @@
   <section class="post-references-section">
     <div class="post-references-container">
       <p class="post-text center half text-highlight" data-i18n="about.cta-projects"></p>
-      <div class="project-container">
-        <div class="project-container-top">
-          <div class="project-image-container">
-            <img class="project-image" src="images/projects/trofy/Trofy_AppIcon.png">
-          </div>
-          <div class="project-summary">
-            <div class="project-summary-container">
-              <h1 class="project-title-text">Trofy</h1>
-              <div class="project-summary-tags">
-                <div class="stack-tag">C#</div>
-                <div class="stack-tag">Unity</div>
-                <div class="stack-tag">iOS</div>
-                <div class="stack-tag">Android</div>
-              </div>
-              <button class="js-animated-button cta-button project-cta"  data-action="navigate" data-target="/trofy.html" data-i18n="index.learn-more-btn"></button>
-            </div>
-          </div>
-        </div>
-        <p class="project-description-text" data-i18n="projects.trofy-project-description"></p> 
-      </div>
-
-      <div class="project-container">
-        <div class="project-container-top">
-          <div class="project-image-container">
-            <img class="project-image" src="images/projects/flappy_astronaut/FlappyAstronaut_AppIcon.png">
-          </div>
-          <div class="project-summary">
-            <div class="project-summary-container">
-              <h1 class="project-title-text">Flappy Astronaut</h1>
-              <div class="project-summary-tags">
-                <div class="stack-tag">C#</div>
-                <div class="stack-tag">Unity</div>
-              </div>
-              <button class="js-animated-button project-cta cta-button"  data-action="navigate" data-target="/flappy_astronaut.html" data-i18n="index.learn-more-btn"></button>
-            </div>
-          </div>
-        </div>
-        <p class="project-description-text" data-i18n="projects.fa-project-description"></p> 
-      </div>
+      <%= render "shared/projects_list", skip: "born_survivor" %>
     </div>
   </section>
 </main>

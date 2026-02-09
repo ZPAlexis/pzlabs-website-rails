@@ -23,7 +23,6 @@ i18next
 
 
 function updateContent() {
-  console.log("Starting to update content with i18n")
   // Text
   document.querySelectorAll('[data-i18n]').forEach(el => {
     const key = el.getAttribute('data-i18n');
