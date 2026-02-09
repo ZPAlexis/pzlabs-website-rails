@@ -10,6 +10,8 @@ export const AutoText = {
   i1: 0,
 
   init() {
+    const container = Elements.coverBarBlinkHTML;
+    if (!container) return;
     if (i18next.isInitialized) {
       this.runAutoText();
     } else {

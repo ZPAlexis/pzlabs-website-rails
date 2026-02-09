@@ -6,7 +6,7 @@ i18next
   .use(i18nextHttpBackend)
   .use(i18nextBrowserLanguageDetector)
   .init({
-    debug: false,
+    debug: true,
     fallbackLng: 'en',
     supportedLngs: ['en', 'pt'],
     load: 'languageOnly',
