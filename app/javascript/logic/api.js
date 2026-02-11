@@ -1,15 +1,18 @@
-const SERVER_URL = 'https://api.acoelho.dev';
+const SERVER_URL = '';
 
 export async function recordCoinCollected(coinName) {
     const eventData = {
         eventAction: coinName
     };
 
+    const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
+
     try {
         const response = await fetch(`${SERVER_URL}/api/record-event`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
+                'X-CSRF-Token': csrfToken,
             },
             credentials: 'include',
             body: JSON.stringify(eventData),

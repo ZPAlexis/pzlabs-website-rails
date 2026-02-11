@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  namespace :api do
+    post 'record-event', to: 'events#create'
+    get  'metrics/coins', to: 'events#metrics'
+  end
+  
   get "about", to: "pages#about"
   get "projects", to: "pages#projects"
   get "dev", to: "pages#dev"
