@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   namespace :api do
-    post 'record-event', to: 'events#create'
-    get  'metrics/coins', to: 'events#metrics'
+    post "record-event", to: "events#create"
+    get  "metrics/coins", to: "events#metrics"
   end
-  
+
   get "about", to: "pages#about"
   get "projects", to: "pages#projects"
   get "dev", to: "pages#dev"
@@ -22,5 +22,5 @@ Rails.application.routes.draw do
   # get "service-worker" => "rails/pwa#service_worker", as: :pwa_service_worker
 
   # Silence Chrome DevTools requests
-  get '/.well-known/appspecific/com.chrome.devtools.json', to: proc { [200, {}, ['{}']] }
+  get "/.well-known/appspecific/com.chrome.devtools.json", to: proc { [ 200, {}, [ "{}" ] ] }
 end

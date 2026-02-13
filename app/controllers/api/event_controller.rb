@@ -12,43 +12,43 @@ module Api
 
       if event.save
         MetricsCalculator.refresh
-        
-        render json: { 
+
+        render json: {
           message: "Client #{client.id} recorded new event: #{event.coin_name}.",
           clientId: client.id,
-          newRecord: true 
+          newRecord: true
         }
       else
-        render json: { 
+        render json: {
           message: "Client #{client.id} already had event: #{event.coin_name}. No new record created.",
           clientId: client.id,
-          newRecord: false 
+          newRecord: false
         }
       end
     end
 
     def metrics
       data = MetricsCalculator.stats
-      
+
       if data
-        render json: { status: 'success', data: data }
+        render json: { status: "success", data: data }
       else
-        render json: { status: 'error', message: 'Metrics initializing...' }, status: 503
+        render json: { status: "error", message: "Metrics initializing..." }, status: 503
       end
     end
 
     private
 
     def set_client_cookie
-      cookie_name = 'pzlabs_client_id'
-      
+      cookie_name = "pzlabs_client_id"
+
       if cookies[cookie_name].blank?
         new_id = SecureRandom.uuid
         cookies[cookie_name] = {
           value: new_id,
           expires: 1.year.from_now,
           httponly: true,
-          secure: Rails.env.production?, 
+          secure: Rails.env.production?,
           same_site: :none
         }
         @cookie_id = new_id

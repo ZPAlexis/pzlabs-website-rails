@@ -4,8 +4,8 @@ class MetricsCalculator
       totalCoinsCollected: CoinEvent.count,
       totalUsersWithCoins: CoinEvent.distinct.count(:client_id),
       totalUsersWithAllThreeCoins: Client.joins(:coin_events)
-                                         .group('clients.id')
-                                         .having('COUNT(DISTINCT coin_events.coin_name) = 3')
+                                         .group("clients.id")
+                                         .having("COUNT(DISTINCT coin_events.coin_name) = 3")
                                          .length
     }
   rescue => e
@@ -29,7 +29,7 @@ class MetricsCalculator
       totalUsersWithCoins: CoinEvent.distinct.count(:client_id),
       totalUsersWithAllThreeCoins: Client.joins(:coin_events)
                                          .group(:id)
-                                         .having('COUNT(DISTINCT coin_events.coin_name) >= 3')
+                                         .having("COUNT(DISTINCT coin_events.coin_name) >= 3")
                                          .count
                                          .keys
                                          .size
