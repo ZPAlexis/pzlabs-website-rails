@@ -21,10 +21,11 @@ const App = {
       i18next.on('initialized', () => this.startLanguageDependentLogic());
     }
 
-    //fetchAndDisplayMetrics(); //better if moved to refreshApp() but will use more server calls
+    fetchAndDisplayMetrics();
   },
 
   startLanguageDependentLogic() {
+    GameState.load();
     AutoText.init();
     TabManager.init();
     TutorialManager.init();

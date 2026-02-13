@@ -1,12 +1,11 @@
 default: &default
   adapter: postgresql
   encoding: unicode
-  # For local development, this pool size is fine
   pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
 
 development:
   <<: *default
-  database: pzlabs_website_rails_development # Change 'my_app' to your actual app name!
+  database: pzlabs_website_rails_development
 
 test:
   <<: *default

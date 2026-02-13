@@ -1,8 +1,20 @@
 class MetricsCalculator
   def self.stats
+    {
+      totalCoinsCollected: CoinEvent.count,
+      totalUsersWithCoins: CoinEvent.distinct.count(:client_id),
+      totalUsersWithAllThreeCoins: Client.joins(:coin_events)
+                                         .group('clients.id')
+                                         .having('COUNT(DISTINCT coin_events.coin_name) = 3')
+                                         .length
+    }
+  rescue => e
+    Rails.logger.error "Metrics Calculation Error: #{e.message}"
+    nil
+=begin
     Rails.cache.fetch("coin_metrics", expires_in: 12.hours) do
       calculate_stats
-    end
+=end
   end
 
   def self.refresh

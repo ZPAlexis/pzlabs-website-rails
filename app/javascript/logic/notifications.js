@@ -1,4 +1,5 @@
 import { Elements } from 'logic/uiElements';
+import i18next from "i18next"
 
 export const NotificationManager = {
   notificationTime: 10000,
