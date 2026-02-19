@@ -40,21 +40,21 @@ module Api
     private
 
     def set_client_cookie
-      cookie_name = "pzlabs_client_id"
+      cookie_name = 'pzlabs_client_id'
+      existing_id = cookies[cookie_name]
 
-      if cookies[cookie_name].blank?
+      if existing_id.present?
+        @cookie_id = existing_id
+      else
         new_id = SecureRandom.uuid
         cookies[cookie_name] = {
           value: new_id,
           expires: 1.year.from_now,
           httponly: true,
-          secure: Rails.env.production?,
-          same_site: :none
+          secure: Rails.env.production?, 
+          same_site: Rails.env.production? ? :none : :lax
         }
         @cookie_id = new_id
-        Rails.logger.info "Setting new client cookie: #{new_id}"
-      else
-        @cookie_id = cookies[cookie_name]
       end
     end
   end

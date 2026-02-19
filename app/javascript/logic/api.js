@@ -39,7 +39,7 @@ export async function fetchAndDisplayMetrics() {
         const jsonResponse = await response.json();
         if (jsonResponse.status !== 'success' || !jsonResponse.data) return;
 
-        const { totalCoinsCollected, totalUsersWithAllThreeCoins, totalUsersWithCoins } = jsonResponse.data;
+        const { totalCoinsCollected, totalUsersWithCoins, totalUsersWithAllThreeCoins } = jsonResponse.data;
         const formattedCoins = new Intl.NumberFormat().format(totalCoinsCollected);
 
         const coinDisplays = document.querySelectorAll('.api-total-coins');

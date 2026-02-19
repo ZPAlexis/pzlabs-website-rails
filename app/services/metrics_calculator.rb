@@ -18,9 +18,9 @@ class MetricsCalculator
       totalUsersWithAllThreeCoins: Client.joins(:coin_events)
                                          .group(:id)
                                          .having("COUNT(DISTINCT coin_events.coin_name) >= 3")
-                                         .count
-                                         .keys
                                          .size
+                                         .keys
+                                         .count
     }
   end
 end
