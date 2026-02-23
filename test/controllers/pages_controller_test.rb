@@ -2,12 +2,12 @@ require "test_helper"
 
 class PagesControllerTest < ActionDispatch::IntegrationTest
   test "should get index" do
-    get pages_index_url
+    get root_url
     assert_response :success
   end
 
   test "should get about" do
-    get pages_about_url
+    get about_url
     assert_response :success
   end
 
@@ -17,7 +17,7 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get dev" do
-    get pages_dev_url
+    get dev_url
     assert_response :success
   end
 
@@ -27,7 +27,7 @@ class PagesControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should get projects" do
-    get pages_projects_url
+    get projects_url
     assert_response :success
   end
 

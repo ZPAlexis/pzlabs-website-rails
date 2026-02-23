@@ -1,7 +1,7 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  cookie_id: MyString
+  cookie_id: unique_cookie_1
 
 two:
-  cookie_id: MyString
+  cookie_id: unique_cookie_2
