@@ -12,7 +12,22 @@ test:
   database: pzlabs_website_rails_test
 
 production:
-  <<: *default
-  database: pzlabs_website_rails_production
-  username: avfco
-  password: <%= ENV["MY_APP_DATABASE_PASSWORD"] %>
+  primary:
+    <<: *default
+    adapter: postgresql
+    encoding: unicode
+    database: <%= ENV['DATABASE_NAME'] %>
+    username: <%= ENV['DATABASE_USER'] %>
+    password: <%= ENV['DATABASE_PASSWORD'] %>
+    host: <%= ENV.fetch('DATABASE_HOST') { 'localhost' } %>
+    port: 5432
+    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  queue:
+    <<: *default
+    adapter: postgresql
+    encoding: unicode
+    database: <%= ENV['DATABASE_NAME'] %>
+    username: <%= ENV['DATABASE_USER'] %>
+    password: <%= ENV['DATABASE_PASSWORD'] %>
+    host: <%= ENV.fetch('DATABASE_HOST') { 'localhost' } %>
+    port: 5432
