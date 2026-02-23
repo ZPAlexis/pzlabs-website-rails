@@ -40,7 +40,7 @@ module Api
     private
 
     def set_client_cookie
-      cookie_name = 'pzlabs_client_id'
+      cookie_name = "pzlabs_client_id"
       existing_id = cookies[cookie_name]
 
       if existing_id.present?
@@ -51,7 +51,7 @@ module Api
           value: new_id,
           expires: 1.year.from_now,
           httponly: true,
-          secure: Rails.env.production?, 
+          secure: Rails.env.production?,
           same_site: Rails.env.production? ? :none : :lax
         }
         @cookie_id = new_id
