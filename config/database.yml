@@ -10,6 +10,7 @@ development:
 test:
   <<: *default
   database: pzlabs_website_rails_test
+  url: <%= ENV['DATABASE_URL'] %>
 
 production:
   primary:
