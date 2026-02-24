@@ -23,6 +23,11 @@ footer {
   font-size: var(--font-size-xsmall);
   text-align: center;
   line-height: 150%;
+  color: var(--color-text-inactive);
+}
+
+.footer-small-font.bold {
+  font-weight: bold;
 }
 
 .footer-line {
