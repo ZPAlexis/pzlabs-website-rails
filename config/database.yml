@@ -13,22 +13,20 @@ test:
   url: <%= ENV['DATABASE_URL'] %>
 
 production:
-  primary:
-    <<: *default
+  primary: &primary_production
     adapter: postgresql
     encoding: unicode
-    database: <%= ENV['DATABASE_NAME'] %>
-    username: <%= ENV['DATABASE_USER'] %>
-    password: <%= ENV['DATABASE_PASSWORD'] %>
-    host: <%= ENV.fetch('DATABASE_HOST') { 'localhost' } %>
+    database: <%= Rails.application.credentials.dig(:db_production, :database) %>
+    username: <%= Rails.application.credentials.dig(:db_production, :username) %>
+    password: <%= Rails.application.credentials.dig(:db_production, :password) %>
+    host: <%= Rails.application.credentials.dig(:db_production, :host) %>
     port: 5432
-    pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+
   queue:
-    <<: *default
-    adapter: postgresql
-    encoding: unicode
-    database: <%= ENV['DATABASE_NAME'] %>
-    username: <%= ENV['DATABASE_USER'] %>
-    password: <%= ENV['DATABASE_PASSWORD'] %>
-    host: <%= ENV.fetch('DATABASE_HOST') { 'localhost' } %>
-    port: 5432
+    <<: *primary_production
+
+  cable:
+    <<: *primary_production
+
+  cache:
+    <<: *primary_production
