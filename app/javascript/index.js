@@ -20,8 +20,6 @@ const App = {
     } else {
       i18next.on('initialized', () => this.startLanguageDependentLogic());
     }
-
-    fetchAndDisplayMetrics();
   },
 
   startLanguageDependentLogic() {
@@ -34,11 +32,13 @@ const App = {
     
     this.setupEventListeners();
     this.refreshApp();
+
+    fetchAndDisplayMetrics();
   },
 
   refreshApp() {
-    refreshIndex();
     calculateCoinAmount();
+    refreshCoverCoin();
     FillBarGame.refreshUI(GameState.flags.fillBar);
     RPSGame.updateRPSFillBar();
     RPSGame.updateScoreText();
@@ -168,7 +168,7 @@ export function calculateCoinAmount() {
   updateSummaryMenu(coinsCollected, totalCoins);
 }
 
-export function refreshIndex() {
+export function refreshCoverCoin() {
   const isCoverCollected = GameState.flags.cover;
   
   Elements.toggle(Elements.coverBoxImg, 'idle', !isCoverCollected);
@@ -185,21 +185,21 @@ export function refreshIndex() {
 }
 
 export function collectFillBarCoin() {
-    const isNew = GameState.collectFillBarCoin();
-    if (isNew) {
-        calculateCoinAmount(); 
-        Animations.highlightSummaryCoinContainer();
-    } else {
-        Animations.highlightSummaryCoinContainer();
-    }
-    FillBarGame.refreshUI(GameState.flags.fillBar);
+  const isNew = GameState.collectFillBarCoin();
+  if (isNew) {
+    calculateCoinAmount();
+    Animations.highlightSummaryCoinContainer();
+  } else {
+    Animations.highlightSummaryCoinContainer();
+  }
+  FillBarGame.refreshUI(GameState.flags.fillBar);
 }
 
 export function collectRPSCoin() {
     const isNew = GameState.collectRPSCoin();
     if (isNew) {
-        calculateCoinAmount();
-        Animations.highlightSummaryCoinContainer();
+      calculateCoinAmount();
+      Animations.highlightSummaryCoinContainer();
     }
 }
 

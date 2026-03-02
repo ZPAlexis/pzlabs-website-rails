@@ -1,5 +1,6 @@
 import { trackEvent } from 'logic/utils';
 import { NotificationManager } from 'logic/notifications';
+import { recordCoinCollected, fetchAndDisplayMetrics } from 'logic/api';
 
 const defaultCoinFlags = {
   cover: false,
@@ -46,36 +47,42 @@ export const GameState = {
     return false;
   },
 
-  collectCoverCoin() {
-      if (!this.flags.cover) {
-          this.flags.cover = true;
-          this.save();
-          this.checkCompletion();
-          trackEvent("boxCoin", { syncToApi: true });
-          return true;
-      }
-      return false;
+  async collectCoverCoin() {
+    if (!this.flags.cover) {
+      this.flags.cover = true;
+      this.save();
+      this.checkCompletion();
+      await recordCoinCollected("boxCoin");
+      fetchAndDisplayMetrics();
+      trackEvent("boxCoin");
+      return true;
+    }
+    return false;
   },
 
-  collectFillBarCoin() {
-      if (!this.flags.fillBar) {
-          this.flags.fillBar = true;
-          this.save();
-          this.checkCompletion();
-          trackEvent("fillCoin", { syncToApi: true });
-          return true;
-      }
-      return false;
+  async collectFillBarCoin() {
+    if (!this.flags.fillBar) {
+      this.flags.fillBar = true;
+      this.save();
+      this.checkCompletion();
+      await recordCoinCollected("fillCoin");
+      fetchAndDisplayMetrics();
+      trackEvent("fillCoin");
+      return true;
+    }
+    return false;
   },
 
-  collectRPSCoin() {
-      if (!this.flags.rps) {
-          this.flags.rps = true;
-          this.save();
-          this.checkCompletion();
-          trackEvent("rpsCoin", { syncToApi: true });
-          return true;
-      }
-      return false;
+  async collectRPSCoin() {
+    if (!this.flags.rps) {
+      this.flags.rps = true;
+      this.save();
+      this.checkCompletion();
+      await recordCoinCollected("rpsCoin");
+      fetchAndDisplayMetrics();
+      trackEvent("rpsCoin");
+      return true;
+    }
+    return false;
   }
 };
