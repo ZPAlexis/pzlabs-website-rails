@@ -13,7 +13,7 @@
   flex: 1;
   margin: 60px 0;
   max-width: var(--max-width-container);
-  height: clamp(420px, 50vw, 700px);
+  height: clamp(420px, 40vw, 60vh);
 }
 
 .intro-left-container {
