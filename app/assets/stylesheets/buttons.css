@@ -156,10 +156,13 @@
 }
 
 .info-button {
+  display: flex;
   cursor: pointer;
-  height: 30px;
-  width: 30px;
+  height: 26px;
+  width: 26px;
   align-items: center;
+  justify-content: center;
+  text-decoration: none;
   font-family: var(--font-family-base);
   font-size: var(--font-size-small);
   font-weight: bold;
@@ -168,7 +171,6 @@
   border-radius: 9999px;
   border: 2px solid var(--color-border-shadow);
   color: var(--color-border-shadow);
-  padding-top: 2px;
 }
 
 .info-button:hover {

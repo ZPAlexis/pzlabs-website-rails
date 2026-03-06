@@ -242,19 +242,19 @@ function updateSummaryMenu(coinsCollected, totalCoins) {
 function updateAnalyticsText(collected, total) {
   const allCollected = collected === total;
 
-  const ctaKey = allCollected
-  ? 'index.game-analytics-summary-coins-3'
-  : 'index.game-analytics-cta';
+  const ctaContent = allCollected 
+  ? Elements.analyticsCTACoins.dataset.ctaAll
+  : Elements.analyticsCTACoins.dataset.ctaDefault;
   
-  const summaryKey = `index.game-analytics-summary-coins-${collected}`;
+  const summaryContent = Elements.analyticsSummaryCoins.dataset[`summary-${collected}`];
 
-  const percentageKey = allCollected
-  ? 'index.game-analytics-summary-percentage-all'
-  : 'index.game-analytics-summary-percentage-none';
+  const percentageContent = allCollected 
+  ? Elements.analyticsSummaryPercentage.dataset.percentAll 
+  : Elements.analyticsSummaryPercentage.dataset.percentNone;
 
-  Elements.analyticsCTACoins.innerHTML = i18next.t(ctaKey);
-  Elements.analyticsSummaryCoins.innerHTML = i18next.t(summaryKey);
-  Elements.analyticsSummaryPercentage.innerHTML = i18next.t(percentageKey);
+  Elements.analyticsCTACoins.innerHTML = ctaContent;
+  Elements.analyticsSummaryCoins.innerHTML = summaryContent;
+  Elements.analyticsSummaryPercentage.innerHTML = percentageContent;
 }
 
 App.init();

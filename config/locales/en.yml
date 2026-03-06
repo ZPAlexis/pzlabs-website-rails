@@ -293,5 +293,5 @@ en:
       learnings_li_5_html: "<span class='text-highlight'>Coding with AI</span><p class='post-text'>This was the first time I tested the use of Artificial Intelligence chats for code review and it was an eye-opening experience. These tools are great for quickly building complex code, but they quickly become a detriment to the retention of information and re-application in future similar situations. I've learned that it's crucial to know how to discern when the application of the tool can truly be beneficial. There’s a full statement on my usage of AI on our <a class='link' href='/about.html#ai'>about page.</a></p>"
       closing: "Thank you for checking out this project!"
   notifications:
-    notification_title_1: "Congratulations! 🥳"
-    notification_description_1: "You've found all coins and completed game 🤩"
+    notification_title_1: "Congratulations! 🎉"
+    notification_description_1: "You've found all coins and completed game 🥳"

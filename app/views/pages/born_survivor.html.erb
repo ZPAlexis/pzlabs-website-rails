@@ -9,63 +9,67 @@
       <h1 class="post-heading title center">Born Survivor</h1>
       <div class="post-intro-wrapper">
         <div class="post-list-container center gap">
-          <p class="post-text" data-i18n-html="portfolio.bs.category"></p>
-          <p class="post-text" data-i18n-html="portfolio.bs.stack"></p>
-          <p class="post-text" data-i18n-html="portfolio.bs.inspiration"></p>
+          <p class="post-text"><%= t('portfolio.bs.category_html') %></p>
+          <p class="post-text"><%= t('portfolio.bs.stack_html') %></p>
+          <p class="post-text"><%= t('portfolio.bs.inspiration_html') %></p>
         </div>
         <div class="post-spacing"></div>
         <div class="post-list-container">
-          <h3 class="post-text text-highlight" data-i18n="portfolio.bs.index"></h3>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#objective" data-i18n="portfolio.bs.objective"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#concepts" data-i18n="portfolio.bs.concepts"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#stack" data-i18n="portfolio.bs.tech"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#logic" data-i18n="portfolio.bs.logic"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#design" data-i18n="portfolio.bs.design"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#demo" data-i18n="portfolio.bs.demo"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#learnings" data-i18n="portfolio.bs.learnings"></a></p>
+          <h3 class="post-text text-highlight"><%= t('portfolio.bs.index') %></h3>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#objective"><%= t('portfolio.bs.objective') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#concepts"><%= t('portfolio.bs.concepts') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#stack"><%= t('portfolio.bs.tech') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#logic"><%= t('portfolio.bs.logic') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#design"><%= t('portfolio.bs.design') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#demo"><%= t('portfolio.bs.demo') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#learnings"><%= t('portfolio.bs.learnings') %></a></p>
         </div>
       </div>
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="objective" data-i18n="portfolio.bs.objective"></h2>
-      <p class="post-text" data-i18n="portfolio.bs.objective-1"></p>
+      <h2 class="post-heading" id="objective"><%= t('portfolio.bs.objective') %></h2>
+      <p class="post-text"><%= t('portfolio.bs.objective_1') %></p>
       <a href="/images/projects/born_survivor/Portfolio_Cover_StartScreen_BornSurvivor.jpg" target="_blank"><img class="post-image shadow" src="/images/projects/born_survivor/Portfolio_Cover_StartScreen_BornSurvivor.jpg"></a>
-      <p class="post-text" data-i18n="portfolio.bs.objective-2"></p>
+      <p class="post-text"><%= t('portfolio.bs.objective_2') %></p>
       <a href="/images/projects/born_survivor/Portfolio_Choices_BornSurvivor_zoom.png" target="_blank"><img class="post-image shadow center" src="/images/projects/born_survivor/Portfolio_Choices_BornSurvivor_zoom.png"></a>
       
 
       <div class="post-line"></div>
       
-      <h2 class="post-heading" id="concepts" data-i18n="portfolio.bs.concepts"></h2>
-      <a data-i18n-href="portfolio.bs.images.concepts" target="_blank"><img class="post-image shadow" data-i18n-img="portfolio.bs.images.concepts"></a>
-      <p class="post-text" data-i18n="portfolio.bs.concepts-1"></p>
-      <p class="post-text" data-i18n="portfolio.bs.concepts-2"></p>
-      <p class="post-text" data-i18n="portfolio.bs.concepts-3"></p>
-      <p class="post-text" data-i18n="portfolio.bs.concepts-4"></p>
-      <p class="post-text" data-i18n="portfolio.bs.concepts-5"></p>
+      <h2 class="post-heading" id="concepts"><%= t('portfolio.bs.concepts') %></h2>
+      <%= link_to t("portfolio.bs.images.concepts"), target: "_blank" do %>
+        <%= image_tag t("portfolio.bs.images.concepts"), class: "post-image shadow" %>
+      <% end %>
+      <p class="post-text"><%= t('portfolio.bs.concepts_1') %></p>
+      <p class="post-text"><%= t('portfolio.bs.concepts_2') %></p>
+      <p class="post-text"><%= t('portfolio.bs.concepts_3') %></p>
+      <p class="post-text"><%= t('portfolio.bs.concepts_4') %></p>
+      <p class="post-text"><%= t('portfolio.bs.concepts_5') %></p>
       <a href="/images/projects/born_survivor/Portfolio_Choices_BornSurvivor.jpg" target="_blank"><img class="post-image shadow" src="/images/projects/born_survivor/Portfolio_Choices_BornSurvivor.jpg"></a>
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="stack" data-i18n="portfolio.bs.tech">Tech Stack</h2>
+      <h2 class="post-heading" id="stack"><%= t('portfolio.bs.tech') %></h2>
       <a class="post-logo-link" href="https://unity.com/" target="_blank"><img class="post-logo" src="/images/unity_logo_white.png"></a>
-      <p class="post-text" data-i18n-html="portfolio.bs.tech-1"></p>
+      <p class="post-text"><%= t('portfolio.bs.tech_1_html') %></p>
       <a class="post-logo-link" href="https://www.w3schools.com/cs/index.php" target="_blank"><img class="post-logo" src="/images/csharp_logo_white.png"></a>
-      <p class="post-text" data-i18n="portfolio.bs.tech-2"></p>
+      <p class="post-text"><%= t('portfolio.bs.tech_2') %></p>
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="logic" data-i18n="portfolio.bs.logic"></h2>
-      <a data-i18n-href="portfolio.bs.images.logic" target="_blank"><img class="post-image shadow" data-i18n-img="portfolio.bs.images.logic"></a>
-      <p class="post-text" data-i18n="portfolio.bs.logic-1"></p>
-      <p class="post-text" data-i18n-html="portfolio.bs.logic-2"></p>
+      <h2 class="post-heading" id="logic"><%= t('portfolio.bs.logic') %></h2>
+      <%= link_to t("portfolio.bs.images.logic"), target: "_blank" do %>
+        <%= image_tag t("portfolio.bs.images.logic"), class: "post-image shadow" %>
+      <% end %>
+      <p class="post-text"><%= t('portfolio.bs.logic_1') %></p>
+      <p class="post-text"><%= t('portfolio.bs.logic_2_html') %></p>
       <a href="/images/projects/born_survivor/Portfolio_BornSurvivor_FolderStructure.png" target="_blank"><img class="post-image half center shadow" src="/images/projects/born_survivor/Portfolio_BornSurvivor_FolderStructure.png"></a>
-      <p class="post-text" data-i18n="portfolio.bs.logic-3"></p>
+      <p class="post-text"><%= t('portfolio.bs.logic_3') %></p>
       <pre><code class="language-javascript">//Increase Player Damage Percentage Snippet
 
 target.GetComponent<PlayerController>().data.attackDMG *= (1 + (amount/100));</code></pre>
-      <p class="post-text" data-i18n="portfolio.bs.logic-4"></p>
+      <p class="post-text"><%= t('portfolio.bs.logic_4') %></p>
       <pre><code class="language-javascript">//Powerup Options Generation Snippet
 
 public void GeneratePowerUpOptions() {
@@ -89,17 +93,19 @@ public void GeneratePowerUpOptions() {
   list.RemoveAt(rand3);
   InstantiatePowerUp(value3, choice3, cardPrefab, gameObject.transform);
 }</code></pre>
-      <p class="post-text" data-i18n-html="portfolio.bs.logic-5"></p>
+      <p class="post-text"><%= t('portfolio.bs.logic_5_html') %></p>
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="design" data-i18n="portfolio.bs.design"></h2>
-      <a data-i18n-href="portfolio.bs.images.design" target="_blank"><img class="post-image shadow" data-i18n-img="portfolio.bs.images.design"></a>
-      <p class="post-text" data-i18n="portfolio.bs.design-1"></p>
+      <h2 class="post-heading" id="design"><%= t('portfolio.bs.design') %></h2>
+      <%= link_to t("portfolio.bs.images.design"), target: "_blank" do %>
+        <%= image_tag t("portfolio.bs.images.design"), class: "post-image shadow" %>
+      <% end %>
+      <p class="post-text"><%= t('portfolio.bs.design_1') %></p>
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="demo" data-i18n="portfolio.bs.demo"></h2>
+      <h2 class="post-heading" id="demo"><%= t('portfolio.bs.demo') %></h2>
       <div class="post-video">
         <iframe 
           src="https://www.youtube-nocookie.com/embed/D0cnr842wTY?si=epOZK1sm1zW1oUrX"
@@ -112,25 +118,25 @@ public void GeneratePowerUpOptions() {
         </iframe>
       </div>
       <div class="post-spacing"></div>
-      <p class="post-text half center" data-i18n="portfolio.bs.demo-1"></p>
+      <p class="post-text half center"><%= t('portfolio.bs.demo_1') %></p>
       <img class="post-image half center" src="/images/projects/born_survivor/Born_Survivor_exe_icon.png">
-      <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/BornSurvivor-V0.1.0-PC-Demo" data-i18n="portfolio.bs.demo-btn" data-new-tab="true"></button>
-      <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/BornSurvivor" data-i18n="portfolio.bs.dir-btn" data-new-tab="true"></button>
+      <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/BornSurvivor-V0.1.0-PC-Demo" data-new-tab="true"><%= t('portfolio.bs.demo_btn') %></button>
+      <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/BornSurvivor" data-new-tab="true"><%= t('portfolio.bs.dir_btn') %></button>
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="learnings" data-i18n="portfolio.bs.learnings"></h2>
+      <h2 class="post-heading" id="learnings"><%= t('portfolio.bs.learnings') %></h2>
       <a href="/images/projects/born_survivor/Portfolio_Death_BornSurvivor.jpg" target="_blank"><img class="post-image shadow" src="/images/projects/born_survivor/Portfolio_Death_BornSurvivor.jpg"></a>
-      <p class="post-text" data-i18n-html="portfolio.bs.learnings-1"></p>
-      <p class="post-text" data-i18n="portfolio.bs.learnings-2"></p>
+      <p class="post-text"><%= t('portfolio.bs.learnings_1_html') %></p>
+      <p class="post-text"><%= t('portfolio.bs.learnings_2') %></p>
       <ol type="1" class="post-text">
-        <li data-i18n-html="portfolio.bs.learnings-li-1"></li>
-        <li data-i18n-html="portfolio.bs.learnings-li-2"></li>
-        <li data-i18n-html="portfolio.bs.learnings-li-3"></li>
-        <li data-i18n-html="portfolio.bs.learnings-li-4"></li>
+        <li><%= t('portfolio.bs.learnings_li_1_html') %></li>
+        <li><%= t('portfolio.bs.learnings_li_2_html') %></li>
+        <li><%= t('portfolio.bs.learnings_li_3_html') %></li>
+        <li><%= t('portfolio.bs.learnings_li_4_html') %></li>
       </ol>
       <img class="post-image half center" src="/images/projects/born_survivor/Born_Survivor_demo_cutout.png">
-      <p class="post-text center"  data-i18n="portfolio.bs.closing"></p>
+      <p class="post-text center"><%= t('portfolio.bs.closing') %></p>
       <div class="post-spacing"></div>
       <div class="post-line"></div>
     </div>
@@ -138,7 +144,7 @@ public void GeneratePowerUpOptions() {
 
   <section class="post-references-section">
     <div class="post-references-container">
-      <p class="post-text center half text-highlight" data-i18n="about.cta-projects"></p>
+      <p class="post-text center half text-highlight"><%= t('about.cta_projects') %></p>
       <%= render "shared/projects_list", skip: "born_survivor" %>
     </div>
   </section>

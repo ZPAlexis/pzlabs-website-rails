@@ -2,70 +2,70 @@
   <section class="about-hero-section">
     <div class="about-hero-container">
       <div class="about-hero-image-container">
-        <img class="about-hero-image" src="images/zero.png">
+        <img class="about-hero-image" src="/images/zero.png">
       </div>
       <div class="about-hero-bio-container">
         <h1 class="about-bio-name">Alexis Coelho</h1>
         <div class="about-bio-title-container">
-          <div class="about-bio-title-icon"><img class="icon" src="icons/icon_clock_gold.png"></div>
-          <div class="about-bio-title-text" data-i18n="about.bio-availability"></div>
+          <div class="about-bio-title-icon"><img class="icon" src="/icons/icon_clock_gold.png"></div>
+          <div class="about-bio-title-text"><%= t('about.bio_availability') %></div>
         </div>
         <div class="about-bio-title-container">
-          <div class="about-bio-title-icon"><img class="icon" src="icons/icon_info_gold.png"></div>
-          <div class="about-bio-title-text" data-i18n="about.bio-role"></div>
+          <div class="about-bio-title-icon"><img class="icon" src="/icons/icon_info_gold.png"></div>
+          <div class="about-bio-title-text"><%= t('about.bio_role') %></div>
         </div>
         <div class="about-bio-title-container">
-          <div class="about-bio-title-icon"><img class="icon" src="icons/icon_home_gold.png"></div>
-          <div class="about-bio-title-text" data-i18n="about.bio-location"></div>
+          <div class="about-bio-title-icon"><img class="icon" src="/icons/icon_home_gold.png"></div>
+          <div class="about-bio-title-text"><%= t('about.bio_location') %></div>
         </div>
       </div>
     </div>
     <div class="about-hero-socials-container">
       <button class="js-animated-button cta-button nav-button social" data-action="navigate" data-target="https://github.com/zpalexis" data-new-tab="true" data-tracking="gitHubClick">
-        <img class="button-icon" src="icons/icon_github_dark.png">GitHub
+        <img class="button-icon" src="/icons/icon_github_dark.png">GitHub
       </button>
       <button class="js-animated-button cta-button nav-button social" data-action="navigate" data-target="https://www.linkedin.com/in/coelhoalexis/" data-new-tab="true" data-tracking="linkedInClick">
-        <img class="button-icon" src="icons/icon_linkedin_dark.png">LinkedIn
+        <img class="button-icon" src="/icons/icon_linkedin_dark.png">LinkedIn
       </button>
       <button class="js-animated-button cta-button nav-button social" data-action="navigate" data-target="mailto:alevic9991@gmail.com" data-new-tab="true">
-        <img class="button-icon" src="icons/icon_email_dark.png">Email
+        <img class="button-icon" src="/icons/icon_email_dark.png">Email
       </button>
       <button class="js-animated-button cta-button nav-button social" data-action="navigate" data-target="https://wa.me/+5511995873453" data-new-tab="true">
-        <img class="button-icon" src="icons/icon_wa_dark.png">WhatsApp
+        <img class="button-icon" src="/icons/icon_wa_dark.png">WhatsApp
       </button>
     </div>
   </section>
 
   <section class="about-text-section">
     <div class="about-text-container">
-      <p class="about-text-description" data-i18n="about.intro-1"></p>
-      <p class="about-text-description" data-i18n-html="about.intro-2"></p>
-      <p class="about-text-description" data-i18n="about.intro-3"></p>
+      <p class="about-text-description"><%= t('about.intro_1') %></p>
+      <p class="about-text-description"><%= t('about.intro_2_html') %></p>
+      <p class="about-text-description"><%= t('about.intro_3') %></p>
     </div>
   </section>
 
   <section class="about-text-section">
     <div class="about-text-container">
-      <h1 class="about-text-title" data-i18n="about.services-title"></h1>
-      <p class="about-text-description" data-i18n="about.intro-4"></p>
+      <h1 class="about-text-title"><%= t('about.services_title') %></h1>
+      <p class="about-text-description"><%= t('about.intro_4') %></p>
       <div class="about-skills-container">
         <div class="about-skills-cards-container">
           <div class="about-skills-card extra-gap">
-            <div class="about-skills-card-icon"><img class="icon" src="icons/icon_automation_dark.png"></div>
-            <div class="about-skills-card-title" data-i18n="about.intro-services-title-1"></div>
-            <div class="about-skills-card-description" data-i18n="about.intro-services-description-1"></div>
+            <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_automation_dark.png"></div>
+            <div class="about-skills-card-title"><%= t('about.intro_services_title_1') %></div>
+            <div class="about-skills-card-description"><%= t('about.intro_services_description_1') %></div>
           </div>
 
           <div class="about-skills-card extra-gap">
-            <div class="about-skills-card-icon"><img class="icon" src="icons/icon_gamification_dark.png"></div>
-            <div class="about-skills-card-title" data-i18n="about.intro-services-title-2"></div>
-            <div class="about-skills-card-description" data-i18n="about.intro-services-description-2"></div>
+            <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_gamification_dark.png"></div>
+            <div class="about-skills-card-title"><%= t('about.intro_services_title_2') %></div>
+            <div class="about-skills-card-description"><%= t('about.intro_services_description_2') %></div>
           </div>
 
           <div class="about-skills-card extra-gap">
-            <div class="about-skills-card-icon"><img class="icon" src="icons/icon_website_dark.png"></div>
-            <div class="about-skills-card-title" data-i18n="about.intro-services-title-3"></div>
-            <div class="about-skills-card-description" data-i18n="about.intro-services-description-3"></div>
+            <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_website_dark.png"></div>
+            <div class="about-skills-card-title"><%= t('about.intro_services_title_3') %></div>
+            <div class="about-skills-card-description"><%= t('about.intro_services_description_3') %></div>
           </div>
         </div>
       </div>
@@ -74,132 +74,132 @@
 
   <section class="about-text-section">
     <div class="about-text-container">
-      <h1 class="about-text-title" data-i18n="about.skills-title"></h1>
-      <p class="about-text-description" data-i18n="about.intro-5"></p>
+      <h1 class="about-text-title"><%= t('about.skills_title') %></h1>
+      <p class="about-text-description"=><%= t('about.intro_5') %></p>
       <div class="about-skills-container">
         <div class="about-skills-cards-container">
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_js_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_js_dark.png"></div>
               <div class="about-skills-card-title skills">JavaScript</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_html_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_html_dark.png"></div>
               <div class="about-skills-card-title skills">HTML5</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_css_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_css_dark.png"></div>
               <div class="about-skills-card-title skills">CSS3</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_csharp_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_csharp_dark.png"></div>
               <div class="about-skills-card-title skills">C#</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_api_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_api_dark.png"></div>
               <div class="about-skills-card-title skills">APIs</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_ai_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_ai_dark.png"></div>
               <div class="about-skills-card-title skills">AI Frameworks</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_node_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_node_dark.png"></div>
               <div class="about-skills-card-title skills">Node.js</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_n8n_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_n8n_dark.png"></div>
               <div class="about-skills-card-title skills">N8N</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_zapier_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_zapier_dark.png"></div>
               <div class="about-skills-card-title skills">Zapier</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_vps_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_vps_dark.png"></div>
               <div class="about-skills-card-title skills">Cloud VPS</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_aws_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_aws_dark.png"></div>
               <div class="about-skills-card-title skills">AWS</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_uiux_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_uiux_dark.png"></div>
               <div class="about-skills-card-title skills">UI/UX Design</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_prototype_dark.png"></div>
-              <div class="about-skills-card-title skills" data-i18n="about.intro-prototyping"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_prototype_dark.png"></div>
+              <div class="about-skills-card-title skills"><%= t('about.intro_prototyping') %></div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_figma_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_figma_dark.png"></div>
               <div class="about-skills-card-title skills">Figma</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_unity_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_unity_dark.png"></div>
               <div class="about-skills-card-title skills">Unity</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_kpis_dark.png"></div>
-              <div class="about-skills-card-title skills" data-i18n="about.intro-kpis"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_kpis_dark.png"></div>
+              <div class="about-skills-card-title skills"><%= t('about.intro_kpis') %></div>
             </div>
           </div> 
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_funnel_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_funnel_dark.png"></div>
               <div class="about-skills-card-title skills">CRM</div>
             </div>
           </div>
 
           <div class="about-skills-card small-card">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon"><img class="icon" src="icons/icon_salesforce_dark.png"></div>
+              <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_salesforce_dark.png"></div>
               <div class="about-skills-card-title skills">Salesforce</div>
             </div>
           </div>  
@@ -210,72 +210,72 @@
 
   <section class="about-text-section">
     <div class="about-text-container">
-      <h1 class="about-text-title" data-i18n="about.background-title"></h1>
-      <p class="about-text-description" data-i18n="about.background-1"></p>
-      <p class="about-text-description" data-i18n="about.background-2"></p>
-      <p class="about-text-description" data-i18n="about.background-3"></p>
-      <p class="about-text-description" data-i18n="about.background-4"></p>
-      <p class="about-text-description" data-i18n-html="about.background-5"></p>
-      <p class="about-text-description" data-i18n="about.background-6"></p>
-      <p class="about-text-description" data-i18n="about.background-7"></p>
+      <h1 class="about-text-title"><%= t('about.background_title') %></h1>
+      <p class="about-text-description"><%= t('about.background_1') %></p>
+      <p class="about-text-description"><%= t('about.background_2') %></p>
+      <p class="about-text-description"><%= t('about.background_3') %></p>
+      <p class="about-text-description"><%= t('about.background_4') %></p>
+      <p class="about-text-description"><%= t('about.background_5_html') %></p>
+      <p class="about-text-description"><%= t('about.background_6') %></p>
+      <p class="about-text-description"><%= t('about.background_7') %></p>
       <div class="about-skills-card about-quote">
         <div class="about-skills-card-title-wrapper">
-          <div class="about-skills-card-icon"><img class="icon" src="icons/icon_quote_dark.png"></div>
-          <div class="about-skills-card-title about-quote" data-i18n="about.background-quote-title"></div>
+          <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_quote_dark.png"></div>
+          <div class="about-skills-card-title about-quote"><%= t('about.background_quote_title') %></div>
         </div>
-        <div class="about-skills-card-description about-quote" data-i18n="about.background-quote"></div>
+        <div class="about-skills-card-description about-quote"><%= t('about.background_quote') %></div>
       </div>
     </div> 
   </section>
 
   <section class="about-text-section">
     <div class="about-text-container">
-      <h1 class="about-text-title" data-i18n="about.interests-title"></h1>
-      <p class="about-text-description" data-i18n="about.interests-1"></p>
-      <p class="about-text-description" data-i18n="about.interests-2"></p>
-      <p class="about-text-description" data-i18n="about.interests-3"></p>
-      <p class="about-text-description" data-i18n="about.interests-4"></p>
-      <p class="about-text-description" data-i18n="about.interests-5"></p>
+      <h1 class="about-text-title"><%= t('about.interests_title') %></h1>
+      <p class="about-text-description"><%= t('about.interests_1') %></p>
+      <p class="about-text-description"><%= t('about.interests_2') %></p>
+      <p class="about-text-description"><%= t('about.interests_3') %></p>
+      <p class="about-text-description"><%= t('about.interests_4') %></p>
+      <p class="about-text-description"><%= t('about.interests_5') %></p>
       
       <div class="about-skills-cards-container">
         <div class="about-skills-card">
           <div class="about-skills-card-title-wrapper">
-            <div class="about-skills-card-icon"><img class="icon" src="icons/icon_tech_dark.png"></div>
-            <div class="about-skills-card-title" data-i18n="about.interests-technology-title"></div>
+            <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_tech_dark.png"></div>
+            <div class="about-skills-card-title"><%= t('about.interests_technology_title') %></div>
           </div>
-          <div class="about-skills-card-description" data-i18n="about.interests-technology"></div>
+          <div class="about-skills-card-description"><%= t('about.interests_technology') %></div>
         </div>
 
         <div class="about-skills-card">
           <div class="about-skills-card-title-wrapper">
-            <div class="about-skills-card-icon"><img class="icon" src="icons/icon_gaming_dark.png"></div>
-            <div class="about-skills-card-title" data-i18n="about.interests-gaming-title"></div>
+            <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_gaming_dark.png"></div>
+            <div class="about-skills-card-title"><%= t('about.interests_gaming_title') %></div>
           </div>
-          <div class="about-skills-card-description" data-i18n="about.interests-gaming"></div>
+          <div class="about-skills-card-description"><%= t('about.interests_gaming') %></div>
         </div>
 
         <div class="about-skills-card">
           <div class="about-skills-card-title-wrapper">
-            <div class="about-skills-card-icon"><img class="icon" src="icons/icon_fantasy_dark.png"></div>
-            <div class="about-skills-card-title" data-i18n="about.interests-fantasy-title"></div>
+            <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_fantasy_dark.png"></div>
+            <div class="about-skills-card-title"><%= t('about.interests_fantasy_title') %></div>
           </div>
-          <div class="about-skills-card-description" data-i18n="about.interests-fantasy"></div>
+          <div class="about-skills-card-description"><%= t('about.interests_fantasy') %></div>
         </div>
 
         <div class="about-skills-card">
           <div class="about-skills-card-title-wrapper">
-            <div class="about-skills-card-icon"><img class="icon" src="icons/icon_3dp_dark.png"></div>
-            <div class="about-skills-card-title" data-i18n="about.interests-3dp-title"></div>
+            <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_3dp_dark.png"></div>
+            <div class="about-skills-card-title"><%= t('about.interests_3dp_title') %></div>
           </div>
-          <div class="about-skills-card-description" data-i18n="about.interests-3dp"></div>
+          <div class="about-skills-card-description"><%= t('about.interests_3dp') %></div>
         </div>
 
         <div class="about-skills-card">
           <div class="about-skills-card-title-wrapper">
-            <div class="about-skills-card-icon"><img class="icon" src="icons/icon_fitness_dark.png"></div>
-            <div class="about-skills-card-title" data-i18n="about.interests-fitness-title"></div>
+            <div class="about-skills-card-icon"><img class="icon" src="/icons/icon_fitness_dark.png"></div>
+            <div class="about-skills-card-title"><%= t('about.interests_fitness_title') %></div>
           </div>
-          <div class="about-skills-card-description" data-i18n="about.interests-fitness"></div>
+          <div class="about-skills-card-description"><%= t('about.interests_fitness') %></div>
         </div>
       </div>
     </div> 
@@ -283,39 +283,39 @@
 
   <section class="about-text-section">
     <div class="about-text-container">
-      <h1 class="about-text-title" id="ai" data-i18n="about.ai-title"></h1>
-      <p class="about-text-description" data-i18n="about.ai-1"></p>
-      <p class="about-text-description" data-i18n="about.ai-2"></p>
-      <p class="about-text-description" data-i18n="about.ai-3"></p>
-      <p class="about-text-description" data-i18n="about.ai-4"></p>
+      <h1 class="about-text-title" id="ai"><%= t('about.ai_title') %></h1>
+      <p class="about-text-description"><%= t('about.ai_1') %></p>
+      <p class="about-text-description"><%= t('about.ai_2') %></p>
+      <p class="about-text-description"><%= t('about.ai_3') %></p>
+      <p class="about-text-description"><%= t('about.ai_4') %></p>
     </div> 
   </section>
 
   <section class="about-text-section">
     <div class="about-text-container">
-      <button class="js-animated-button cta-button nav-button social" data-action="navigate" data-target="/projects.html" data-i18n="about.projects-btn"></button>
+      <button class="js-animated-button cta-button nav-button social" data-action="navigate" data-target="/projects.html"><%= t('about.projects_btn') %></button>
     </div> 
   </section>
 
   <section class="about-text-section">
     <div class="about-text-container">
-      <p class="about-text-description" data-i18n="about.closing"></p>
+      <p class="about-text-description"><%= t('about.closing') %></p>
     </div> 
   </section>
 
   <section class="about-socials-section">
     <div class="about-hero-socials-container">
       <button class="js-animated-button cta-button nav-button" data-action="navigate" data-target="https://github.com/zpalexis" data-new-tab="true" data-tracking="gitHubClick">
-        <img class="button-icon" src="icons/icon_github_dark.png">
+        <img class="button-icon" src="/icons/icon_github_dark.png">
       </button>
       <button class="js-animated-button cta-button nav-button" data-action="navigate" data-target="https://www.linkedin.com/in/coelhoalexis/" data-new-tab="true" data-tracking="linkedInClick">
-        <img class="button-icon" src="icons/icon_linkedin_dark.png">
+        <img class="button-icon" src="/icons/icon_linkedin_dark.png">
       </button>
       <button class="js-animated-button cta-button nav-button" data-action="navigate" data-target="mailto:alevic9991@gmail.com" data-new-tab="true">
-        <img class="button-icon" src="icons/icon_email_dark.png">
+        <img class="button-icon" src="/icons/icon_email_dark.png">
       </button>
       <button class="js-animated-button cta-button nav-button" data-action="navigate" data-target="https://wa.me/+5511995873453" data-new-tab="true">
-        <img class="button-icon" src="icons/icon_wa_dark.png">
+        <img class="button-icon" src="/icons/icon_wa_dark.png">
       </button>
     </div>
   </section>

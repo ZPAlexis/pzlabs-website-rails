@@ -7,7 +7,7 @@
         <img class="mobile-nav-icon" src="/icons/icon_mobile_nav_home_light.png"> 
         <img class="js-nav-toggle mobile-nav-icon <%= 'inactive' unless current_page?(root_path) %>" src="/icons/icon_mobile_nav_home_dark.png"> 
       </div>
-      <div class="js-nav-toggle mobile-nav-text <%= 'inactive' unless current_page?(root_path) %>" data-i18n="mobile-nav.home-nav">Home</div>
+      <div class="js-nav-toggle mobile-nav-text <%= 'inactive' unless current_page?(root_path) %>"><%= t('mobile_nav.home_nav') %></div>
     </button>
 
     <%# --- Projects Button --- %>
@@ -18,7 +18,7 @@
         <img class="mobile-nav-icon" src="/icons/icon_mobile_nav_app_light.png">
         <img class="js-nav-toggle mobile-nav-icon <%= 'inactive' unless is_projects %>" src="/icons/icon_mobile_nav_app_dark.png">
       </div>
-      <div class="js-nav-toggle mobile-nav-text <%= 'inactive' unless is_projects %>" data-i18n="mobile-nav.projects-nav">Projects</div>
+      <div class="js-nav-toggle mobile-nav-text <%= 'inactive' unless is_projects %>"><%= t('mobile_nav.projects_nav') %></div>
     </button>
 
     <%# --- About Button --- %>
@@ -27,7 +27,7 @@
         <img class="mobile-nav-icon" src="/icons/icon_mobile_nav_about_light.png"> 
         <img class="js-nav-toggle mobile-nav-icon <%= 'inactive' unless current_page?(about_path) %>" src="/icons/icon_mobile_nav_about_dark.png">
       </div>
-      <div class="js-nav-toggle mobile-nav-text <%= 'inactive' unless current_page?(about_path) %>" data-i18n="mobile-nav.about-nav">About</div>
+      <div class="js-nav-toggle mobile-nav-text <%= 'inactive' unless current_page?(about_path) %>"><%= t('mobile_nav.about_nav') %></div>
     </button>
 
   </div>
