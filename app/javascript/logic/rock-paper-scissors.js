@@ -96,7 +96,7 @@ export const RPSGame = {
 
     const playerHtml = `<img src="icons/${player}-emoji.png" class="move-icon">`;
     const aiHtml = `<img src="icons/${ai}-emoji.png" class="move-icon">`;
-    const resultHtml = `<p class="result-highlight">${i18next.t(`index.rps-${result}`)}</p>`;
+    const resultHtml = `<p class="result-highlight">${Elements.jsResult.dataset[`${result}`]}</p>`;
 
     Animations.fadeUpdate(Elements.jsPlayerMove, playerHtml);
     await Animations.fadeUpdate(Elements.jsAiMove, aiHtml);
@@ -123,11 +123,11 @@ export const RPSGame = {
 
     this.playCoinSpin();
 
-    this.updateBarText(i18next.t('index.coin-collected-text'));
+    this.updateBarText(Elements.rpsBarText.dataset.collectedText);
   },
 
   handleProgressState(wins) {
-    const text = wins === 0 ? i18next.t('index.rps-win-3-times') : `${wins}/3`;
+    const text = wins === 0 ? Elements.rpsBarText.dataset.winGoalText : `${wins}/3`;
     this.updateBarText(text);
     
     if (wins === 0) {
@@ -165,7 +165,7 @@ export const RPSGame = {
 
   resetResult() {
     if (Elements.jsResult) {
-      Elements.jsResult.innerHTML = i18next.t('index.rps-make-a-move');
+      Elements.jsResult.innerHTML = Elements.jsResult.dataset.cta;
     }
   },
 

@@ -82,6 +82,7 @@ export const Elements = {
 
     // --- Notifications ---
     notificationBox: document.querySelector('.js-notification-container'),
+    notificationTextContainer: document.querySelector('.js-notification-text-container'),
     notificationTitle: document.querySelector('.js-notification-title'),
     notificationDescription: document.querySelector('.js-notification-description'),
     notificationCloseBtn: document.querySelector('.js-notification-close-btn'),

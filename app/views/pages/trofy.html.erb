@@ -9,86 +9,94 @@
       <h1 class="post-heading title center">Trofy</h1>
       <div class="post-intro-wrapper">
         <div class="post-list-container center gap">
-          <p class="post-text" data-i18n-html="portfolio.trofy.category"></p>
-          <p class="post-text" data-i18n-html="portfolio.trofy.stack"></p>
-          <p class="post-text" data-i18n-html="portfolio.trofy.inspiration"></p>
+          <p class="post-text"><%= t('portfolio.trofy.category_html') %></p>
+          <p class="post-text"><%= t('portfolio.trofy.stack_html') %></p>
+          <p class="post-text"><%= t('portfolio.trofy.inspiration_html') %></p>
         </div>
         <div class="post-spacing"></div>
         <div class="post-list-container">
-          <h3 class="post-text text-highlight" data-i18n="portfolio.trofy.index"></h3>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#objective" data-i18n="portfolio.trofy.objective"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#concepts" data-i18n="portfolio.trofy.concepts"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#user" data-i18n="portfolio.trofy.user"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#stack" data-i18n="portfolio.trofy.tech"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#logic" data-i18n="portfolio.trofy.logic"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#design" data-i18n="portfolio.trofy.design"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#wireframe" data-i18n="portfolio.trofy.wireframe"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#roadmap" data-i18n="portfolio.trofy.roadmap"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#demo" data-i18n="portfolio.trofy.demo"></a></p>
-          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#learnings" data-i18n="portfolio.trofy.learnings"></a></p>
+          <h3 class="post-text text-highlight"><%= t('portfolio.trofy.index') %></h3>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#objective"><%= t('portfolio.trofy.objective') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#concepts"><%= t('portfolio.trofy.concepts') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#user"><%= t('portfolio.trofy.user') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#stack"><%= t('portfolio.trofy.tech') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#logic"><%= t('portfolio.trofy.logic') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#design"><%= t('portfolio.trofy.design') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#wireframe"><%= t('portfolio.trofy.wireframe') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#roadmap"><%= t('portfolio.trofy.roadmap') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#demo"><%= t('portfolio.trofy.demo') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#learnings"><%= t('portfolio.trofy.learnings') %></a></p>
         </div>
       </div>
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="objective" data-i18n="portfolio.trofy.objective"></h2>
-      <p class="post-text" data-i18n="portfolio.trofy.objective-1"></p>
+      <h2 class="post-heading" id="objective"><%= t('portfolio.trofy.objective') %></h2>
+      <p class="post-text"><%= t('portfolio.trofy.objective_1') %></p>
       <a href="/images/projects/trofy/Trofy_IntroScreen_GIF.gif" target="_blank"><img class="post-image shadow half center" src="/images/projects/trofy/Trofy_IntroScreen_GIF.gif"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.objective-2"></p>
-      <p class="post-text" data-i18n="portfolio.trofy.objective-3"></p>
+      <p class="post-text"><%= t('portfolio.trofy.objective_2') %></p>
+      <p class="post-text"><%= t('portfolio.trofy.objective_3') %></p>
 
       <div class="post-line"></div>
       
-      <h2 class="post-heading" id="concepts" data-i18n="portfolio.trofy.concepts"></h2>
-      <a data-i18n-href="portfolio.trofy.images.concepts" target="_blank"><img class="post-image shadow" data-i18n-img="portfolio.trofy.images.concepts"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.concepts-1"></p>
-      <h2 class="post-heading" data-i18n="portfolio.trofy.concepts-2"></h2>
-      <p class="post-text" data-i18n="portfolio.trofy.concepts-3"></p>
+      <h2 class="post-heading" id="concepts"><%= t('portfolio.trofy.concepts') %></h2>
+      <%= link_to t("portfolio.trofy.images.concepts"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.concepts"), class: "post-image shadow" %>
+      <% end %>
+      <p class="post-text"><%= t('portfolio.trofy.concepts_1') %></p>
+      <h2 class="post-heading"><%= t('portfolio.trofy.concepts_2') %></h2>
+      <p class="post-text"><%= t('portfolio.trofy.concepts_3') %></p>
       <a href="/images/projects/trofy/Trofy_Completing_GIF.gif" target="_blank"><img class="post-image shadow half center" src="/images/projects/trofy/Trofy_Completing_GIF.gif"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.concepts-4"></p>
-      <a data-i18n-href="portfolio.trofy.images.gamification" target="_blank"><img class="post-image shadow" data-i18n-img="portfolio.trofy.images.gamification"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.concepts-5"></p>
+      <p class="post-text"><%= t('portfolio.trofy.concepts_4') %></p>
+      <%= link_to t("portfolio.trofy.images.gamification"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.gamification"), class: "post-image shadow" %>
+      <% end %>
+      <p class="post-text"><%= t('portfolio.trofy.concepts_5') %></p>
       <a href="/images/projects/trofy/Trofy_Objective_Portfolio.jpg" target="_blank"><img class="post-image shadow half center" src="/images/projects/trofy/Trofy_Objective_Portfolio.jpg"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.concepts-6"></p>
-      <h2 class="post-heading" data-i18n="portfolio.trofy.concepts-7"></h2>
-      <p class="post-text" data-i18n="portfolio.trofy.concepts-8"></p>
-      <p class="post-text" data-i18n="portfolio.trofy.concepts-9"></p>
+      <p class="post-text"><%= t('portfolio.trofy.concepts_6') %></p>
+      <h2 class="post-heading"><%= t('portfolio.trofy.concepts_7') %></h2>
+      <p class="post-text"><%= t('portfolio.trofy.concepts_8') %></p>
+      <p class="post-text"><%= t('portfolio.trofy.concepts_9') %></p>
       <a href="/images/projects/trofy/Trofy_ChallengeCustomize_Portfolio.png" target="_blank"><img class="post-image shadow half center" src="/images/projects/trofy/Trofy_ChallengeCustomize_Portfolio.png"></a>
       <ol type="a" class="post-text">
-        <li data-i18n-html="portfolio.trofy.concepts-10"></li>
-        <li data-i18n-html="portfolio.trofy.concepts-11"></li>
+        <li><%= t('portfolio.trofy.concepts_10_html') %></li>
+        <li><%= t('portfolio.trofy.concepts_11_html') %></li>
       </ol>
-      <h2 class="post-heading" data-i18n="portfolio.trofy.concepts-12"></h2>
-      <p class="post-text" data-i18n="portfolio.trofy.concepts-13"></p>
+      <h2 class="post-heading"><%= t('portfolio.trofy.concepts_12') %></h2>
+      <p class="post-text"><%= t('portfolio.trofy.concepts_13') %></p>
       <a href="/images/projects/trofy/Trofy_TwoObjectives_Portfolio.png" target="_blank"><img class="post-image shadow half center" src="/images/projects/trofy/Trofy_TwoObjectives_Portfolio.png"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.concepts-14"></p>
+      <p class="post-text"><%= t('portfolio.trofy.concepts_14') %></p>
       <a href="/images/projects/trofy/Trofy_Drawer_Portfolio.png" target="_blank"><img class="post-image shadow half center" src="/images/projects/trofy/Trofy_Drawer_Portfolio.png"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.concepts-15"></p>
+      <p class="post-text"><%= t('portfolio.trofy.concepts_15') %></p>
       <a href="/images/projects/trofy/Trofy_ProgressTutorial_Portfolio.jpg" target="_blank"><img class="post-image shadow half center" src="/images/projects/trofy/Trofy_ProgressTutorial_Portfolio.jpg"></a>
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="user" data-i18n="portfolio.trofy.user"></h2>
-      <a data-i18n-href="portfolio.trofy.images.user" target="_blank"><img class="post-image shadow" data-i18n-img="portfolio.trofy.images.user"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.user-1"></p>
-      <p class="post-text" data-i18n="portfolio.trofy.user-2"></p>
+      <h2 class="post-heading" id="user"><%= t('portfolio.trofy.user') %></h2>
+      <%= link_to t("portfolio.trofy.images.user"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.user"), class: "post-image shadow" %>
+      <% end %>
+      <p class="post-text"><%= t('portfolio.trofy.user_1') %></p>
+      <p class="post-text"><%= t('portfolio.trofy.user_2') %></p>
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="stack" data-i18n="portfolio.trofy.tech"></h2>
+      <h2 class="post-heading" id="stack"><%= t('portfolio.trofy.tech') %></h2>
       <a class="post-logo-link" href="https://unity.com/" target="_blank"><img class="post-logo" src="/images/unity_logo_white.png"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.tech-1"></p>
+      <p class="post-text"><%= t('portfolio.trofy.tech_1') %></p>
       <a class="post-logo-link" href="https://www.w3schools.com/cs/index.php" target="_blank"><img class="post-logo" src="/images/csharp_logo_white.png"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.tech-2"></p>
-      <p class="post-text" data-i18n-html="portfolio.trofy.tech-3"></p>
+      <p class="post-text"><%= t('portfolio.trofy.tech_2') %></p>
+      <p class="post-text"><%= t('portfolio.trofy.tech_3_html') %></p>
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="logic" data-i18n="portfolio.trofy.logic"></h2>
-      <a data-i18n-href="portfolio.trofy.images.logic" target="_blank"><img class="post-image shadow"  data-i18n-img="portfolio.trofy.images.logic"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.logic-1"></p>
-      <p class="post-text" data-i18n="portfolio.trofy.logic-2"></p>
-      <p class="post-text" data-i18n="portfolio.trofy.logic-3"></p>
+      <h2 class="post-heading" id="logic"><%= t('portfolio.trofy.logic') %></h2>
+      <%= link_to t("portfolio.trofy.images.logic"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.logic"), class: "post-image shadow" %>
+      <% end %>
+      <p class="post-text"><%= t('portfolio.trofy.logic_1') %></p>
+      <p class="post-text"><%= t('portfolio.trofy.logic_2') %></p>
+      <p class="post-text"><%= t('portfolio.trofy.logic_3') %></p>
       <pre><code class="language-javascript">//Objective Controller Code Snippet
 
 public void GenerateDayList() {
@@ -105,42 +113,50 @@ public void GenerateDayList() {
   DateTime currentDate = DateTime.Now;
   CheckDayList(currentDate);
 }</code></pre>
-      <p class="post-text" data-i18n="portfolio.trofy.logic-4"></p>
-      <a data-i18n-href="portfolio.trofy.images.notifications" target="_blank"><img class="post-image shadow" data-i18n-img="portfolio.trofy.images.notifications"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.logic-5"></p>
+      <p class="post-text"><%= t('portfolio.trofy.logic_4') %></p>
+      <%= link_to t("portfolio.trofy.images.notifications"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.notifications"), class: "post-image shadow" %>
+      <% end %>
+      <p class="post-text"><%= t('portfolio.trofy.logic_5') %></p>
       <ol type="1" class="post-text">
-        <li data-i18n-html="portfolio.trofy.logic-6"></li>
-        <li data-i18n-html="portfolio.trofy.logic-7"></li>
-        <li data-i18n-html="portfolio.trofy.logic-8"></li>
+        <li><%= t('portfolio.trofy.logic_6_html') %></li>
+        <li><%= t('portfolio.trofy.logic_7_html') %></li>
+        <li><%= t('portfolio.trofy.logic_8_html') %></li>
       </ol>
-      <p class="post-text" data-i18n="portfolio.trofy.logic-9"></p>
+      <p class="post-text"><%= t('portfolio.trofy.logic_9') %></p>
       <img class="post-image shadow half center" src="/images/projects/trofy/Trofy_LanguageChange_Portfolio_GIF.gif">
-      <p class="post-text" data-i18n="portfolio.trofy.logic-10"></p>
+      <p class="post-text"><%= t('portfolio.trofy.logic_10') %></p>
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="design" data-i18n="portfolio.trofy.design"></h2>
-      <a data-i18n-href="portfolio.trofy.images.design" target="_blank"><img class="post-image shadow" data-i18n-img="portfolio.trofy.images.design"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.design-1"></p>
-      <p class="post-text" data-i18n-html="portfolio.trofy.design-2"></p>
+      <h2 class="post-heading" id="design"><%= t('portfolio.trofy.design') %></h2>
+      <%= link_to t("portfolio.trofy.images.design"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.design"), class: "post-image shadow" %>
+      <% end %>
+      <p class="post-text"><%= t('portfolio.trofy.design_1') %></p>
+      <p class="post-text"><%= t('portfolio.trofy.design_2_html') %></p>
       <img class="post-image half center" src="/images/projects/trofy/Trofy_character.png">
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="wireframe" data-i18n="portfolio.trofy.wireframe"></h2>
-      <a data-i18n-href="portfolio.trofy.images.wireframe" target="_blank"><img class="post-image shadow" data-i18n-img="portfolio.trofy.images.wireframe"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.wireframe-1"></p>
+      <h2 class="post-heading" id="wireframe"><%= t('portfolio.trofy.wireframe') %></h2>
+      <%= link_to t("portfolio.trofy.images.wireframe"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.wireframe"), class: "post-image shadow" %>
+      <% end %>
+      <p class="post-text"><%= t('portfolio.trofy.wireframe_1') %></p>
       <a href="/images/projects/trofy/Trofy_8_1_MVP_PZLabs_Portfolio.png" target="_blank"><img class="post-image shadow" src="/images/projects/trofy/Trofy_8_1_MVP_PZLabs_Portfolio.png"></a>
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="roadmap" data-i18n="portfolio.trofy.roadmap"></h2>
-      <a data-i18n-href="portfolio.trofy.images.roadmap" target="_blank"><img class="post-image shadow" data-i18n-img="portfolio.trofy.images.roadmap"></a>
-      <p class="post-text" data-i18n="portfolio.trofy.roadmap-1"></p>
+      <h2 class="post-heading" id="roadmap"><%= t('portfolio.trofy.roadmap') %></h2>
+      <%= link_to t("portfolio.trofy.images.roadmap"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.roadmap"), class: "post-image shadow" %>
+      <% end %>
+      <p class="post-text"><%= t('portfolio.trofy.roadmap_1') %></p>
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="demo" data-i18n="portfolio.trofy.demo"></h2>
+      <h2 class="post-heading" id="demo"><%= t('portfolio.trofy.demo') %></h2>
       <div class="post-video">
         <iframe 
           src="https://www.youtube-nocookie.com/embed/5UU06yBFbc8"
@@ -153,26 +169,26 @@ public void GenerateDayList() {
         </iframe>
       </div>
       <div class="post-spacing"></div>
-      <p class="post-text half center" data-i18n="portfolio.trofy.demo-1"></p>
+      <p class="post-text half center"><%= t('portfolio.trofy.demo_1') %></p>
       <img class="post-image half center" src="/images/projects/trofy/Trofy_AppIcon_Portfolio.png">
-      <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/BornSurvivor-V0.1.0-PC-Demo" data-i18n="portfolio.trofy.demo-btn" data-new-tab="true"></button>
-      <p class="post-text" data-i18n="portfolio.trofy.demo-2"></p>
+      <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/BornSurvivor-V0.1.0-PC-Demo" data-new-tab="true"><%= t('portfolio.trofy.demo_btn') %></button>
+      <p class="post-text"><%= t('portfolio.trofy.demo_2') %></p>
 
       <div class="post-line"></div>
 
-      <h2 class="post-heading" id="learnings" data-i18n="portfolio.trofy.learnings"></h2>
+      <h2 class="post-heading" id="learnings"><%= t('portfolio.trofy.learnings') %></h2>
       <img class="post-image shadow half center" src="/images/projects/trofy/Trofy_TwoCompletes_GIF.gif">
-      <p class="post-text" data-i18n="portfolio.trofy.learnings-1"></p>
-      <p class="post-text" data-i18n="portfolio.trofy.learnings-2"></p>
+      <p class="post-text"><%= t('portfolio.trofy.learnings_1') %></p>
+      <p class="post-text"><%= t('portfolio.trofy.learnings_2') %></p>
       <ol type="1" class="post-text">
-        <li data-i18n-html="portfolio.trofy.learnings-li-1"></li>
-        <li data-i18n-html="portfolio.trofy.learnings-li-2"></li>
-        <li data-i18n-html="portfolio.trofy.learnings-li-3"></li>
-        <li data-i18n-html="portfolio.trofy.learnings-li-4"></li>
-        <li id="ai" data-i18n-html="portfolio.trofy.learnings-li-5"></li>
+        <li><%= t('portfolio.trofy.learnings_li_1_html') %></li>
+        <li><%= t('portfolio.trofy.learnings_li_2_html') %></li>
+        <li><%= t('portfolio.trofy.learnings_li_3_html') %></li>
+        <li><%= t('portfolio.trofy.learnings_li_4_html') %></li>
+        <li id="ai"><%= t('portfolio.trofy.learnings_li_5_html') %></li>
       </ol>
       <img class="post-image half center" src="/images/projects/trofy/Trofy_Closing_Portfolio.png">
-      <p class="post-text center" data-i18n-html="portfolio.trofy.closing"></p>
+      <p class="post-text center"><%= t('portfolio.trofy.closing') %></p>
       <div class="post-spacing"></div>
       <div class="post-line"></div>
     </div>
@@ -180,7 +196,7 @@ public void GenerateDayList() {
 
   <section class="post-references-section">
     <div class="post-references-container">
-      <p class="post-text center half text-highlight" data-i18n="about.cta-projects"></p>
+      <p class="post-text center half text-highlight"><%= t('about.cta_projects') %></p>
       <%= render "shared/projects_list", skip: "trofy" %>
     </div>
   </section>

@@ -2,7 +2,7 @@ import { Elements } from 'logic/uiElements';
 import i18next from "i18next"
 
 export const NotificationManager = {
-  notificationTime: 10000,
+  notificationTime: 8000,
 
   //trigger notification:
   notify(notificationIndex) {
@@ -12,8 +12,10 @@ export const NotificationManager = {
   
   //set text: 
   setNotificationText(index) {
-    const title = i18next.t(`notifications.notification-title-${index}`);
-    const description = i18next.t(`notifications.notification-description-${index}`);
+    const translations = JSON.parse(Elements.notificationTextContainer.dataset.translations);
+    
+    const title = translations[`notification_title_${index}`];
+    const description = translations[`notification_description_${index}`];
     this.updateNotificationText(title, description);
   },
 

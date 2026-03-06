@@ -5,18 +5,16 @@
 <nav class="js-summary-menu-overlay summary-menu-section hidden">
   <div class="summary-menu-container">
     <div class="summary-menu-top-container">
-      <div class="summary-title" data-i18n-html="summary.title"></div>
+      <div class="summary-title"><%= t('summary.title_html') %></div>
       <div class="summary-menu-close-btn-container"><button class="js-animated-button js-summary-close-btn summary-menu-close-btn"><img class="button-icon" src="icons/icon_x_dark.png"></button></div>
     </div>
     <div class="summary-tabs" data-tab-group="summary-menu">
       <div class="js-tab summary-you-tab selected"
       data-tab-target="#tab-contents-summary-you" 
-      data-tab-group="summary-menu"
-      data-i18n="summary.tab-you"></div>
+      data-tab-group="summary-menu"><%= t('summary.tab_you') %></div>
       <div class="js-tab summary-everyone-tab"
       data-tab-target="#tab-contents-summary-everyone" 
-      data-tab-group="summary-menu"
-      data-i18n="summary.tab-everyone"></div>
+      data-tab-group="summary-menu"><%= t('summary.tab_everyone') %></div>
     </div>
     <div id="tab-contents-summary-you" class="js-tab-content tab-content" data-tab-group="summary-menu">
       <div class="summary-menu-stats-container">
@@ -26,7 +24,7 @@
             <img class="js-summary-menu-cover-gold-coin summary-menu-coin-collect-gold hidden" src="icons/coin_idle.gif">
           </div>
           <div class="js-summary-menu-cover-text summary-menu-stat-text-container">
-            <div class="summary-menu-stat-title" data-i18n-html="summary.text-coin-1"></div>
+            <div class="summary-menu-stat-title"><%= t('summary.text_coin_1_html') %></div>
           </div>
         </div>
         <div class="summary-menu-stats-coin-2">
@@ -35,9 +33,9 @@
             <img class="js-summary-menu-fillbar-gold-coin summary-menu-coin-collect-gold hidden" src="icons/coin_idle.gif">
           </div>
           <div class="js-summary-menu-fillbar-text summary-menu-stat-text-container">
-            <div class="summary-menu-stat-title" data-i18n-html="summary.text-coin-2"></div>
+            <div class="summary-menu-stat-title"><%= t('summary.text_coin_2_html') %></div>
             <div class="js-summary-menu-stat-timer-container summary-menu-stat-timer-container">
-              <img class="summary-timer-icon" src="icons/icon_timer_light.png"><p data-i18n="summary.best-coin-2"></p><div class="js-fill-bar-best-timer summary-timer-text">---</div>
+              <img class="summary-timer-icon" src="icons/icon_timer_light.png"><p><%= t('summary.best_coin_2') %></p><div class="js-fill-bar-best-timer summary-timer-text">---</div>
             </div>
           </div>
         </div>
@@ -47,27 +45,27 @@
             <img class="js-summary-menu-rps-gold-coin summary-menu-coin-collect-gold hidden" src="icons/coin_idle.gif">
           </div>
           <div class="js-summary-menu-rps-text summary-menu-stat-text-container">
-            <div class="summary-menu-stat-title" data-i18n-html="summary.text-coin-3"></div>
+            <div class="summary-menu-stat-title"><%= t('summary.text_coin_3_html') %></div>
           </div>
           <div class="js-summary-menu-rps-stats summary-menu-rps-stats-container">
             <div class="summary-rps-stat-container">
-              <div class="summary-rps-stat-title" data-i18n="summary.text-wins"></div>
+              <div class="summary-rps-stat-title"><%= t('summary.text_wins') %></div>
               <div class="js-rps-wins summary-rps-stat-number">-</div>
             </div>
             <div class="summary-rps-stat-container">
-              <div class="summary-rps-stat-title" data-i18n="summary.text-ties"></div>
+              <div class="summary-rps-stat-title"><%= t('summary.text_ties') %></div>
               <div class="js-rps-ties summary-rps-stat-number">-</div>
             </div>
             <div class="summary-rps-stat-container">
-              <div class="summary-rps-stat-title" data-i18n="summary.text-losses"></div>
+              <div class="summary-rps-stat-title"><%= t('summary.text_losses') %></div>
               <div class="js-rps-losses summary-rps-stat-number">-</div>
             </div>
           </div>
         </div>
       </div>
       <div class="summary-menu-options-container">
-        <button class="js-animated-button js-summary-reset-score-button cta-button summary-reset-score-button"><img class="js-summary-lock-icon summary-lock-icon" src="icons/lock-icon-blue.png"><p class="small" data-i18n="summary.reset-text-btn"></p></button>
-        <div class="js-summary-unlock-text summary-menu-unlock-text"><img class="js-summary-lock-icon summary-lock-icon" src="icons/lock-icon-white.png"><p class="small" data-i18n="summary.reset-text"></p></div>
+        <button class="js-animated-button js-summary-reset-score-button cta-button summary-reset-score-button"><img class="js-summary-lock-icon summary-lock-icon" src="icons/lock-icon-blue.png"><p class="small"><%= t('summary.reset_text_btn') %></p></button>
+        <div class="js-summary-unlock-text summary-menu-unlock-text"><img class="js-summary-lock-icon summary-lock-icon" src="icons/lock-icon-white.png"><p class="small"><%= t('summary.reset_text') %></p></div>
       </div>
     </div>
     <div id="tab-contents-summary-everyone" class="js-tab-content tab-content hidden" data-tab-group="summary-menu">
@@ -76,16 +74,24 @@
           <p class="api-total-coins game-title analyics-number long-number">0</p>
           <img class="analytics-coin" src="icons/coin_idle.gif">
         </div>
-        <p class="analytics-text body" data-i18n-html="index.game-analytics-description-summary"></p>
-        <p class="js-analytics-coins-text analytics-text accent"></p>
+        <p class="analytics-text body"><%= t('index.game_analytics_description_summary_html') %></p>
+        <p class="js-analytics-coins-text analytics-text accent"
+          data-summary-0="<%= t('index.game_analytics_summary_coins_0') %>"
+          data-summary-1="<%= t('index.game_analytics_summary_coins_1') %>"
+          data-summary-2="<%= t('index.game_analytics_summary_coins_2') %>"
+          data-summary-3="<%= t('index.game_analytics_summary_coins_3') %>">
+        </p>
       </div>
       <div class="summary-menu-analytics-container">
         <div class="analyics-number-container">
           <p class="api-total-percentage game-title analyics-number long-number">0%</p>
           <img class="analytics-coin" src="icons/icon_trophy_gold.png">
         </div>
-        <p class="analytics-text body" data-i18n-html="index.game-analytics-description-percentage-summary"></p>
-        <p class="js-analytics-percentage-text analytics-text accent"></p>
+        <p class="analytics-text body"><%= t('index.game_analytics_description_percentage_summary_html') %></p>
+        <p class="js-analytics-percentage-text analytics-text accent"
+            data-percent-none="<%= t('index.game_analytics_summary_percentage_none_html') %>"
+            data-percent-all="<%= t('index.game_analytics_summary_percentage_all_html') %>">
+        </p>
       </div>
     </div>
   </div>
@@ -97,16 +103,16 @@
       <div class="intro-left-container fade-up">
         <h1 class="intro-title">
           <div class="auto-text-container">
-            <div class="js-cover-text cover-text"></div>
+            <div class="js-cover-text cover-text" data-options="<%= t('index.intro_cover_options').to_json %>"></div>
             <div class="js-cover-bar-blink cover-bar-blink">|</div>
           </div>
-          <div data-i18n-html="index.intro-cover"></div>
+          <div><%= t('index.intro_cover_html') %></div>
         </h1>
-        <p class="intro-description" data-i18n="index.intro-description"></p>
+        <p class="intro-description"><%= t('index.intro_description') %></p>
       </div>
       <div class="intro-right-container fade-in">
         <button class="cover-btn">
-          <p class="js-cover-coin-collected-text cover-coin-collected-text" data-i18n="index.coin-collected-text"></p>
+          <p class="js-cover-coin-collected-text cover-coin-collected-text"><%= t('index.coin_collected_text') %></p>
           <img class="js-cover-box cover-box idle" src="images/cover-box.png">
           <div class="js-coin-container coin-container">
             <img class="js-cover-coin js-coin-idle coin coin-idle" src="icons/coin_idle.gif">
@@ -122,7 +128,10 @@
     <div class="fill-bar-container-wrapper fade-right">
       <div class="js-fill-bar-container fill-bar-container">
         <div class="js-fill-bar-fill fill-bar-fill"></div>
-        <div class="js-fill-bar-text fill-bar-text"></div>
+        <div class="js-fill-bar-text fill-bar-text" 
+          data-collected-text="<%= t('index.coin_collected_text') %>"
+          data-guide-text="<%= t('index.fill_bar_text_guide') %>">
+        </div>
         <div class="fill-bar-coin">
           <img class="js-fill-bar-gray-coin fill-bar-coin-image" src="icons/coin-gray.svg">
           <img class="js-fill-bar-collected-coin fill-bar-collected-coin-image hidden" src="icons/coin-gold.svg">
@@ -134,7 +143,7 @@
       <div class="js-fill-bar-timer-container fill-bar-timer-container hidden">
         <img class="fill-bar-timer-icon" src="icons/icon_timer_light.png">
         <div class="js-fill-bar-timer">---</div>
-        <p class="js-fill-bar-best-text fill-bar-best-text" data-i18n="index.fill-bar-best-text"></p>
+        <p class="js-fill-bar-best-text fill-bar-best-text"><%= t('index.fill_bar_best_text') %></p>
       </div>
       <div class="play-button">
         <button class="js-animated-button play-button-top gold-button" data-action="fillBar" data-value="6">
@@ -155,31 +164,31 @@
       <div class="about-focus-container fade-up">
         <h1 class="about-focus-title">
           <div class="auto-text-list-container">
-            <div class="js-list-text-1 auto-list-text" data-text="index.focus-auto-text-1"></div>
+            <div class="js-list-text-1 auto-list-text" data-text="<%= t('index.focus_auto_text_1') %>"></div>
             <div class="js-list-bar-blink list-bar-blink">|</div>
           </div>
         </h1>
-        <p class="about-focus-description" data-i18n="index.focus-text-1"></p>
+        <p class="about-focus-description"><%= t('index.focus_text_1') %></p>
       </div>
 
       <div class="about-focus-container fade-up">
         <h1 class="about-focus-title">
           <div class="auto-text-list-container">
-            <div class="js-list-text-2 auto-list-text" data-text="index.focus-auto-text-2"></div>
+            <div class="js-list-text-2 auto-list-text" data-text="<%= t('index.focus_auto_text_2') %>"></div>
             <div class="js-list-bar-blink list-bar-blink">|</div>
           </div>
         </h1>
-        <p class="about-focus-description" data-i18n="index.focus-text-2"></p>
+        <p class="about-focus-description"><%= t('index.focus_text_2') %></p>
       </div>
 
       <div class="about-focus-container fade-up">
         <h1 class="about-focus-title">
           <div class="auto-text-list-container">
-            <div class="js-list-text-3 auto-list-text" data-text="index.focus-auto-text-3"></div>
+            <div class="js-list-text-3 auto-list-text" data-text="<%= t('index.focus_auto_text_3') %>"></div>
             <div class="js-list-bar-blink list-bar-blink">|</div>
           </div>
         </h1>
-        <p class="about-focus-description" data-i18n="index.focus-text-3"></p>
+        <p class="about-focus-description"><%= t('index.focus_text_3') %></p>
       </div>
     </div> 
   </section>
@@ -190,18 +199,18 @@
         <img class="about-me-head cover-image" src="images/about-image.png">
         <div class="about-me-chat-bubble-container">
           <img class="about-me-chat-bubble-prism" src="icons/chat-bubble-prism-light.svg">
-          <div class="about-me-chat-bubble" data-i18n="index.about-text-bubble"></div>
+          <div class="about-me-chat-bubble"><%= t('index.about_text_bubble') %></div>
         </div>
       </div>
-      <div class="about-me-description fade-up" data-i18n-html="index.about-text"></div>
-      <button class="js-animated-button cta-button project-cta fade-up" data-action="navigate" data-target="<%= about_path %>" data-i18n="index.about-learn-more-btn"></button>
+      <div class="about-me-description fade-up"><%= t('index.about_text_html') %></div>
+      <button class="js-animated-button cta-button project-cta fade-up" data-action="navigate" data-target="<%= about_path %>"><%= t('index.about_learn_more_btn') %></button>
     </div>
   </section>
 
   <section class="about-projects-section fade-up">
     <div class="about-projects-container">
-      <h1 class="about-projects-title" data-i18n="index.about-projects-title"></h1>
-      <p class="about-projects-description" data-i18n="index.about-projects-description"></p>
+      <h1 class="about-projects-title"><%= t('index.about_projects_title') %></h1>
+      <p class="about-projects-description"><%= t('index.about_projects_description') %></p>
     </div>      
   </section>
 
@@ -213,14 +222,20 @@
     <div class="game-container rps">
       <div class="game-title-container rps">
         <div class="rps-title-wrapper">
-          <p class="game-title fade-up" data-i18n="index.rps-title"></p>
-          <button class="js-button info-button rps-info fade-up" data-action="navigate" data-i18n-attr='{"data-target": "buttons.rps_info_url"}' data-new-tab="true">i</button>
+          <p class="game-title fade-up"><%= t('index.rps_title') %></p>
+          <%= link_to t("buttons.rps_info_url"), 
+            class: "js-button info-button rps-info fade-up", 
+            target: "_blank", 
+            rel: "noopener",
+            data: { new_tab: true } do %>
+            i
+          <% end %>
         </div> 
       </div>
       <div class="rps-names-container">
-        <p class="rps-name fade-right" data-i18n="index.rps-you"></p>
+        <p class="rps-name fade-right"><%= t('index.rps_you') %></p>
         <img class="rps-vs-icon fade-up" src="icons/icon_vs_gold.png">
-        <p class="rps-name fade-left" data-i18n="index.rps-ai"></p>
+        <p class="rps-name fade-left"><%= t('index.rps_ai') %></p>
       </div>
       <div class="rps-avatars-container">
         <div class="rps-avatar-wrapper">
@@ -236,7 +251,12 @@
           <div class="js-avatar-move rps-avatar-move rps-ai-move hidden fade-1s"><div class="js-ai-move rps-ai-move-content fade-1s"></div></div>
         </div>
       </div>
-      <p class="js-result result fade-2s"></p>
+      <p class="js-result result fade-2s"
+        data-win="<%= t('index.rps_win') %>"
+        data-lose="<%= t('index.rps_lose') %>"
+        data-tie="<%= t('index.rps_tie') %>"
+        data-cta="<%= t('index.rps_make_a_move') %>">
+      </p>
       <div class="rock-paper-scissors-buttons-container">
         <div class="play-button">
           <button class="js-animated-button play-button-top blue-button" data-action="rps" data-value="rock">
@@ -262,7 +282,10 @@
       <div class="fill-bar-container-wrapper fade-right">
         <div class="js-rps-bar-container fill-bar-container rps-fill-bar-container">
           <div class="js-rps-bar-fill fill-bar-fill rps-fill-bar-fill"></div>
-          <div class="js-rps-bar-text fill-bar-text"></div>
+          <div class="js-rps-bar-text fill-bar-text"
+            data-collected-text="<%= t('index.coin_collected_text') %>"
+            data-win-goal-text="<%= t('index.rps_win_3_times') %>">
+          </div>
           <div class="fill-bar-coin">
             <img class="js-rps-gray-coin fill-bar-coin-image" src="icons/coin-gray.svg">
             <img class="js-rps-collected-coin fill-bar-collected-coin-image hidden" src="icons/coin-gold.svg">
@@ -274,7 +297,7 @@
 
   <section class="cta-section">
     <div class="cta-container fade-up">
-      <p class="cta-message" data-i18n-html="index.cta-text"></p>
+      <p class="cta-message"><%= t('index.cta_text_html') %></p>
       <p><img class="cta-icon" src="icons/icon_email_thin_light.png"><a class="cta-link" href="mailto:alevic9991@gmail.com" target="_blank">alevic9991@gmail.com</a><br><img class="cta-icon" src="icons/icon_wa_light.png"><a class="cta-link" href="https://wa.me/+5511995873453" target="_blank">WhatsApp</a></p>
     </div>
   </section>
@@ -282,16 +305,20 @@
   <section class="game-analytics-section">
     <div class="game-container">
       <div class="game-title-container">
-        <p class="game-title" data-i18n="index.game-analytics-title"></p>
+        <p class="game-title"><%= t('index.game_analytics_title') %></p>
       </div>
       <div class="analytics-container">
         <div class="analyics-number-container">
           <p class="api-total-coins js-analyics-number game-title analyics-number fade-in">0</p>
           <img class="analytics-coin" src="icons/coin_idle.gif">
         </div>
-        <p class="analytics-text" data-i18n-html="index.game-analytics-description"></p>
+        <p class="analytics-text"><%= t('index.game_analytics_description_html') %></p>
       </div>
-      <p class="js-analytics-cta-text analytics-cta"></p>
+      <p class="analytics-cta"></p>
+      <p class="js-analytics-cta-text analytics-cta"
+        data-cta-default="<%= t('index.game_analytics_cta_html') %>"
+        data-cta-all="<%= t('index.game_analytics_summary_coins_3') %>">
+      </p>
       <button class="js-animated-button js-analytics-coin-summary coin-summary cta-button fixed-width">
         <div class="gold-coin-container">
           <img class="summary-icon" src="icons/coin-gold.svg">
@@ -300,7 +327,7 @@
       </button>
       <div id="hint-press-button" class="tutorial-hint up">
         <img class="tutorial-box-arrow" src="icons/icon_halfarrow_up_blue.png">
-        <p class="tutorial-text" data-i18n="index.tutorial-press-hint"></p>
+        <p class="tutorial-text"><%= t('index.tutorial_press_hint') %></p>
       </div>
     </div>
   </section>

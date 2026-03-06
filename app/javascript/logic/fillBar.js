@@ -176,7 +176,7 @@ export const FillBarGame = {
     Elements.toggle(Elements.fillBarGoldCoin, 'hidden', false);
     Elements.fillBarBorder?.classList.add('highlight');
     
-    this.updateBarText(i18next.t('index.coin-collected-text'), true);
+    this.updateBarText(Elements.fillBarText.dataset.collectedText, true);
     
     this.playCoinSpin();
 
@@ -202,7 +202,7 @@ export const FillBarGame = {
     Elements.toggle(Elements.fillBarGoldCoin, 'hidden', true);
     Elements.fillBarBorder?.classList.remove('highlight');
     
-    const guideHtml = `${i18next.t('index.fill-bar-text-guide')} <img class="fill-bar-arrow" src="icons/arrow-fill-right.svg">`;
+    const guideHtml = `${Elements.fillBarText.dataset.guideText} <img class="fill-bar-arrow" src="icons/arrow-fill-right.svg">`;
     this.updateBarText(guideHtml, false);
     
     Elements.fillTimerCont?.classList.add('hidden');

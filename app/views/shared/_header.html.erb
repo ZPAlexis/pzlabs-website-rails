@@ -8,17 +8,17 @@
 
         <div class="js-header-drawer header-menu-nav-drawer">
           <button class="js-animated-button cta-button nav-button menu-fix-width text" data-action="navigate" data-target="<%= root_path %>">
-            <p class="small" data-i18n="header.home"></p>
+            <p class="small"><%= t('header.home') %></p>
             <img class="button-icon small" src="/icons/icon_right_dark.png">
           </button>  
         
           <button class="js-animated-button cta-button nav-button menu-fix-width text" data-action="navigate" data-target="<%= projects_path %>">
-            <p class="small" data-i18n="header.projects"></p>
+            <p class="small"><%= t('header.projects') %></p>
             <img class="button-icon small" src="/icons/icon_right_dark.png">
           </button>
           
           <button class="js-animated-button cta-button nav-button menu-fix-width text" data-action="navigate" data-target="<%= about_path %>" data-tracking="aboutClick">
-            <p class="small" data-i18n="header.about"></p>
+            <p class="small"><%= t('header.about') %></p>
             <img class="button-icon small" src="/icons/icon_right_dark.png">
           </button>
         </div>
@@ -47,8 +47,10 @@
         <div class="js-notification-close-btn notification-close-btn-container">
           <button class="notification-close-btn"><img class="button-icon small" src="/icons/icon_x_dark_thin.png"></button>
         </div>
-        <p class="js-notification-title notification-title"></p>
-        <p class="js-notification-description"></p>
+        <div class="js-notification-text-container" data-translations="<%= t('notifications').to_json %>">
+          <p class="js-notification-title notification-title"></p>
+          <p class="js-notification-description"></p>
+        </div>
       </div>
     </div>
   </nav>

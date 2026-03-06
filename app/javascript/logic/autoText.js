@@ -22,7 +22,7 @@ export const AutoText = {
   runAutoText() {
     this.targets = Elements.listTextsHTML;
 
-    this.coverTextOptions = i18next.t('index.intro-cover-options', { returnObjects: true });
+    this.coverTextOptions = JSON.parse(Elements.coverTextHTML.dataset.options);
 
     const sleep = (ms) => new Promise(resolve => setTimeout(resolve, ms));
 
@@ -91,8 +91,7 @@ export const AutoText = {
     };
 
     const startListText = (element) => {
-      const key = element.dataset.text;
-      const text = i18next.t(key);
+      const text = element.dataset.text;
       typeText(text, element, 60);
     };
 
@@ -102,8 +101,7 @@ export const AutoText = {
         if (controller) controller.stopped = true;
 
         element.innerHTML = '';
-        const key = element.dataset.text;
-        const text = i18next.t(key);
+        const text = element.dataset.text;
         typeText(text, element, 60);
       });
     };
