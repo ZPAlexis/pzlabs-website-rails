@@ -1,8 +1,14 @@
 require "test_helper"
 
 class PagesControllerTest < ActionDispatch::IntegrationTest
-  test "should get index" do
+  test "should redirect from root to localized path" do
     get root_url
+    assert_response :redirect
+    assert_redirected_to "/#{I18n.default_locale}"
+  end
+
+  test "should get index with locale" do
+    get root_url(locale: I18n.default_locale)
     assert_response :success
   end
 

@@ -8,8 +8,6 @@ export const TabManager = {
         const groupName = tab.getAttribute('data-tab-group');
         
         this.switchTab(tab, targetSelector, groupName);
-
-        console.log('Trying to switch tab')
       });
     });
   },
