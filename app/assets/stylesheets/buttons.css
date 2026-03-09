@@ -143,8 +143,11 @@
 }
 
 .nav-button.language-fix-width {
-  min-width: 68px;
+  display: flex;
+  width: 68px;
+  box-sizing: border-box;
   justify-content: center;
+  text-decoration: none;
 }
 
 .nav-button.social {

@@ -1,8 +1,4 @@
 export const Elements = {
-    // --- Language / Locales ---
-    languageBtnPT: document.querySelector('.js-pt-locale'),
-    languageBtnEN: document.querySelector('.js-en-locale'),
-
     // --- Auto Text ---
     coverTextHTML: document.querySelector('.js-cover-text'),
     coverBarBlinkHTML: document.querySelector('.js-cover-bar-blink'),

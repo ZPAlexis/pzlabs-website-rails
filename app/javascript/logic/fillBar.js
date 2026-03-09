@@ -1,7 +1,6 @@
 import { collectFillBarCoin } from 'index';
 import { Animations } from 'logic/animations';
 import { Elements } from 'logic/uiElements';
-import i18next from "i18next"
 
 export const FillBarGame = {
   bestTimer: parseFloat(localStorage.getItem('bestTimer')) || null,
