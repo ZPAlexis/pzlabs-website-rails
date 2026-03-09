@@ -1,5 +1,4 @@
 import { Elements } from 'logic/uiElements';
-import i18next from "i18next"
 
 export const AutoText = {
   coverBlinkActive: true,
@@ -12,11 +11,7 @@ export const AutoText = {
   init() {
     const container = Elements.coverBarBlinkHTML;
     if (!container) return;
-    if (i18next.isInitialized) {
-      this.runAutoText();
-    } else {
-      i18next.on('initialized', () => this.runAutoText());
-    }
+    this.runAutoText();
   },
 
   runAutoText() {
@@ -116,14 +111,6 @@ export const AutoText = {
     }, { threshold: 0.8 });
 
     this.targets.forEach(target => autoTextObserver.observe(target));
-
-    i18next.on('languageChanged', () => {
-      this.coverTextOptions = i18next.t('index.intro-cover-options', { returnObjects: true });
-      this.controller.stopped = true; // This will stop current cover loop
-      Elements.coverTextHTML.innerHTML = '';
-      this.i1 = 0;
-      restartListTexts();
-    });
 
     startCoverBarBlink();
     startCoverText();

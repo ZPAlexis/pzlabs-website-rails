@@ -1,24 +1,15 @@
 import { collectRPSCoin } from 'index';
 import { Animations } from 'logic/animations';
 import { Elements } from 'logic/uiElements';
-import i18next from "i18next"
 
 export const RPSGame = {
   score: JSON.parse(localStorage.getItem('score')) || { wins: 0, losses: 0, ties: 0 },
   isPlaying: false,
 
   init() {
-    if (i18next.isInitialized) {
     this.updateScoreText();
     this.updateRPSFillBar();
     this.updateSummaryScore();
-  } else {
-    i18next.on('initialized', () => {
-      this.updateScoreText();
-      this.updateRPSFillBar();
-      this.updateSummaryScore();
-    });
-  }
   },
 
   // --- Core Game Logic ---

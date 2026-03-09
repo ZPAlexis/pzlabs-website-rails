@@ -1,7 +1,3 @@
 import "controllers"
-import "i18next"
-import "i18next-http-backend"
-import "i18next-browser-languagedetector"
-import "i18n"
 import "common"
 import "logic/api"

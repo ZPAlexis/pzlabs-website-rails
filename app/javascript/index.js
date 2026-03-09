@@ -8,21 +8,11 @@ import { FillBarGame } from 'logic/fillBar';
 import { AutoText } from 'logic/autoText';
 import { fetchAndDisplayMetrics } from 'logic/api';
 import { NotificationManager } from 'logic/notifications';
-import i18next from "i18next"
-import { changeLanguage } from "i18next"
 
 const App = {
   coinIsSpinning: false,
   
   init() {
-    if (typeof i18next !== 'undefined' && i18next.isInitialized) {
-      this.startLanguageDependentLogic();
-    } else {
-      i18next.on('initialized', () => this.startLanguageDependentLogic());
-    }
-  },
-
-  startLanguageDependentLogic() {
     GameState.load();
     AutoText.init();
     TabManager.init();
@@ -70,10 +60,6 @@ const App = {
         this.resetCoins();
         TutorialManager.resetFlags();
     });
-
-    Elements.languageBtnEN?.addEventListener('click', () => this.changeAppLanguage('en'));
-
-    Elements.languageBtnPT?.addEventListener('click', () => this.changeAppLanguage('pt'));
   },
 
   setupScrollObservers() {
@@ -141,12 +127,6 @@ const App = {
     RPSGame.resetRPSScore();
     this.refreshApp();
   },
-
-  async changeAppLanguage(lang) {
-    await changeLanguage(lang);
-    this.refreshApp();
-    RPSGame.resetResult();
-  }
 };
 
 export function calculateCoinAmount() {

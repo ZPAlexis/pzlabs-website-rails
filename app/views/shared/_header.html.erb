@@ -30,9 +30,9 @@
         </button>
 
         <div class="js-header-drawer header-menu-nav-drawer">
-          <button class="js-pt-locale js-animated-button cta-button nav-button language-fix-width text">PT</button>
+          <%= link_to 'EN', url_for(request.params.merge(locale: 'en')), class: "js-animated-button cta-button nav-button language-fix-width" %>
 
-          <button class="js-en-locale js-animated-button cta-button nav-button language-fix-width text">EN</button>
+          <%= link_to 'PT', url_for(request.params.merge(locale: 'pt')), class: "js-animated-button cta-button nav-button language-fix-width" %>
         </div>
       </div>
     </div>
