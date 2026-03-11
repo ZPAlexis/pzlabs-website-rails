@@ -1,12 +1,12 @@
 <div class="project-container fade-right">
   <div class="project-container-top">
-    <div class="project-image-container">
+    <div class="project-image-container not-selectable">
       <img class="project-image" src="<%= image_path %>">
     </div>
     <div class="project-summary">
       <div class="project-summary-container">
         <h1 class="project-title-text"><%= title %></h1>
-        <div class="project-summary-tags">
+        <div class="project-summary-tags not-selectable">
           <% tags.each do |tag| %>
             <div class="stack-tag"><%= tag %></div>
           <% end %>

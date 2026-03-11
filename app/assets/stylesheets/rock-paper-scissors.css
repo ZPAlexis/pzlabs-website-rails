@@ -148,10 +148,6 @@
   vertical-align: middle;
 }
 
-.rock-icon {
-  height: 40px;
-}
-
 .moves {
   transition: opacity 0.4s ease;
   opacity: 1;
