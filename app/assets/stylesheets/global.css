@@ -13,10 +13,8 @@ body {
 
   transition: background-color 0.15s;
   
-  user-select: none;
   touch-action: manipulation;
   -webkit-tap-highlight-color: transparent;
-  -webkit-user-select: none;
 }
 
 body.no-scroll {
@@ -39,6 +37,11 @@ html {
 .main-container {
   min-width: var(--min-width-container);
   width: 100%;
+}
+
+.not-selectable {
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .link {

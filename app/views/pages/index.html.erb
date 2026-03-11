@@ -2,7 +2,7 @@
   <%= javascript_import_module_tag "index" %>
 <% end %>
 
-<nav class="js-summary-menu-overlay summary-menu-section hidden">
+<nav class="js-summary-menu-overlay summary-menu-section not-selectable hidden">
   <div class="summary-menu-container">
     <div class="summary-menu-top-container">
       <div class="summary-title"><%= t('summary.title_html') %></div>
@@ -110,7 +110,7 @@
         </h1>
         <p class="intro-description"><%= t('index.intro_description') %></p>
       </div>
-      <div class="intro-right-container fade-in">
+      <div class="intro-right-container not-selectable fade-in">
         <button class="cover-btn">
           <p class="js-cover-coin-collected-text cover-coin-collected-text"><%= t('index.coin_collected_text') %></p>
           <img class="js-cover-box cover-box idle" src="images/cover-box.png">
@@ -124,7 +124,7 @@
     </div>
   </section>
 
-  <section class="fill-bar-section">
+  <section class="fill-bar-section not-selectable">
     <div class="fill-bar-container-wrapper fade-right">
       <div class="js-fill-bar-container fill-bar-container">
         <div class="js-fill-bar-fill fill-bar-fill"></div>
@@ -195,7 +195,7 @@
 
   <section class="about-me-section">
     <div class="about-me-container">
-      <div class="about-me-head-container fade-up">
+      <div class="about-me-head-container not-selectable fade-up">
         <img class="about-me-head cover-image" src="images/about-image.png">
         <div class="about-me-chat-bubble-container">
           <img class="about-me-chat-bubble-prism" src="icons/chat-bubble-prism-light.svg">
@@ -218,7 +218,7 @@
     <%= render "shared/projects_list" %>
   </section>
 
-  <section class="rock-paper-scissors-section js-trigger-coin-summary">
+  <section class="rock-paper-scissors-section js-trigger-coin-summary not-selectable">
     <div class="game-container rps">
       <div class="game-title-container rps">
         <div class="rps-title-wrapper">
@@ -260,7 +260,7 @@
       <div class="rock-paper-scissors-buttons-container">
         <div class="play-button">
           <button class="js-animated-button play-button-top blue-button" data-action="rps" data-value="rock">
-            <img src="icons/rock-emoji.png" class="move-icon rock-icon">
+            <img src="icons/rock-emoji.png" class="move-icon">
           </button>
           <div class="play-button-base"></div>
         </div>
@@ -298,11 +298,11 @@
   <section class="cta-section">
     <div class="cta-container fade-up">
       <p class="cta-message"><%= t('index.cta_text_html') %></p>
-      <p><img class="cta-icon" src="icons/icon_email_thin_light.png"><a class="cta-link" href="mailto:alevic9991@gmail.com" target="_blank">alevic9991@gmail.com</a><br><img class="cta-icon" src="icons/icon_wa_light.png"><a class="cta-link" href="https://wa.me/+5511995873453" target="_blank">WhatsApp</a></p>
+      <p><img class="cta-icon not-selectable" src="icons/icon_email_thin_light.png"><a class="cta-link" href="mailto:alevic9991@gmail.com" target="_blank">alevic9991@gmail.com</a><br><img class="cta-icon not-selectable" src="icons/icon_wa_light.png"><a class="cta-link" href="https://wa.me/+5511995873453" target="_blank">WhatsApp</a></p>
     </div>
   </section>
 
-  <section class="game-analytics-section">
+  <section class="game-analytics-section not-selectable">
     <div class="game-container">
       <div class="game-title-container">
         <p class="game-title"><%= t('index.game_analytics_title') %></p>

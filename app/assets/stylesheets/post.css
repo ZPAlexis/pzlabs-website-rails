@@ -45,6 +45,9 @@
   justify-content: left;
   align-items: center;
   box-shadow: var(--shadow-spread) var(--color-shadow);
+
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .post-banner-image.cover {
@@ -124,6 +127,9 @@
   display: block;
   width: 100%;
   border-radius: 12px;
+
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .post-image.shadow {
@@ -147,6 +153,9 @@
 .post-logo {
   display: block;
   height: 40px;
+
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .post-video {
@@ -157,6 +166,9 @@
   height: 0;
   overflow: hidden;
   box-shadow: var(--shadow-spread) var(--color-shadow);
+
+  user-select: none;
+  -webkit-user-select: none;
 }
 
 .post-video iframe {
