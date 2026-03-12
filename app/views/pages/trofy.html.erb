@@ -10,7 +10,15 @@
       <div class="post-intro-wrapper not-selectable">
         <div class="post-list-container center gap">
           <p class="post-text"><%= t('portfolio.trofy.category_html') %></p>
-          <p class="post-text"><%= t('portfolio.trofy.stack_html') %></p>
+          <div>
+            <p class="post-text"><%= t('portfolio.trofy.stack_html') %></p>
+            <div class="project-summary-tags portfolio not-selectable">
+              <div class="stack-tag portfolio">C#</div>
+              <div class="stack-tag portfolio">Unity</div>
+              <div class="stack-tag portfolio">iOS</div>
+              <div class="stack-tag portfolio">Android</div>
+            </div>
+          </div>
           <p class="post-text"><%= t('portfolio.trofy.inspiration_html') %></p>
         </div>
         <div class="post-spacing"></div>
@@ -33,7 +41,9 @@
 
       <h2 class="post-heading" id="objective"><%= t('portfolio.trofy.objective') %></h2>
       <p class="post-text"><%= t('portfolio.trofy.objective_1') %></p>
-      <a href="/images/projects/trofy/Trofy_IntroScreen_GIF.gif" target="_blank"><img class="post-image shadow half center" src="/images/projects/trofy/Trofy_IntroScreen_GIF.gif"></a>
+      <%= link_to t("portfolio.trofy.images.intro_screen"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.intro_screen"), class: "post-image shadow half center" %>
+      <% end %>
       <p class="post-text"><%= t('portfolio.trofy.objective_2') %></p>
       <p class="post-text"><%= t('portfolio.trofy.objective_3') %></p>
 
@@ -46,29 +56,41 @@
       <p class="post-text"><%= t('portfolio.trofy.concepts_1') %></p>
       <h2 class="post-heading"><%= t('portfolio.trofy.concepts_2') %></h2>
       <p class="post-text"><%= t('portfolio.trofy.concepts_3') %></p>
-      <a href="/images/projects/trofy/Trofy_Completing_GIF.gif" target="_blank"><img class="post-image shadow half center" src="/images/projects/trofy/Trofy_Completing_GIF.gif"></a>
+      <%= link_to t("portfolio.trofy.images.completing"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.completing"), class: "post-image shadow half center" %>
+      <% end %>
       <p class="post-text"><%= t('portfolio.trofy.concepts_4') %></p>
       <%= link_to t("portfolio.trofy.images.gamification"), target: "_blank" do %>
         <%= image_tag t("portfolio.trofy.images.gamification"), class: "post-image shadow" %>
       <% end %>
       <p class="post-text"><%= t('portfolio.trofy.concepts_5') %></p>
-      <a href="/images/projects/trofy/Trofy_Objective_Portfolio.jpg" target="_blank"><img class="post-image shadow half center" src="/images/projects/trofy/Trofy_Objective_Portfolio.jpg"></a>
+      <%= link_to t("portfolio.trofy.images.objective"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.objective"), class: "post-image shadow half center" %>
+      <% end %>
       <p class="post-text"><%= t('portfolio.trofy.concepts_6') %></p>
       <h2 class="post-heading"><%= t('portfolio.trofy.concepts_7') %></h2>
       <p class="post-text"><%= t('portfolio.trofy.concepts_8') %></p>
       <p class="post-text"><%= t('portfolio.trofy.concepts_9') %></p>
-      <a href="/images/projects/trofy/Trofy_ChallengeCustomize_Portfolio.png" target="_blank"><img class="post-image shadow half center" src="/images/projects/trofy/Trofy_ChallengeCustomize_Portfolio.png"></a>
+      <%= link_to t("portfolio.trofy.images.challenge_customize"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.challenge_customize"), class: "post-image shadow half center" %>
+      <% end %>
       <ol type="a" class="post-text">
         <li><%= t('portfolio.trofy.concepts_10_html') %></li>
         <li><%= t('portfolio.trofy.concepts_11_html') %></li>
       </ol>
       <h2 class="post-heading"><%= t('portfolio.trofy.concepts_12') %></h2>
       <p class="post-text"><%= t('portfolio.trofy.concepts_13') %></p>
-      <a href="/images/projects/trofy/Trofy_TwoObjectives_Portfolio.png" target="_blank"><img class="post-image shadow half center" src="/images/projects/trofy/Trofy_TwoObjectives_Portfolio.png"></a>
+      <%= link_to t("portfolio.trofy.images.two_objectives"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.two_objectives"), class: "post-image shadow half center" %>
+      <% end %>
       <p class="post-text"><%= t('portfolio.trofy.concepts_14') %></p>
-      <a href="/images/projects/trofy/Trofy_Drawer_Portfolio.png" target="_blank"><img class="post-image shadow half center" src="/images/projects/trofy/Trofy_Drawer_Portfolio.png"></a>
+      <%= link_to t("portfolio.trofy.images.drawer"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.drawer"), class: "post-image shadow half center" %>
+      <% end %>
       <p class="post-text"><%= t('portfolio.trofy.concepts_15') %></p>
-      <a href="/images/projects/trofy/Trofy_ProgressTutorial_Portfolio.jpg" target="_blank"><img class="post-image shadow half center" src="/images/projects/trofy/Trofy_ProgressTutorial_Portfolio.jpg"></a>
+      <%= link_to t("portfolio.trofy.images.progress_tutorial"), target: "_blank" do %>
+        <%= image_tag t("portfolio.trofy.images.progress_tutorial"), class: "post-image shadow half center" %>
+      <% end %>
 
       <div class="post-line"></div>
 
@@ -177,7 +199,8 @@ public void GenerateDayList() {
       <div class="post-line"></div>
 
       <h2 class="post-heading" id="learnings"><%= t('portfolio.trofy.learnings') %></h2>
-      <img class="post-image shadow half center" src="/images/projects/trofy/Trofy_TwoCompletes_GIF.gif">
+
+      <%= image_tag t("portfolio.trofy.images.two_completes"), class: "post-image shadow half center" %>
       <p class="post-text"><%= t('portfolio.trofy.learnings_1') %></p>
       <p class="post-text"><%= t('portfolio.trofy.learnings_2') %></p>
       <ol type="1" class="post-text">

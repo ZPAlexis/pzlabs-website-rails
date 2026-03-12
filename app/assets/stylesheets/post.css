@@ -24,8 +24,6 @@
 .post-list-container {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
   align-self: start;
   width: 294px;
 }
@@ -245,7 +243,7 @@ code[class*="language-"] {
   background: none !important;
 }
 
-@media (max-width: 680px) {
+@media (max-width: 720px) {
   .post-list-container.center {
     text-align: center;
   }

@@ -390,6 +390,12 @@
   width: 80%;
 }
 
+.project-summary-tags.portfolio {
+  justify-self: end;
+  justify-content: end;
+  margin-top: 4px;
+}
+
 .stack-tag {
   padding: 4px 16px;
   border: 0px solid var(--color-button);
@@ -400,6 +406,10 @@
   background-color: var(--color-primary-highlight-fade);
   text-align: center;
   font-weight: 600;
+}
+
+.stack-tag.portfolio {
+  font-size: var(--font-size-medium);
 }
 
 .project-cta {
@@ -600,5 +610,10 @@
   .about-list-container {
     flex-direction: column;
     gap: 80px;
+  }
+
+  .project-summary-tags.portfolio {
+    justify-self: center;
+    justify-content: center;
   }
 }
