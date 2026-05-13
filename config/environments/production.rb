@@ -84,10 +84,13 @@ Rails.application.configure do
   # Only use :id for inspections in production.
   config.active_record.attributes_for_inspect = [ :id ]
 
+
+
   # Enable DNS rebinding protection and other `Host` header attacks.
   config.hosts = [
-     "acoelho.dev",     # Allow requests from example.com
-     /.*\.acoelho\.dev/ # Allow requests from subdomains like `www.example.com`
+     "acoelho.dev",
+     /.*\.acoelho\.dev/,
+     "localhost" # Allow requests from localhost for local Docker testing
    ]
   #
   # Skip DNS rebinding protection for the default health check endpoint.

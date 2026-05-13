@@ -1,0 +1,7 @@
+localhost {
+    reverse_proxy web:80
+}
+
+acoelho.dev, www.acoelho.dev {
+    reverse_proxy web:80
+}

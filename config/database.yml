@@ -16,11 +16,7 @@ production:
   primary: &primary_production
     adapter: postgresql
     encoding: unicode
-    database: <%= Rails.application.credentials.dig(:db_production, :database) %>
-    username: <%= Rails.application.credentials.dig(:db_production, :username) %>
-    password: <%= Rails.application.credentials.dig(:db_production, :password) %>
-    host: <%= Rails.application.credentials.dig(:db_production, :host) %>
-    port: 5432
+    url: <%= ENV['DATABASE_URL'] %>
 
   queue:
     <<: *primary_production
