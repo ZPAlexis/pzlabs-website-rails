@@ -1,0 +1,38 @@
+name: CD - Deploy to Production
+
+on:
+  push:
+    branches: [ "main" ]
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Deploy to VPS via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.REMOTE_HOST }}
+          username: ${{ secrets.REMOTE_USER }}
+          key: ${{ secrets.SSH_PRIVATE_KEY }}
+          script: |
+            mkdir -p ~/pzlabs-website
+            cd ~/pzlabs-website
+
+            if [ -d .git ]; then
+              git pull origin main
+            else
+              git clone https://github.com/${{ github.repository }}.git .
+            fi
+
+            echo "${{ secrets.ENV_FILE }}" > .env
+            echo "${{ secrets.RAILS_MASTER_KEY }}" > config/master.key
+            chmod 600 config/master.key
+
+            docker compose up -d --build
+
+            docker compose exec -T web ./bin/rails db:migrate
+
+            docker image prune -f
