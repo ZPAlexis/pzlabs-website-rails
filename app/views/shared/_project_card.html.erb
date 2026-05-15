@@ -1,3 +1,8 @@
+<% 
+  btn_text = local_assigns.fetch(:button_text, t('index.learn_more_btn'))
+  is_disabled = local_assigns[:disabled] == true 
+%>
+
 <div class="project-container fade-right">
   <div class="project-container-top">
     <div class="project-image-container not-selectable">
@@ -11,7 +16,11 @@
             <div class="stack-tag"><%= tag %></div>
           <% end %>
         </div>
-        <button class="js-animated-button cta-button project-cta" data-action="navigate" data-target="<%= path %>"><%= t('index.learn_more_btn') %></button>
+        <button class="js-animated-button cta-button project-cta" data-action="navigate" 
+          data-target="<%= path %>"
+          <%= 'disabled="disabled"' if is_disabled %>>
+        <%= btn_text %>
+      </button>
       </div>
     </div>
   </div>

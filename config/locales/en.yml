@@ -52,7 +52,7 @@ en:
     about_text_html: "I’m <span>Alexis Coelho</span>, a <span>Solutions Engineer</span>, focused on automation and gamification of workflows."
     about_learn_more_btn: "CHECK PROFILE"
     about_projects_title: "Projects"
-    about_projects_description: "These are some of our experiments so far."
+    about_projects_description: "A selection of my technical solutions and architectural implementations so far."
     learn_more_btn: "LEARN MORE"
     rps_title: "ROCK PAPER SCISSORS"
     rps_you: "YOU"
@@ -76,6 +76,11 @@ en:
     game_analytics_summary_percentage_all: "You are one of them!"
     game_analytics_summary_percentage_none_html: "Find all 3 coins to join them!"
   projects:
+    status:
+      coming_soon: "Coming Soon"
+    jiko_project_description: "A gamified productivity app designed to track focus sessions and visualize personal growth."
+    n8n_whatsapp_project_description: "A robust automation engine that orchestrates participant workflows and delivers  RSS updates via WhatsApp."
+    acoelho_project_description: "A full-stack showcase of our capabilities to deliver technical architecture with production-ready products."
     trofy_project_description: "A “To-Do like” mobile app that gamifies personal objectives to reinforce the development of good habits."
     bs_project_description: "A demo Unity game with a “Pick 1 of 3” rogue-like style mechanic inspired by the game Vampire Survivors."
     fa_project_description: "Our first Unity demo game to learn the basics of game development inspired by the game Flappy Bird."

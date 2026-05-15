@@ -1,4 +1,44 @@
 <div class="projects-container">
+
+  <%# Jiko %>
+  <% unless local_assigns[:skip] == "jiko" %>
+    <%= render "shared/project_card", 
+        title: "Jiko App", 
+        image_path: "/images/projects/jiko/jiko_icon.png", 
+        tags: ["Ruby on Rails", "PostgreSQL", "Docker", "CI/CD"], 
+        path: "#", 
+        i18n_key: "projects.jiko_project_description",
+        button_text: t('projects.status.coming_soon'),
+        disabled: true
+    %>
+  <% end %>
+
+  <%# N8N WhatsApp %>
+  <% unless local_assigns[:skip] == "n8n_whatsapp" %>
+    <%= render "shared/project_card", 
+        title: "N8N RSS Bot", 
+        image_path: "/images/projects/n8n_whatsapp/n8n_whatsapp_icon.png", 
+        tags: ["N8N", "WhatsApp", "Evolution API", "Docker"], 
+        path: "#", 
+        i18n_key: "projects.n8n_whatsapp_project_description",
+        button_text: t('projects.status.coming_soon'),
+        disabled: true
+    %>
+  <% end %>
+
+  <%# acoelho.dev %>
+  <% unless local_assigns[:skip] == "acoelho.dev" %>
+    <%= render "shared/project_card", 
+        title: "acoelho.dev", 
+        image_path: "/images/projects/acoelho/acoelho_icon.png", 
+        tags: ["Ruby on Rails", "PostgreSQL", "Docker", "CI/CD"], 
+        path: "#", 
+        i18n_key: "projects.acoelho_project_description",
+        button_text: t('projects.status.coming_soon'),
+        disabled: true
+    %>
+  <% end %>
+
   <%# Trofy %>
   <% unless local_assigns[:skip] == "trofy" %>
     <%= render "shared/project_card", 
