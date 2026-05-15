@@ -12,6 +12,9 @@ Rails.application.routes.draw do
     get "projects/born_survivor", to: "pages#born_survivor", as: :pages_born_survivor
     get "projects/flappy_astronaut", to: "pages#flappy_astronaut", as: :pages_flappy_astronaut
     get "projects/trofy", to: "pages#trofy", as: :pages_trofy
+    get "projects/acoelho", to: "pages#acoelho", as: :pages_acoelho
+    get "projects/n8n_whatsapp", to: "pages#n8n_whatsapp", as: :pages_n8n_whatsapp
+    get "projects/jiko", to: "pages#jiko", as: :pages_jiko
 
     root "pages#index"
   end

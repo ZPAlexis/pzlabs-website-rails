@@ -124,6 +124,20 @@
     </div>
   </section>
 
+  <section class="about-me-section">
+    <div class="about-me-container">
+      <div class="about-me-head-container not-selectable fade-up">
+        <img class="about-me-head cover-image" src="images/about-image.png">
+        <div class="about-me-chat-bubble-container">
+          <img class="about-me-chat-bubble-prism" src="icons/chat-bubble-prism-light.svg">
+          <div class="about-me-chat-bubble"><%= t('index.about_text_bubble') %></div>
+        </div>
+      </div>
+      <div class="about-me-description fade-up"><%= t('index.about_text_html') %></div>
+      <button class="js-animated-button cta-button project-cta fade-up" data-action="navigate" data-target="<%= about_path %>"><%= t('index.about_learn_more_btn') %></button>
+    </div>
+  </section>
+
   <section class="fill-bar-section not-selectable">
     <div class="fill-bar-container-wrapper fade-right">
       <div class="js-fill-bar-container fill-bar-container">
@@ -191,20 +205,6 @@
         <p class="about-focus-description"><%= t('index.focus_text_3') %></p>
       </div>
     </div> 
-  </section>
-
-  <section class="about-me-section">
-    <div class="about-me-container">
-      <div class="about-me-head-container not-selectable fade-up">
-        <img class="about-me-head cover-image" src="images/about-image.png">
-        <div class="about-me-chat-bubble-container">
-          <img class="about-me-chat-bubble-prism" src="icons/chat-bubble-prism-light.svg">
-          <div class="about-me-chat-bubble"><%= t('index.about_text_bubble') %></div>
-        </div>
-      </div>
-      <div class="about-me-description fade-up"><%= t('index.about_text_html') %></div>
-      <button class="js-animated-button cta-button project-cta fade-up" data-action="navigate" data-target="<%= about_path %>"><%= t('index.about_learn_more_btn') %></button>
-    </div>
   </section>
 
   <section class="about-projects-section fade-up">

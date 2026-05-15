@@ -36,7 +36,7 @@
     </div>
   </section>
 
-  <section class="about-text-section">
+  <section class="about-text-section fade-up">
     <div class="about-text-container">
       <p class="about-text-description"><%= t('about.intro_1') %></p>
       <p class="about-text-description"><%= t('about.intro_2_html') %></p>
@@ -44,7 +44,7 @@
     </div>
   </section>
 
-  <section class="about-text-section">
+  <section class="about-text-section fade-up">
     <div class="about-text-container">
       <h1 class="about-text-title"><%= t('about.services_title') %></h1>
       <p class="about-text-description"><%= t('about.intro_4') %></p>
@@ -72,7 +72,18 @@
     </div>
   </section>
 
-  <section class="about-text-section">
+  <section class="about-projects-section fade-up">
+    <div class="about-projects-container about-projects-container--about">
+      <h1 class="about-projects-title"><%= t('index.about_projects_title') %></h1>
+      <p class="about-projects-description about-projects-description--about"><%= t('index.about_projects_description') %></p>
+    </div>      
+  </section>
+
+  <section class="projects-section projects-section--about fade-up">
+    <%= render "shared/projects_list" %>
+  </section>
+
+  <section class="about-text-section fade-up">
     <div class="about-text-container">
       <h1 class="about-text-title"><%= t('about.skills_title') %></h1>
       <p class="about-text-description"=><%= t('about.intro_5') %></p>
@@ -208,7 +219,7 @@
     </div>
   </section>
 
-  <section class="about-text-section">
+  <section class="about-text-section fade-up">
     <div class="about-text-container">
       <h1 class="about-text-title"><%= t('about.background_title') %></h1>
       <p class="about-text-description"><%= t('about.background_1') %></p>
@@ -228,7 +239,7 @@
     </div> 
   </section>
 
-  <section class="about-text-section">
+  <section class="about-text-section fade-up">
     <div class="about-text-container">
       <h1 class="about-text-title"><%= t('about.interests_title') %></h1>
       <p class="about-text-description"><%= t('about.interests_1') %></p>
@@ -281,7 +292,7 @@
     </div> 
   </section>
 
-  <section class="about-text-section">
+  <section class="about-text-section fade-up">
     <div class="about-text-container">
       <h1 class="about-text-title" id="ai"><%= t('about.ai_title') %></h1>
       <p class="about-text-description"><%= t('about.ai_1') %></p>
@@ -291,19 +302,19 @@
     </div> 
   </section>
 
-  <section class="about-text-section">
+  <section class="about-text-section fade-up">
     <div class="about-text-container">
       <button class="js-animated-button cta-button nav-button social" data-action="navigate" data-target="/projects.html"><%= t('about.projects_btn') %></button>
     </div> 
   </section>
 
-  <section class="about-text-section">
+  <section class="about-text-section fade-up">
     <div class="about-text-container">
       <p class="about-text-description"><%= t('about.closing') %></p>
     </div> 
   </section>
 
-  <section class="about-socials-section">
+  <section class="about-socials-section fade-up">
     <div class="about-hero-socials-container">
       <button class="js-animated-button cta-button nav-button" data-action="navigate" data-target="https://github.com/zpalexis" data-new-tab="true" data-tracking="gitHubClick">
         <img class="button-icon" src="/icons/icon_github_dark.png">

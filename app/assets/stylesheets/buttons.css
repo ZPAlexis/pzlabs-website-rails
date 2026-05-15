@@ -77,6 +77,19 @@
   will-change: transform, box-shadow;
 }
 
+.cta-button:disabled {
+  background-color: var(--color-background);
+  box-shadow: none;
+  border: 2px solid var(--color-border);
+  color: var(--color-text);
+  font-weight: 400;
+  cursor: default;
+
+  &:hover {
+    background-color: transparent;
+  }
+}
+
 .cta-button.fixed-width {
   width: 100px;
 }

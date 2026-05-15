@@ -52,7 +52,7 @@ pt:
     about_text_html: "Meu nome é <span>Alexis Coelho</span>, sou <span>Engenheiro de Soluções</span>, focado em automação e gamificação de processos."
     about_learn_more_btn: "VER PERFIL"
     about_projects_title: "Projetos"
-    about_projects_description: "Esses são alguns dos nossos experimentos até agora."
+    about_projects_description: "Uma seleção de soluções técnicas e implementações desenvolvidas até agora."
     learn_more_btn: "SAIBA MAIS"
     rps_title: "PEDRA PAPEL TESOURA"
     rps_you: "VOCÊ"
@@ -76,6 +76,11 @@ pt:
     game_analytics_summary_percentage_all: "Você é um deles!"
     game_analytics_summary_percentage_none_html: "Ache todas as 3 moedas<br>para se juntar a eles!"
   projects:
+    status:
+      coming_soon: "Em Breve"
+    jiko_project_description: "Um app de produtividade gamificado para monitorar sessões de foco e análise de crescimento pessoal."
+    n8n_whatsapp_project_description: "Uma automação robusta que orquestra fluxos de registro de participantes e entrega atualizações de RSS via WhatsApp."
+    acoelho_project_description: "Uma amostra full-stack que demonstra nossa capacidade de desenvolver arquitetura técnica e produtos em produção."
     trofy_project_description: "Um app de tarefas que transforma seus objetivos pessoais em um jogo para reforçar o desenvolvimento de bons hábitos."
     bs_project_description: "Um jogo demo feito em Unity com uma mecânica no estilo “escolha 1 de 3”, inspirada em Vampire Survivors."
     fa_project_description: "Um jogo simples feito em Unity com mecânicas de tempo e sobrevivência, inspirado em Flappy Bird."
