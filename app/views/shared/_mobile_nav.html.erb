@@ -16,9 +16,9 @@
     <button class="js-mobile-nav-button mobile-nav-button" data-action="navigate" data-target="<%= projects_path %>">
       <div class="mobile-nav-icon-container">
         <img class="mobile-nav-icon" src="/icons/icon_mobile_nav_app_light.png">
-        <img class="js-nav-toggle mobile-nav-icon <%= 'inactive' unless is_projects %>" src="/icons/icon_mobile_nav_app_dark.png">
+        <img class="js-nav-toggle mobile-nav-icon <%= 'inactive' unless current_page?(projects_path) %>" src="/icons/icon_mobile_nav_app_dark.png">
       </div>
-      <div class="js-nav-toggle mobile-nav-text <%= 'inactive' unless is_projects %>"><%= t('mobile_nav.projects_nav') %></div>
+      <div class="js-nav-toggle mobile-nav-text <%= 'inactive' unless current_page?(projects_path) %>"><%= t('mobile_nav.projects_nav') %></div>
     </button>
 
     <%# --- About Button --- %>

@@ -1,5 +1,3 @@
-
-
 body {
   font-family: var(--font-family-base);
   color: var(--color-text);
@@ -7,6 +5,11 @@ body {
 
   overflow-x: hidden;
   margin: 0;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   transition: background-color 0.15s;
   
@@ -84,8 +87,4 @@ html {
 
 .indent {
   padding-left: 20px;
-}
-
-.page-content {
-  flex: 1 0 auto;
 }
