@@ -1,22 +1,31 @@
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+
 .mobile-nav {
   display: none;
 }
 
+.mobile-layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100dvh;
+}
+
 @media (max-width: 720px) and (hover: none) and (pointer: coarse) {
   .mobile-nav {
-    position: fixed;
+    position: sticky;
     display: flex;
     flex-direction: row;
     align-items: center;
     justify-content: center;
-    height: 184px;
     bottom: 0;
-    left: 0;
-    right: 0;
     z-index: 100;
+    width: 100%;
     pointer-events: none;
     background-color: var(--color-button);
-    transform: translate3d(0, 100px, 0);
+    box-shadow: var(--shadow-mobile-nav) var(--color-mobile-nav-shadow);
+    padding-bottom: calc(var(--space-sm) + env(safe-area-inset-bottom));
   }
 
   .mobile-nav-container {
@@ -27,7 +36,6 @@
     height: 100%;
     width: 100%;
     pointer-events: auto;
-    box-shadow: var(--shadow-mobile-nav) var(--color-mobile-nav-shadow);
   }
 
   .mobile-nav-button {
@@ -95,6 +103,6 @@
   }
 
   footer {
-    padding-bottom: 100px;
+    padding-bottom: 20px;
   }
 }

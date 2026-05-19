@@ -28,14 +28,23 @@
   </head>
 
   <body data-locale="<%= I18n.locale %>">
-    <%= render "shared/header" %>
-    <%= render "shared/mobile_nav" %>
 
-    <%= yield %>
+    <div class="mobile-layout-wrapper">
+
+      <%= render "shared/header" %>
+
+      <main class="page-content">
+        
+      </main>
+
+      <%= yield %>
+
+      <%= render "shared/footer" %>
+      <%= render "shared/mobile_nav" %>
+
+    </div>
   
     <%= render "shared/return_to_top" %>
-    <%= render "shared/footer" %>
-
     <%= yield :page_specific_js %>
   </body>
 </html>
