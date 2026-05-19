@@ -5,7 +5,6 @@ footer {
   height: 160px;
   display: flex;
   justify-content: center;
-  align-items: end;
   margin-top: 80px;
 }
 
@@ -13,7 +12,7 @@ footer {
   display: flex;
   flex: 1;
   flex-direction: column;
-  justify-content: end;
+  justify-content: flex-end;
   align-items: center;
   padding: 20px 20px 10px 20px;
   gap: 10px;
@@ -24,6 +23,7 @@ footer {
   text-align: center;
   line-height: 150%;
   color: var(--color-text-inactive);
+  margin: 0;
 }
 
 .footer-small-font.bold {
