@@ -202,8 +202,12 @@
 
 .return-to-top {
   opacity: 1;
+  background-color: color-mix(in srgb, var(--color-button) 85%, transparent);
   pointer-events: auto;
   transition: opacity 0.3s ease, transform 0.3s ease;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
 }
 
 .return-to-top.hidden {
