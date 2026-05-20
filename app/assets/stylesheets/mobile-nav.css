@@ -105,8 +105,8 @@
   }
 
   .return-to-top-container {
-    bottom: 104px;
-    right: 8px;
+    bottom: calc(104px + env(safe-area-inset-bottom));
+    right: 10px;
     z-index: 99;
   }
 

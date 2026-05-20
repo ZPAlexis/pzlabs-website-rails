@@ -41,7 +41,7 @@
   flex-direction: column;
   width: 320px;
   min-height: 200px;
-  padding: 20px 40px 0 40px;
+  padding: 20px 40px;
   justify-content: baseline;
   gap: 20px;
 }
