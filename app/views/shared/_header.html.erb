@@ -2,42 +2,42 @@
   <nav class="header-nav">
     <div class="header-menu-container">
       <div class="js-header-menu">
-        <button class="js-animated-button js-menu-toggle cta-button nav-button desktop-nav">
+        <button class="js-animated-button js-menu-toggle cta-button nav-button desktop-nav glass-button">
           <img class="button-icon" src="/icons/icon_menu_dark.png">
         </button>
 
         <div class="js-header-drawer header-menu-nav-drawer">
-          <button class="js-animated-button cta-button nav-button menu-fix-width text" data-action="navigate" data-target="<%= root_path %>">
+          <button class="js-animated-button cta-button nav-button menu-fix-width text glass-button" data-action="navigate" data-target="<%= root_path %>">
             <p class="small"><%= t('header.home') %></p>
             <img class="button-icon small" src="/icons/icon_right_dark.png">
           </button>  
         
-          <button class="js-animated-button cta-button nav-button menu-fix-width text" data-action="navigate" data-target="<%= projects_path %>">
+          <button class="js-animated-button cta-button nav-button menu-fix-width text glass-button" data-action="navigate" data-target="<%= projects_path %>">
             <p class="small"><%= t('header.projects') %></p>
             <img class="button-icon small" src="/icons/icon_right_dark.png">
           </button>
           
-          <button class="js-animated-button cta-button nav-button menu-fix-width text" data-action="navigate" data-target="<%= about_path %>" data-tracking="aboutClick">
+          <button class="js-animated-button cta-button nav-button menu-fix-width text glass-button" data-action="navigate" data-target="<%= about_path %>" data-tracking="aboutClick">
             <p class="small"><%= t('header.about') %></p>
             <img class="button-icon small" src="/icons/icon_right_dark.png">
           </button>
         </div>
       </div>
       <div class="js-header-menu">
-        <button class="js-animated-button js-menu-toggle cta-button language-fix-width nav-button">
+        <button class="js-animated-button js-menu-toggle cta-button language-fix-width nav-button glass-button">
           <img class="button-icon" src="/icons/icon_language_dark.png">
           <img class="button-icon small" src="/icons/icon_down_dark.png">
         </button>
 
         <div class="js-header-drawer header-menu-nav-drawer">
-          <%= link_to 'EN', url_for(request.params.merge(locale: 'en')), class: "js-animated-button cta-button nav-button language-fix-width" %>
+          <%= link_to 'EN', url_for(request.params.merge(locale: 'en')), class: "js-animated-button cta-button nav-button glass-button language-fix-width" %>
 
-          <%= link_to 'PT', url_for(request.params.merge(locale: 'pt')), class: "js-animated-button cta-button nav-button language-fix-width" %>
+          <%= link_to 'PT', url_for(request.params.merge(locale: 'pt')), class: "js-animated-button cta-button nav-button glass-button language-fix-width" %>
         </div>
       </div>
     </div>
     <div class="header-menu-container column">
-      <button class="js-animated-button js-coin-summary coin-summary cta-button fixed-width hidden">
+      <button class="js-animated-button js-coin-summary coin-summary cta-button fixed-width glass-button hidden">
         <div class="gold-coin-container">
           <img class="summary-icon" src="/icons/coin-gold.svg">
         </div>
