@@ -14,7 +14,7 @@
 
 .header-nav {
   max-width: var(--max-width-container);
-  padding: 8px;
+  padding: 20px;
   display: flex;
   flex: 1;
   justify-content: space-between;

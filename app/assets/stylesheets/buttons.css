@@ -193,6 +193,12 @@
   background-color: var(--color-button-hover);
 }
 
+.glass-button {
+  background-color: color-mix(in srgb, var(--color-mobile-nav) 85%, transparent);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
 .return-to-top-container {
   position: fixed;
   bottom: 20px;
