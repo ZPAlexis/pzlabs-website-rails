@@ -2,7 +2,7 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  padding-top: 80px;
+  padding-top: 100px;
 }
 
 .intro-container {
@@ -338,7 +338,7 @@
 .projects-container {
   display: flex;
   flex-wrap: wrap;
-  gap: 80px;
+  gap: 80px 40px;
   justify-content: center;
 
   max-width: var(--max-width-container);

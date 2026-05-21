@@ -26,9 +26,9 @@ pt:
     reset_text_btn: "RESETAR PROGRESSO"
     reset_text: "Colete todas para desbloquear"
   index:
-    intro_cover_html: "Experiências<br>Gamificadas"
+    intro_cover_html: "Soluções<br>Gamificadas"
     coin_collected_text: "Moeda Coletada!"
-    intro_description: "Soluções inspiradas em jogos para engajar usuários"
+    intro_description: "Experiências inspiradas em jogos para engajar usuários"
     intro_cover_options:
       - "Criando"
       - "Engenhando"
@@ -78,9 +78,9 @@ pt:
   projects:
     status:
       coming_soon: "Em Breve"
-    jiko_project_description: "Um app de produtividade gamificado para monitorar sessões de foco e análise de crescimento pessoal."
+    jiko_project_description: "Um app de produtividade com elementos de gamificação para monitorar sessões de foco e análise de crescimento pessoal."
     n8n_whatsapp_project_description: "Uma automação robusta que orquestra fluxos de registro de participantes e entrega atualizações de RSS via WhatsApp."
-    acoelho_project_description: "Uma amostra full-stack que demonstra nossa capacidade de desenvolver arquitetura técnica e produtos em produção."
+    acoelho_project_description: "Um website full-stack que demonstra nossa capacidade de desenvolver arquitetura técnica e publicar soluções em produção."
     trofy_project_description: "Um app de tarefas que transforma seus objetivos pessoais em um jogo para reforçar o desenvolvimento de bons hábitos."
     bs_project_description: "Um jogo demo feito em Unity com uma mecânica no estilo “escolha 1 de 3”, inspirada em Vampire Survivors."
     fa_project_description: "Um jogo simples feito em Unity com mecânicas de tempo e sobrevivência, inspirado em Flappy Bird."

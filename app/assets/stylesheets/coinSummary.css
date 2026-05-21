@@ -129,11 +129,15 @@
   height: 40px;
   border-radius: 100%;
   border: 3px solid var(--color-text);
-  box-shadow: var(--shadow-sm) var(--color-border-shadow);
+  box-shadow: var(--shadow-md) var(--color-button-base-shadow);
   font-family: var(--font-family-basic);
   font-weight: bold;
   font-size: var(--font-size-h1);
   color: transparent;
+
+  --btn-transition: border 0.1s ease-out, transform 0.2s ease-out, box-shadow 0.2s ease-out, background-color 0.1s ease-out, opacity 0.3s ease;
+  transition: var(--btn-transition);
+  will-change: transform, box-shadow;
 }
 
 .summary-menu-stats-container {
