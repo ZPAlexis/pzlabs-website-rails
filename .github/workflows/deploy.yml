@@ -11,28 +11,41 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Deploy to VPS via SSH
-        uses: appleboy/ssh-action@v1.0.3
+      - name: Set up SSH key
+        run: |
+          mkdir -p ~/.ssh
+          echo "${{ secrets.SSH_PRIVATE_KEY }}" > ~/.ssh/deploy_key
+          chmod 600 ~/.ssh/deploy_key
+          ssh-keyscan -H "${{ secrets.REMOTE_HOST }}" >> ~/.ssh/known_hosts 2>/dev/null || true
+
+      - name: Copy secrets to VPS
+        run: |
+          DEST="${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }}"
+          printf '%s' "${{ secrets.ENV_FILE }}" > /tmp/deploy.env
+          printf '%s' "${{ secrets.RAILS_MASTER_KEY }}" > /tmp/master.key
+
+          ssh -i ~/.ssh/deploy_key "$DEST" "mkdir -p ~/pzlabs-website/config"
+          scp -i ~/.ssh/deploy_key /tmp/deploy.env "$DEST:~/pzlabs-website/.env"
+          scp -i ~/.ssh/deploy_key /tmp/master.key "$DEST:~/pzlabs-website/config/master.key"
+          ssh -i ~/.ssh/deploy_key "$DEST" "chmod 600 ~/pzlabs-website/config/master.key"
+
+      - name: Deploy to VPS
+        uses: nick-fields/retry@v3
         with:
-          host: ${{ secrets.REMOTE_HOST }}
-          username: ${{ secrets.REMOTE_USER }}
-          key: ${{ secrets.SSH_PRIVATE_KEY }}
-          script: |
-            mkdir -p ~/pzlabs-website
-            cd ~/pzlabs-website
-
-            if [ -d .git ]; then
-              git pull origin main
-            else
-              git clone https://github.com/${{ github.repository }}.git .
-            fi
-
-            echo "${{ secrets.ENV_FILE }}" > .env
-            echo "${{ secrets.RAILS_MASTER_KEY }}" > config/master.key
-            chmod 600 config/master.key
-
-            docker compose up -d --build
-
-            docker compose exec -T web ./bin/rails db:migrate
-
-            docker image prune -f
+          timeout_minutes: 15
+          max_attempts: 3
+          retry_wait_seconds: 15
+          command: |
+            ssh -i ~/.ssh/deploy_key \
+              -o ConnectTimeout=30 \
+              -o StrictHostKeyChecking=no \
+              ${{ secrets.REMOTE_USER }}@${{ secrets.REMOTE_HOST }} \
+              "cd ~/pzlabs-website &&
+              if [ -d .git ]; then
+                git fetch origin && git reset --hard origin/main
+              else
+                git clone https://github.com/${{ github.repository }}.git .
+              fi &&
+              docker compose up -d --build &&
+              docker compose exec -T web ./bin/rails db:migrate &&
+              docker image prune -f"
