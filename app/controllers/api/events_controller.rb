@@ -1,7 +1,5 @@
 module Api
   class EventsController < ApplicationController
-    skip_before_action :verify_authenticity_token
-
     before_action :set_client_cookie
 
     # POST /api/record-event
@@ -52,7 +50,7 @@ module Api
           expires: 1.year.from_now,
           httponly: true,
           secure: Rails.env.production?,
-          same_site: Rails.env.production? ? :none : :lax
+          same_site: :lax
         }
         @cookie_id = new_id
       end

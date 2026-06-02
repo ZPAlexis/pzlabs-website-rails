@@ -1,11 +1,21 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+# alice has all three coins
+alice_box:
+  client: alice
+  coin_name: boxCoin
+  collected_at: 2026-01-01 12:00:00
 
-one:
-  client: one
-  coin_name: MyString
-  collected_at: 2026-02-10 18:35:51
+alice_fill:
+  client: alice
+  coin_name: fillCoin
+  collected_at: 2026-01-01 12:01:00
 
-two:
-  client: two
-  coin_name: MyString
-  collected_at: 2026-02-10 18:35:51
+alice_rps:
+  client: alice
+  coin_name: rpsCoin
+  collected_at: 2026-01-01 12:02:00
+
+# bob has only one coin
+bob_box:
+  client: bob
+  coin_name: boxCoin
+  collected_at: 2026-01-01 13:00:00

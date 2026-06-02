@@ -1,7 +1,8 @@
-# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+alice:
+  cookie_id: cookie_alice_uuid
 
-one:
-  cookie_id: unique_cookie_1
+bob:
+  cookie_id: cookie_bob_uuid
 
-two:
-  cookie_id: unique_cookie_2
+charlie:
+  cookie_id: cookie_charlie_uuid

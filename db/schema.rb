@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.1].define(version: 2026_02_10_213551) do
+ActiveRecord::Schema[8.1].define(version: 2026_06_02_000000) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -26,6 +26,7 @@ ActiveRecord::Schema[8.1].define(version: 2026_02_10_213551) do
     t.string "coin_name", null: false
     t.datetime "collected_at", default: -> { "CURRENT_TIMESTAMP" }, null: false
     t.index ["client_id"], name: "index_coin_events_on_client_id"
+    t.index ["collected_at"], name: "index_coin_events_on_collected_at"
   end
 
   add_foreign_key "coin_events", "clients", on_delete: :cascade

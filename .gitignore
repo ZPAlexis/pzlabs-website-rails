@@ -17,3 +17,7 @@
 /config/*.key
 /config/credentials/*.key
 *.dump
+
+# Ignore key files for decrypting credentials and more.
+/config/*.key
+

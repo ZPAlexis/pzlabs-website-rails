@@ -25,11 +25,11 @@ COPY Gemfile Gemfile.lock ./
 
 RUN bundle install && \
     rm -rf ~/.bundle/ "${BUNDLE_PATH}"/ruby/*/cache "${BUNDLE_PATH}"/ruby/*/bundler/gems/*/.git && \
-    bundle exec bootsnap precompile -j 1 --gemfile
+    bundle exec bootsnap precompile -j auto --gemfile
 
 COPY . .
 
-RUN bundle exec bootsnap precompile -j 1 app/ lib/
+RUN bundle exec bootsnap precompile -j auto app/ lib/
 
 RUN --mount=type=secret,id=master_key,target=/rails/config/master.key \
     SECRET_KEY_BASE_DUMMY=1 ./bin/rails assets:precompile
