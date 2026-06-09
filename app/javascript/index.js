@@ -21,6 +21,7 @@ const App = {
     FillBarGame.init();
     
     this.setupEventListeners();
+    this.setupScrollObservers();
     this.refreshApp();
 
     fetchAndDisplayMetrics();
