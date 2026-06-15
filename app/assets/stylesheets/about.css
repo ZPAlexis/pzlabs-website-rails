@@ -169,7 +169,7 @@
   color: var(--color-background);
 
   flex: 1 1;
-  min-width: 200px;
+  min-width: 240px;
 }
 
 .about-skills-card.extra-gap {
