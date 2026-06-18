@@ -432,7 +432,7 @@
 }
 
 .stack-tag.portfolio {
-  font-size: var(--font-size-medium);
+  font-size: var(--font-size-xsmall);
 }
 
 .project-cta {
@@ -534,14 +534,14 @@
   gap: 6px;
 }
 
-.analyics-number-container {
+.analytics-number-container {
   display: flex;
   align-items: center;
   justify-content: center;
   gap: 6px;
 }
 
-.analyics-number-container::before {
+.analytics-number-container::before {
   content: "";
   display: block;
   width: 44px;

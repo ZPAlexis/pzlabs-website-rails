@@ -4,8 +4,9 @@ Rails.application.configure do
     policy.font_src    :self, "https://fonts.gstatic.com"
     policy.img_src     :self, :data
     policy.object_src  :none
-    policy.script_src  :self
-    policy.style_src   :self, :unsafe_inline, "https://fonts.googleapis.com"
+    policy.script_src  :self, "https://cdn.jsdelivr.net"
+    policy.style_src   :self, :unsafe_inline, "https://fonts.googleapis.com", "https://cdn.jsdelivr.net"
+    policy.frame_src   :self, "https://www.youtube-nocookie.com"
     policy.connect_src :self
   end
 

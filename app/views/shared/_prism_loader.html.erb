@@ -1,11 +1,11 @@
 <link href="https://cdn.jsdelivr.net/npm/prismjs/themes/prism-tomorrow.css" rel="stylesheet">
 
-<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js"></script>
-<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/prism.js" nonce="<%= content_security_policy_nonce %>"></script>
+<script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-javascript.min.js" nonce="<%= content_security_policy_nonce %>"></script>
 
 <%# Load extra languages if passed as an array %>
 <% if local_assigns[:languages] %>
   <% languages.each do |lang| %>
-    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-<%= lang %>.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/prismjs/components/prism-<%= lang %>.min.js" nonce="<%= content_security_policy_nonce %>"></script>
   <% end %>
 <% end %>
