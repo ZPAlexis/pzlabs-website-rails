@@ -82,8 +82,8 @@ pt:
     n8n_whatsapp_project_description: "Uma automação robusta que orquestra fluxos de registro de participantes e entrega atualizações de RSS via WhatsApp."
     acoelho_project_description_html: "<b>Este site!</b><br>Uma demonstração full-stack de arquitetura técnica e engenharia pronta para produção."
     trofy_project_description: "Um app de tarefas que transforma seus objetivos pessoais em um jogo para reforçar o desenvolvimento de bons hábitos."
-    bs_project_description: "Um jogo demo feito em Unity com uma mecânica no estilo “escolha 1 de 3”, inspirada em Vampire Survivors."
-    fa_project_description: "Um jogo simples feito em Unity com mecânicas de tempo e sobrevivência, inspirado em Flappy Bird."
+    bs_project_description: "O segundo jogo demo feito em Unity com uma mecânica no estilo “escolha 1 de 3”. Inspirado em Vampire Survivors."
+    fa_project_description: "Um jogo demo feito em Unity para aplicar conceitos de game-dev e C-sharp. Inspirado em Flappy Bird."
   about:
     bio_availability: "Procurando oportunidades"
     bio_role: "Engenheiro de Soluções"

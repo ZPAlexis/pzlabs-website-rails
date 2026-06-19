@@ -13,7 +13,7 @@ class ApplicationController < ActionController::Base
 
     elsif request.path == "/"
       preferred_locale = cookies[:locale] || extract_locale_from_accept_language || I18n.default_locale
-      redirect_to "/#{preferred_locale}"
+      redirect_to "/#{preferred_locale}#{request.query_string.present? ? "?#{request.query_string}" : ''}"
 
     else
       I18n.locale = params[:locale] || I18n.default_locale

@@ -23,8 +23,21 @@ const App = {
     this.setupEventListeners();
     this.setupScrollObservers();
     this.refreshApp();
+    this.openSummaryFromUrl();
 
     fetchAndDisplayMetrics();
+  },
+
+  openSummaryFromUrl() {
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('openSummary') !== 'true') return;
+
+    this.toggleSummary(false);
+
+    params.delete('openSummary');
+    const newSearch = params.toString();
+    const newUrl = window.location.pathname + (newSearch ? `?${newSearch}` : '') + window.location.hash;
+    window.history.replaceState({}, '', newUrl);
   },
 
   refreshApp() {
