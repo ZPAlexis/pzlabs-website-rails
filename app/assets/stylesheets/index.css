@@ -121,8 +121,10 @@
   transform-origin: center bottom;
 }
 
-.cover-box:hover {
-  filter: drop-shadow(0 0 30px var(--color-text-shadow));
+@media (hover: hover) {
+  .cover-box:hover {
+    filter: drop-shadow(0 0 30px var(--color-text-shadow));
+  }
 }
 
 .cover-box.idle {

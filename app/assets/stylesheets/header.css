@@ -6,15 +6,15 @@
   align-items: start;
   justify-content: center;
   top: 0;
-  left: 0;
-  right: 0;
+  left: 20px;
+  right: 20px;
   z-index: 100;
   pointer-events: none;
 }
 
 .header-nav {
   max-width: var(--max-width-container);
-  padding: 20px;
+  padding: 20px 0;
   display: flex;
   flex: 1;
   justify-content: space-between;

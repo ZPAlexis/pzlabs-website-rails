@@ -84,18 +84,20 @@
   color: var(--color-text);
   font-weight: 400;
   cursor: default;
-
-  &:hover {
-    background-color: transparent;
-  }
 }
 
 .cta-button.fixed-width {
   width: 100px;
 }
 
-.cta-button:hover {
-  background-color: var(--color-button-active);
+@media (hover: hover) {
+  .cta-button:disabled:hover {
+    background-color: transparent;
+  }
+
+  .cta-button:hover {
+    background-color: var(--color-button-active);
+  }
 }
 
 .gold-button {
@@ -115,12 +117,14 @@
   background-color: var(--color-button-active)
 }
 
-.gold-button:hover {
-  background-color: var(--color-accent-highlight);
-}
+@media (hover: hover) {
+  .gold-button:hover {
+    background-color: var(--color-accent-highlight);
+  }
 
-.blue-button:hover {
-  background-color: var(--color-primary-highlight);
+  .blue-button:hover {
+    background-color: var(--color-primary-highlight);
+  }
 }
 
 .button-icon {
@@ -189,8 +193,10 @@
   color: var(--color-border-shadow);
 }
 
-.info-button:hover {
-  background-color: var(--color-button-hover);
+@media (hover: hover) {
+  .info-button:hover {
+    background-color: var(--color-button-hover);
+  }
 }
 
 .glass-button {
@@ -199,11 +205,23 @@
   -webkit-backdrop-filter: blur(8px);
 }
 
-.return-to-top-container {
+.return-to-top-outer {
   position: fixed;
   bottom: 20px;
-  right: 14px;
+  left: 20px;
+  right: 20px;
   z-index: 100;
+  display: flex;
+  justify-content: center;
+  pointer-events: none;
+}
+
+.return-to-top-container {
+  max-width: var(--max-width-container);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
 }
 
 .return-to-top {
@@ -220,6 +238,43 @@
   opacity: 0;
   pointer-events: none;
   transform: translateY(100px);
+}
+
+.section-nav-button {
+  opacity: 1;
+  max-width: 200px;
+  margin-right: 8px;
+  padding: 0 16px;
+  border-width: 4px;
+  overflow: hidden;
+  background-color: color-mix(in srgb, var(--color-button) 85%, transparent);
+  pointer-events: auto;
+  transition: opacity 0.3s ease, transform 0.3s ease, max-width 0.3s ease,
+    margin-right 0.3s ease, padding 0.3s ease, border-width 0.3s ease;
+
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.section-nav-button.hidden {
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(100px);
+  max-width: 0;
+  margin-right: 0;
+  padding-left: 0;
+  padding-right: 0;
+  border-width: 0;
+}
+
+.section-nav-title {
+  overflow: hidden;
+  white-space: nowrap;
+  font-size: var(--font-size-xsmall);
+}
+
+.button-icon.rotate-180 {
+  transform: translateY(-1px) rotate(180deg);
 }
 
 @supports (-webkit-touch-callout: none) {

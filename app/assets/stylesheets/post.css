@@ -372,9 +372,11 @@ h2.post-heading[id] {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-.post-code-link:hover {
-  background-color: var(--color-link);
-  color: var(--color-background);
+@media (hover: hover) {
+  .post-code-link:hover {
+    background-color: var(--color-link);
+    color: var(--color-background);
+  }
 }
 
 .post-analytics-center {

@@ -8,6 +8,7 @@ export const ButtonManager = {
     this.setupMobileNav();
     this.setupDropdownMenus();
     this.setupScrollToTop();
+    this.setupSectionNav();
   },
 
   setupButtons() {
@@ -120,6 +121,83 @@ export const ButtonManager = {
 
     btn.addEventListener('click', () => {
       window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+  },
+
+  setupSectionNav() {
+    const headings = Array.from(document.querySelectorAll('.post-section h2.post-heading[id]'));
+    if (headings.length === 0) return;
+
+    const sections = headings.map((el) => ({ id: el.id, title: el.textContent.trim(), el }));
+
+    const prevBtn = document.querySelector('.js-prev-section');
+    const nextBtn = document.querySelector('.js-next-section');
+    if (!prevBtn || !nextBtn) return;
+
+    const TOP_OFFSET = 150;
+    const HEADER_OFFSET = 100;
+    const HIDE_TRANSITION_MS = 300;
+    const endMarker = document.querySelector('.post-references-section');
+    let currentIndex = -1;
+    let pastThreshold = false;
+
+    const setButtonVisible = (btn, visible) => {
+      if (visible) {
+        clearTimeout(btn._hideTimeout);
+        if (btn.style.display === 'none') btn.style.display = '';
+        requestAnimationFrame(() => btn.classList.remove('hidden'));
+      } else {
+        if (btn.classList.contains('hidden')) return;
+        btn.classList.add('hidden');
+        btn._hideTimeout = setTimeout(() => {
+          if (btn.classList.contains('hidden')) btn.style.display = 'none';
+        }, HIDE_TRANSITION_MS);
+      }
+    };
+
+    const scrollToSection = (el) => {
+      const top = el.getBoundingClientRect().top + window.scrollY - HEADER_OFFSET;
+      window.scrollTo({ top, behavior: 'smooth' });
+    };
+
+    const updateCurrentIndex = () => {
+      let index = -1;
+      sections.forEach((section, i) => {
+        if (section.el.getBoundingClientRect().top <= TOP_OFFSET) index = i;
+      });
+      if (endMarker && endMarker.getBoundingClientRect().top <= TOP_OFFSET) {
+        index = sections.length;
+      }
+      currentIndex = index;
+    };
+
+    const updateButtons = () => {
+      const prevSection = sections[currentIndex - 1];
+      const nextSection = sections[currentIndex + 1];
+
+      prevBtn.querySelector('.js-section-nav-title').textContent = prevSection ? prevSection.title : '';
+      nextBtn.querySelector('.js-section-nav-title').textContent = nextSection ? nextSection.title : '';
+
+      setButtonVisible(prevBtn, pastThreshold && !!prevSection);
+      setButtonVisible(nextBtn, pastThreshold && !!nextSection);
+    };
+
+    window.addEventListener('scroll', () => {
+      requestAnimationFrame(() => {
+        pastThreshold = window.scrollY > 600;
+        updateCurrentIndex();
+        updateButtons();
+      });
+    }, { passive: true });
+
+    prevBtn.addEventListener('click', () => {
+      const target = sections[currentIndex - 1];
+      if (target) scrollToSection(target.el);
+    });
+
+    nextBtn.addEventListener('click', () => {
+      const target = sections[currentIndex + 1];
+      if (target) scrollToSection(target.el);
     });
   },
 

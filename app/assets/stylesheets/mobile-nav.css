@@ -106,9 +106,8 @@
     gap: 0;
   }
 
-  .return-to-top-container {
+  .return-to-top-outer {
     bottom: calc(100px + env(safe-area-inset-bottom));
-    right: 20px;
     z-index: 99;
   }
 
