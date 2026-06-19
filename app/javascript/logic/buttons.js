@@ -1,5 +1,6 @@
 import { buttonActions } from 'logic/actions';
-import { mobileNavSelect } from 'logic/mobile-nav';
+import { mobileNavSelect, positionNavIndicator } from 'logic/mobile-nav';
+import { setupImageLightbox } from 'logic/lightbox';
 
 export const ButtonManager = {
   init() {
@@ -9,6 +10,7 @@ export const ButtonManager = {
     this.setupDropdownMenus();
     this.setupScrollToTop();
     this.setupSectionNav();
+    setupImageLightbox();
   },
 
   setupButtons() {
@@ -51,12 +53,38 @@ export const ButtonManager = {
 
   setupMobileNav() {
     const mobileNavButtons = document.querySelectorAll('.js-mobile-nav-button');
+    if (mobileNavButtons.length === 0) return;
+
+    const indicator = document.querySelector('.js-mobile-nav-indicator');
+    const activeButton = document.querySelector('.js-mobile-nav-button.active-tab') || mobileNavButtons[0];
+    if (indicator) indicator.classList.add('no-transition');
+    positionNavIndicator(activeButton);
+    if (indicator) {
+      requestAnimationFrame(() => indicator.classList.remove('no-transition'));
+    }
+
     mobileNavButtons.forEach((button) => {
-      button.addEventListener('pointerdown', () => {
+      const handlePressStart = () => {
         if (button.disabled) return;
-        mobileNavSelect(button);
-        this.executeAction(button);
-      });
+        button.style.setProperty('transition', 'none');
+        button.classList.add('pressed');
+
+        const handlePressEnd = () => {
+          button.style.setProperty('transition', '');
+          button.classList.remove('pressed');
+          window.removeEventListener('pointerup', handlePressEnd);
+          window.removeEventListener('pointercancel', handlePressEnd);
+
+          mobileNavSelect(button);
+          positionNavIndicator(button);
+          this.executeAction(button);
+        };
+
+        window.addEventListener('pointerup', handlePressEnd);
+        window.addEventListener('pointercancel', handlePressEnd);
+      };
+
+      button.addEventListener('pointerdown', handlePressStart);
     });
   },
 
