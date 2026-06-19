@@ -163,7 +163,7 @@ export const ButtonManager = {
     if (!prevBtn || !nextBtn) return;
 
     const TOP_OFFSET = 150;
-    const HEADER_OFFSET = 100;
+    const HEADER_OFFSET = 60;
     const HIDE_TRANSITION_MS = 300;
     const endMarker = document.querySelector('.post-references-section');
     let currentIndex = -1;
