@@ -51,20 +51,26 @@
       <div class="about-skills-container">
         <div class="about-skills-cards-container">
           <div class="about-skills-card extra-gap fade-up">
-            <div class="about-skills-card-icon not-selectable"><img class="icon" src="/icons/icon_automation_dark.png"></div>
-            <div class="about-skills-card-title"><%= t('about.intro_services_title_1') %></div>
+            <div class="about-skills-card-title-wrapper">
+              <div class="about-skills-card-icon not-selectable"><img class="icon" src="/icons/icon_automation_dark.png"></div>
+              <div class="about-skills-card-title"><%= t('about.intro_services_title_1') %></div>
+            </div>
             <div class="about-skills-card-description"><%= t('about.intro_services_description_1') %></div>
           </div>
 
           <div class="about-skills-card extra-gap fade-up">
-            <div class="about-skills-card-icon not-selectable"><img class="icon" src="/icons/icon_gamification_dark.png"></div>
-            <div class="about-skills-card-title"><%= t('about.intro_services_title_2') %></div>
+            <div class="about-skills-card-title-wrapper">
+              <div class="about-skills-card-icon not-selectable"><img class="icon" src="/icons/icon_gamification_dark.png"></div>
+              <div class="about-skills-card-title"><%= t('about.intro_services_title_2') %></div>
+            </div>
             <div class="about-skills-card-description"><%= t('about.intro_services_description_2') %></div>
           </div>
 
           <div class="about-skills-card extra-gap fade-up">
-            <div class="about-skills-card-icon not-selectable"><img class="icon" src="/icons/icon_website_dark.png"></div>
-            <div class="about-skills-card-title"><%= t('about.intro_services_title_3') %></div>
+            <div class="about-skills-card-title-wrapper">
+              <div class="about-skills-card-icon not-selectable"><img class="icon" src="/icons/icon_website_dark.png"></div>
+              <div class="about-skills-card-title"><%= t('about.intro_services_title_3') %></div>
+            </div>
             <div class="about-skills-card-description"><%= t('about.intro_services_description_3') %></div>
           </div>
         </div>
@@ -85,7 +91,7 @@
 
   <section class="about-text-section fade-up">
     <button class="js-animated-button cta-button nav-button social" data-action="navigate" data-target="/?openSummary=true">
-      <img class="button-icon" src="/icons/coin_idle.gif">TRY THE COIN GAME
+      <img class="button-icon" src="/icons/coin_idle.gif"><%= t('about.coin_game_btn') %>
     </button>
   </section>
 
@@ -310,7 +316,7 @@
 
   <section class="about-text-section fade-up">
     <div class="about-text-container">
-      <button class="js-animated-button cta-button nav-button social" data-action="navigate" data-target="/projects.html"><%= t('about.projects_btn') %></button>
+      <button class="js-animated-button cta-button nav-button social" data-action="navigate" data-target="<%= projects_path %>"><%= t('about.projects_btn') %></button>
     </div> 
   </section>
 

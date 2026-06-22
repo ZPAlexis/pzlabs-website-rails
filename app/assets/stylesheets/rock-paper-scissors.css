@@ -160,7 +160,8 @@
   font-family: var(--font-family-accent);
   font-weight: regular;
   margin: 0;
-  padding-bottom: 20px;
+  padding-bottom: 30px;
+  margin-top: -10px;
   line-height: 20px;
   height: 20px;
 

@@ -387,8 +387,12 @@ h2.post-heading[id] {
   margin-top: 10px;
 }
 
+.post-spacing-large {
+  margin-top: 40px;
+}
+
 .post-line {
-  width: 80%;
+  width: 75%;
   align-self: center;
   max-width: var(--max-width-container);
   border: none;
