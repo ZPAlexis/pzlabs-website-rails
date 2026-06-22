@@ -31,6 +31,7 @@
 
 .intro-title {
   font-size: var(--font-size-h1);
+  font-family: var(--font-family-base);
   margin: 0;
   line-height: 120%;
 }
@@ -59,6 +60,9 @@
   padding: 10px 0;
   max-width: 280px;
   line-height: 26px;
+  font-size: var(--font-size-h3);
+  font-family: var(--font-family-accent);
+  letter-spacing: 1px;
 }
 
 .intro-cta {
@@ -95,7 +99,7 @@
   text-align: center;
   width: 100%;
   font-size: var(--font-size-body);
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-base);
   color: var(--color-text);
   opacity: 0;
   font-weight: 500;
@@ -216,6 +220,8 @@
 
 .about-focus-description {
   line-height: 150%;
+  font-family: var(--font-family-accent);
+  letter-spacing: 1px;
 }
 
 .about-me-section {
@@ -261,7 +267,7 @@
   border-radius: 22px;
   box-shadow: var(--shadow-md) var(--color-button-text-shadow);
   font-size: var(--font-size-small);
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-base);
   font-weight: bold;
   color: var(--color-background);
   padding: 14px 20px;
@@ -270,6 +276,8 @@
 
 .about-me-description {
   font-size: var(--font-size-body);
+  font-family: var(--font-family-accent);
+  letter-spacing: 1px;
   width: 280px;
   line-height: 26px;
 }
@@ -322,6 +330,8 @@
   max-width: 600px;
   padding: 10px 0;
   line-height: 26px;
+  font-family: var(--font-family-accent);
+  letter-spacing: 1px;
 
   &.about-projects-description--about {
     width: 100%;
@@ -447,6 +457,8 @@
   margin: 0;
   line-height: 26px;
   width: 80%;
+  font-family: var(--font-family-accent);
+  letter-spacing: 1px;
 }
 
 .cta-section {
@@ -474,6 +486,8 @@
 .cta-message {
   line-height: 150%;
   font-weight: 400;
+  font-family: var(--font-family-accent);
+  letter-spacing: 1px;
 }
 
 .cta-link {
@@ -517,7 +531,7 @@
 .game-title {
   font-size: var(--font-size-h1);
   line-height: 100%;
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-base);
   color: var(--color-accent);
   text-shadow: var(--text-shadow-sm) var(--color-accent-shadow);
   font-weight: bold;
@@ -572,14 +586,15 @@
 }
 
 .analytics-text {
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-base);
   font-size: var(--font-size-medium);
+  letter-spacing: -1px;
   line-height: 120%;
   text-align: center;
 }
 
 .analytics-text.body {
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-base);
   line-height: 120%;
 }
 
@@ -589,7 +604,7 @@
 }
 
 .analytics-cta {
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-base);
   font-size: var(--font-size-body);
   font-weight: bold;
   text-align: center;

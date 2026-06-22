@@ -32,7 +32,7 @@
 }
 
 .rps-name, .rps-versus {
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-base);
   color: var(--color-text);
   text-shadow: var(--text-shadow-sm) var(--color-shadow);
   font-weight: bold;
@@ -157,7 +157,7 @@
 
 .result {
   font-size: var(--font-size-body);
-  font-family: var(--font-family-accent);
+  font-family: var(--font-family-base);
   font-weight: regular;
   margin: 0;
   padding-bottom: 30px;
