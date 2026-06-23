@@ -1,6 +1,7 @@
 <% 
   btn_text = local_assigns.fetch(:button_text, t('index.learn_more_btn'))
   is_disabled = local_assigns[:disabled] == true 
+  is_short_text = local_assigns[:short_text] == true
 %>
 
 <div class="project-container fade-right">
@@ -10,7 +11,7 @@
     </div>
     <div class="project-summary">
       <div class="project-summary-container">
-        <h1 class="project-title-text"><%= title %></h1>
+        <h1 class="<%= class_names('project-title-text', 'project-title-text--small': is_short_text) %>"><%= title %></h1>
         <div class="project-summary-tags not-selectable">
           <% tags.each do |tag| %>
             <div class="stack-tag"><%= tag %></div>

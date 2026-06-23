@@ -16,13 +16,14 @@
   <%# N8N WhatsApp %>
   <% unless local_assigns[:skip] == "n8n_whatsapp" %>
     <%= render "shared/project_card", 
-        title: "N8N RSS Bot", 
+        title: "WhatsApp News Feed Automation", 
         image_path: "/images/projects/n8n_whatsapp/n8n_whatsapp_icon.png", 
         tags: ["N8N", "Evolution API", "WhatsApp", "Docker"], 
         path: "#", 
         i18n_key: "projects.n8n_whatsapp_project_description",
         button_text: t('projects.status.coming_soon'),
-        disabled: true
+        disabled: true,
+        short_text: true
     %>
   <% end %>
 
