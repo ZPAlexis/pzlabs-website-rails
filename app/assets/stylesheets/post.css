@@ -219,6 +219,10 @@ h2.post-heading[id] {
   box-shadow: var(--shadow-md) var(--color-button-gold-shadow);
 }
 
+.post-image.drop-shadow {
+  box-shadow: var(--shadow-spread) var(--color-button-text-shadow);
+}
+
 .post-image.border {
   border: 1px solid var(--color-button-gold);
 }
@@ -364,6 +368,7 @@ h2.post-heading[id] {
   border-radius: 14px;
   padding: 16px 20px;
   font-weight: 400;
+  box-shadow: var(--shadow-spread) var(--color-button-text-shadow);
 }
 
 .post-self-start {
