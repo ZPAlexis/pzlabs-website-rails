@@ -153,7 +153,7 @@ export const ButtonManager = {
   },
 
   setupSectionNav() {
-    const headings = Array.from(document.querySelectorAll('.post-section h2.post-heading[id]'));
+    const headings = Array.from(document.querySelectorAll('.post-section .post-heading[id]'));
     if (headings.length === 0) return;
 
     const sections = headings.map((el) => ({ id: el.id, title: el.textContent.trim(), el }));

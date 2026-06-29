@@ -89,6 +89,10 @@
   object-fit: cover;
 }
 
+.post-banner-image.no-aspect-ratio {
+  aspect-ratio: auto;
+}
+
 .post-heading {
   display: flex;
   width: 100%;
@@ -244,6 +248,20 @@ h2.post-heading[id] {
   margin: 0 auto;
 }
 
+.post-image-row {
+  display: flex;
+  gap: 12px;
+  width: 100%;
+}
+
+.post-image-row .post-image {
+  flex: 1 1 0%;
+  width: 0;
+  min-width: 0;
+  max-width: 100%;
+  height: auto;
+}
+
 .post-inline-label {
   display: flex;
   align-items: center;
@@ -341,8 +359,19 @@ h2.post-heading[id] {
   letter-spacing: -0.5px;
 }
 
+.post-quote-box {
+  background-color: var(--color-primary-highlight-fade);
+  border-radius: 14px;
+  padding: 16px 20px;
+  font-weight: 400;
+}
+
 .post-self-start {
   align-self: flex-start;
+}
+
+.post-self-center {
+  align-self: center;
 }
 
 .post-text-title {
@@ -355,6 +384,24 @@ h2.post-heading[id] {
   width: 100%;
   padding: 0;
   margin: 0 !important;
+}
+
+.post-text-title.highlight {
+  color: var(--color-accent);
+  text-shadow: var(--text-shadow-sm) var(--color-accent-shadow);
+}
+
+.post-code {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-medium);
+  font-weight: 600;
+  letter-spacing: 0px;
+  color: var(--color-accent);
+  background-color: var(--color-primary-shadow);
+  border-radius: 6px;
+  padding: 2px 6px;
+  white-space: nowrap;
+  text-shadow: none;
 }
 
 .post-code-link {
@@ -370,6 +417,10 @@ h2.post-heading[id] {
   white-space: nowrap;
   text-shadow: none;
   transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.post-code.break, .post-code-link.break {
+  white-space: wrap;
 }
 
 @media (hover: hover) {

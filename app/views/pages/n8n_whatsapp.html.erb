@@ -1,5 +1,203 @@
-<% content_for :title, t("projects.n8n_whatsapp.title") + " | PZLabs" %>
+<main class="main-container">
+  <section class="post-section">
+    <%= image_tag t('portfolio.n8n_whatsapp.images.wf_participant'), class: "post-banner-image no-aspect-ratio" %>
+    <div class="post-container">
+      <h1 class="post-heading title center"><%= t('portfolio.n8n_whatsapp.title') %></h1>
 
-<main class="post-container">
-  <p><%= t("coming_soon", default: "Coming soon.") %></p>
+      <div class="post-intro-wrapper not-selectable">
+        <div class="post-list-container center gap">
+          <p class="post-text"><%= t('portfolio.n8n_whatsapp.category_html') %></p>
+          <div>
+            <p class="post-text"><%= t('portfolio.n8n_whatsapp.stack_html') %></p>
+            <div class="project-summary-tags portfolio not-selectable">
+              <div class="stack-tag portfolio">n8n</div>
+              <div class="stack-tag portfolio">Docker</div>
+              <div class="stack-tag portfolio">Evolution API</div>
+              <div class="stack-tag portfolio">WhatsApp</div>
+              <div class="stack-tag portfolio">PostgreSQL</div>
+              <div class="stack-tag portfolio">Redis</div>
+              <div class="stack-tag portfolio">Caddy</div>
+              <div class="stack-tag portfolio">Webshare</div>
+            </div>
+          </div>
+        </div>
+        <div class="post-spacing"></div>
+        <div class="post-list-container">
+          <h3 class="post-text text-highlight"><%= t('portfolio.n8n_whatsapp.index') %></h3>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#problem"><%= t('portfolio.n8n_whatsapp.problem') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#solution"><%= t('portfolio.n8n_whatsapp.solution') %></a></p>
+          <p class="post-list-item post-text gold">-><a class="post-list-item post-text" href="#architecture"><%= t('portfolio.n8n_whatsapp.architecture_heading') %></a></p>
+          <p class="post-list-item post-text gold">-><a class="post-list-item post-text" href="#api"><%= t('portfolio.n8n_whatsapp.evolution_heading') %></a></p>
+          <p class="post-list-item post-text gold">-><a class="post-list-item post-text" href="#workflows"><%= t('portfolio.n8n_whatsapp.workflows_heading') %></a></p>
+          <p class="post-list-item post-text gold">-><a class="post-list-item post-text" href="#deploy"><%= t('portfolio.n8n_whatsapp.deployment_heading') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#highlights"><%= t('portfolio.n8n_whatsapp.highlights') %></a></p>
+        </div>
+      </div>
+
+      <div class="post-spacing"></div>
+      <p class="post-text"><%= t('portfolio.n8n_whatsapp.overview_1') %></p>
+
+      <div class="post-spacing-large"></div>
+      <h2 class="post-heading" id="problem"><%= t('portfolio.n8n_whatsapp.problem') %></h2>
+      <p class="post-text"><%= t('portfolio.n8n_whatsapp.problem_1') %></p>
+      <p class="post-text"><%= t('portfolio.n8n_whatsapp.problem_2') %></p>
+      <ol type="1" class="post-text">
+        <li><%= t('portfolio.n8n_whatsapp.problem_li_1_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.problem_li_2_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.problem_li_3_html') %></li>
+      </ol>
+
+      <div class="post-spacing-large"></div>
+      <h2 class="post-heading" id="solution"><%= t('portfolio.n8n_whatsapp.solution') %></h2>
+      <p class="post-text post-quote-box"><%= t('portfolio.n8n_whatsapp.solution_quote') %></p>
+      <p class="post-text"><%= t('portfolio.n8n_whatsapp.solution_1') %></p>
+
+      <h3 class="post-heading" id="architecture"><%= t('portfolio.n8n_whatsapp.architecture_heading') %></h3>
+      <%= image_tag t('portfolio.n8n_whatsapp.images.architecture'), class: "post-image js-zoomable-image" %>
+      <ul class="post-bullet-list">
+        <li><%= t('portfolio.n8n_whatsapp.arch_li_1_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.arch_li_2_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.arch_li_3_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.arch_li_4_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.arch_li_5_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.arch_li_6_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.arch_li_7_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.arch_li_8_html') %></li>
+      </ul>
+
+      <div class="post-spacing"></div>
+      <h3 class="post-heading" id="api"><%= t('portfolio.n8n_whatsapp.evolution_heading') %></h3>
+      <h2 class="post-text-title highlight"><%= t('portfolio.n8n_whatsapp.evolution_subheading') %></h2>
+      <p class="post-text"><%= t('portfolio.n8n_whatsapp.evolution_1') %></p>
+
+      <p class="post-text-title"><%= t('portfolio.n8n_whatsapp.evolution_risks_heading') %></p>
+      <ul class="post-bullet-list">
+        <li><%= t('portfolio.n8n_whatsapp.evolution_risk_1_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.evolution_risk_2_html') %></li>
+      </ul>
+
+      <div class="post-spacing"></div>
+      <p class="post-text-title"><%= t('portfolio.n8n_whatsapp.evolution_mitigations_heading') %></p>
+      <p class="post-phase-label"><%= t('portfolio.n8n_whatsapp.evolution_prevention_heading') %></p>
+      <ul class="post-bullet-list">
+        <li><%= t('portfolio.n8n_whatsapp.evolution_prevention_1_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.evolution_prevention_2_html') %></li>
+      </ul>
+      <p class="post-phase-label"><%= t('portfolio.n8n_whatsapp.evolution_recovery_heading') %></p>
+      <ul class="post-bullet-list">
+        <li><%= t('portfolio.n8n_whatsapp.evolution_recovery_1_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.evolution_recovery_2_html') %></li>
+      </ul>
+
+      <div class="post-spacing"></div>
+      <p class="post-text-title"><%= t('portfolio.n8n_whatsapp.evolution_scale_heading') %></p>
+      <ul class="post-bullet-list">
+        <li><%= t('portfolio.n8n_whatsapp.evolution_scale_1_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.evolution_scale_2_html') %></li>
+      </ul>
+
+      <div class="post-spacing-large"></div>
+      <h3 class="post-heading" id="workflows"><%= t('portfolio.n8n_whatsapp.workflows_heading') %></h3>
+      <%= image_tag t('portfolio.n8n_whatsapp.images.flow'), class: "post-image js-zoomable-image" %>
+      <button class="js-animated-button cta-button nav-button social post-self-center" data-action="navigate" data-target="https://github.com/ZPAlexis/n8n-evolution-whatsapp/tree/main/workflows" data-new-tab="true">
+        <img class="button-icon" src="/icons/icon_github_dark.png"><%= t('portfolio.n8n_whatsapp.workflows_json_btn') %>
+      </button>
+
+      <%# Workflow 1 %>
+      <div class="post-spacing-large"></div>
+      <p class="post-text-title highlight"><%= t('portfolio.n8n_whatsapp.wf1_name') %></p>
+      <p class="post-phase-label"><%= t('portfolio.n8n_whatsapp.wf1_trigger') %></p>
+      <p class="post-text"><%= t('portfolio.n8n_whatsapp.wf1_intro') %></p>
+      <%= image_tag t('portfolio.n8n_whatsapp.images.wf_participant'), class: "post-image js-zoomable-image" %>
+      <button class="js-animated-button cta-button nav-button social post-self-center" data-action="navigate" data-target="https://github.com/ZPAlexis/n8n-evolution-whatsapp/blob/main/workflows/Participants%20Manager%20%2B%20Admin%20Messages.json" data-new-tab="true">
+        <img class="button-icon" src="/icons/icon_github_dark.png"><%= t('portfolio.n8n_whatsapp.workflow_json_btn') %>
+      </button>
+      <div class="post-spacing"></div>
+      <ul class="post-bullet-list">
+        <li><%= t('portfolio.n8n_whatsapp.wf1_li_1_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.wf1_li_2_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.wf1_li_3_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.wf1_li_4_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.wf1_li_5_html') %></li>
+      </ul>
+
+      <%# Workflow 2 %>
+      <div class="post-spacing-large"></div>
+      <p class="post-text-title highlight"><%= t('portfolio.n8n_whatsapp.wf2_name') %></p>
+      <p class="post-phase-label"><%= t('portfolio.n8n_whatsapp.wf2_trigger') %></p>
+      <p class="post-text"><%= t('portfolio.n8n_whatsapp.wf2_intro') %></p>
+      <%= image_tag t('portfolio.n8n_whatsapp.images.wf_rss'), class: "post-image js-zoomable-image" %>
+      <button class="js-animated-button cta-button nav-button social post-self-center" data-action="navigate" data-target="https://github.com/ZPAlexis/n8n-evolution-whatsapp/blob/main/workflows/RSS%20Check.json" data-new-tab="true">
+        <img class="button-icon" src="/icons/icon_github_dark.png"><%= t('portfolio.n8n_whatsapp.workflow_json_btn') %>
+      </button>
+      <div class="post-spacing"></div>
+      <ul class="post-bullet-list">
+        <li><%= t('portfolio.n8n_whatsapp.wf2_li_1_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.wf2_li_2_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.wf2_li_3_html') %></li>
+      </ul>
+
+      <%# Workflow 3 %>
+      <div class="post-spacing-large"></div>
+      <p class="post-text-title highlight"><%= t('portfolio.n8n_whatsapp.wf3_name') %></p>
+      <p class="post-phase-label"><%= t('portfolio.n8n_whatsapp.wf3_trigger') %></p>
+      <p class="post-text"><%= t('portfolio.n8n_whatsapp.wf3_intro_html') %></p>
+      <%= image_tag t('portfolio.n8n_whatsapp.images.wf_send'), class: "post-image js-zoomable-image" %>
+      <button class="js-animated-button cta-button nav-button social post-self-center" data-action="navigate" data-target="https://github.com/ZPAlexis/n8n-evolution-whatsapp/blob/main/workflows/Send%20Message%20to%20Participants.json" data-new-tab="true">
+        <img class="button-icon" src="/icons/icon_github_dark.png"><%= t('portfolio.n8n_whatsapp.workflow_json_btn') %>
+      </button>
+      <div class="post-spacing"></div>
+      <ul class="post-bullet-list">
+        <li><%= t('portfolio.n8n_whatsapp.wf3_li_1_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.wf3_li_2_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.wf3_li_3_html') %></li>
+      </ul>
+
+      <div class="post-spacing-large"></div>
+      <h3 class="post-heading"><%= t('portfolio.n8n_whatsapp.lifecycle_heading') %></h3>
+      <h2 class="post-text-title highlight"><%= t('portfolio.n8n_whatsapp.lifecycle_subheading') %></h2>
+      <p class="post-text"><%= t('portfolio.n8n_whatsapp.lifecycle_1') %></p>
+      <div class="post-image-row">
+        <%= image_tag t('portfolio.n8n_whatsapp.images.wf_cleanup_receival'), class: "post-image js-zoomable-image" %>
+        <%= image_tag t('portfolio.n8n_whatsapp.images.wf_cleanup_interactions'), class: "post-image js-zoomable-image" %>
+      </div>
+      <ul class="post-bullet-list">
+        <li><%= t('portfolio.n8n_whatsapp.lifecycle_li_1_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.lifecycle_li_2_html') %></li>
+      </ul>
+      <p class="post-text"><%= t('portfolio.n8n_whatsapp.lifecycle_2_html') %></p>
+
+      <div class="post-spacing-large"></div>
+      <h3 class="post-heading" id="deploy"><%= t('portfolio.n8n_whatsapp.deployment_heading') %></h3>
+      <h2 class="post-text-title highlight"><%= t('portfolio.n8n_whatsapp.deployment_subheading') %></h2>
+      <p class="post-text"><%= t('portfolio.n8n_whatsapp.deployment_1_html') %></p>
+      <ol type="1" class="post-text">
+        <li><%= t('portfolio.n8n_whatsapp.deployment_step_1_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.deployment_step_2_html') %></li>
+      </ol>
+      <p class="post-text"><%= t('portfolio.n8n_whatsapp.deployment_2_html') %></p>
+
+      <div class="post-spacing-large"></div>
+      <h2 class="post-heading" id="highlights"><%= t('portfolio.n8n_whatsapp.highlights') %></h2>
+      <p class="post-text"><%= t('portfolio.n8n_whatsapp.highlights_1') %></p>
+      <ol type="1" class="post-text post-text-large-marker">
+        <li><%= t('portfolio.n8n_whatsapp.highlights_li_1_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.highlights_li_2_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.highlights_li_3_html') %></li>
+        <li><%= t('portfolio.n8n_whatsapp.highlights_li_4_html') %></li>
+      </ol>
+      <p class="post-text post-quote-box"><%= t('portfolio.n8n_whatsapp.closing_1') %></p>
+      <img class="post-image xsmaller center" src="<%= t('portfolio.n8n_whatsapp.images.closing') %>">
+      <p class="post-text center"><%= t('portfolio.n8n_whatsapp.closing_2') %></p>
+      <div class="post-spacing"></div>
+      <div class="post-line"></div>
+    </div>
+  </section>
+
+  <section class="post-references-section">
+    <div class="post-references-container">
+      <p class="post-text center half text-highlight"><%= t('about.cta_projects') %></p>
+      <%= render "shared/projects_list", skip: "n8n_whatsapp" %>
+    </div>
+  </section>
 </main>
