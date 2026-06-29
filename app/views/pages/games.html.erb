@@ -1,0 +1,17 @@
+<main class="main-container">
+  <section class="about-projects-section" id="games">
+    <div class="about-projects-container about-projects-container--top">
+      <h1 class="about-projects-title"><%= t('projects.game_projects_title') %></h1>
+      <p class="about-projects-description"><%= t('projects.game_projects_description') %></p>
+      <p class="about-projects-description"><%= t('projects.game_projects_flavor') %></p>
+    </div>      
+  </section>
+
+  <section class="projects-section">
+    <%= render "shared/projects_list_games" %>
+  </section>
+
+  <section class="projects-section">
+    <button class="js-animated-button cta-button nav-button text fade-in" data-action="navigate" data-target="<%= projects_path %>"><%= t('projects.back') %></button>
+  </section>
+</main>

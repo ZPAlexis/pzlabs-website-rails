@@ -28,4 +28,7 @@ class PagesController < ApplicationController
 
   def jiko
   end
+
+  def games
+  end
 end

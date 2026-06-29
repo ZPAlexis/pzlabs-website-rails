@@ -9,6 +9,7 @@ Rails.application.routes.draw do
     get "projects", to: "pages#projects", as: :projects
     get "dev", to: "pages#dev", as: :dev
 
+    get "projects/games", to: "pages#games", as: :games
     get "projects/born_survivor", to: "pages#born_survivor", as: :pages_born_survivor
     get "projects/flappy_astronaut", to: "pages#flappy_astronaut", as: :pages_flappy_astronaut
     get "projects/trofy", to: "pages#trofy", as: :pages_trofy

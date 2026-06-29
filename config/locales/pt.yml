@@ -78,12 +78,16 @@ pt:
   projects:
     status:
       coming_soon: "Em Breve"
-    jiko_project_description: "Um app de produtividade com elementos de gamificação para monitorar sessões de foco e análise de crescimento pessoal."
-    n8n_whatsapp_project_description: "Uma automação robusta que orquestra fluxos de registro de participantes e entrega atualizações de RSS via WhatsApp."
-    acoelho_project_description_html: "<b>Este site!</b><br>Um produto full-stack com UX gamificada, CI/CD automatizado e dados de engajamento em tempo real."
-    trofy_project_description: "Um app de tarefas que transforma seus objetivos pessoais em um jogo para reforçar o desenvolvimento de bons hábitos."
+    back: "Ver Outros Projetos"
+    jiko_project_description: "App web de produtividade para monitorar sessões de foco e ajudar na análise de performance pessoal."
+    n8n_whatsapp_project_description: "Uma automação que entrega atualizações de RSS via WhatsApp, com gerênciamento de participantes."
+    acoelho_project_description_html: "<b>Este site!</b><br>Website full-stack para portfolio e demonstração de elementos de gamificação."
+    trofy_project_description: "Mobile app de tarefas que gamifica objetivos pessoais para desenvolvimento de bons hábitos."
     bs_project_description: "O segundo jogo demo feito em Unity com uma mecânica no estilo “escolha 1 de 3”. Inspirado em Vampire Survivors."
     fa_project_description: "Um jogo demo feito em Unity para aplicar conceitos de game-dev e C-sharp. Inspirado em Flappy Bird."
+    game_projects_title: "Protótipos de Jogos"
+    game_projects_description: "Jogos criados para explorar os fundamentos de game design e experimentar sistemas e mecânicas de jogabilidade."
+    game_projects_flavor: "Oportunidades que aproveitei para transformar um interesse de longa data em design de jogos em prática concreta, enriquecendo a base dos produtos e experiências gamificadas que desenvolvo hoje."
   about:
     bio_availability: "Procurando oportunidades"
     bio_role: "Engenheiro de Soluções"

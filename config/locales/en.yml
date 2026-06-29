@@ -78,12 +78,16 @@ en:
   projects:
     status:
       coming_soon: "Coming Soon"
-    jiko_project_description: "A gamified productivity app designed to track focus sessions and visualize personal growth."
-    n8n_whatsapp_project_description: "A robust automation engine that orchestrates participant workflows and delivers  RSS updates via WhatsApp."
-    acoelho_project_description_html: "<b>This website!</b><br>A full-stack product with gamified UX, automated CI/CD, and live engagement analytics."
-    trofy_project_description: "A “To-Do like” mobile app that gamifies personal objectives to reinforce the development of good habits."
+    back: "Explore Other Projects"
+    jiko_project_description: "Productivity web app to monitor your focus sessions in real time and track your long-term performance trends."
+    n8n_whatsapp_project_description: "An automation engine that delivers  RSS updates via WhatsApp, with participant management."
+    acoelho_project_description_html: "<b>This site!</b><br>Full-stack portfolio website and showcase of gamified elements and experiences."
+    trofy_project_description: "To-do style mobile app that gamifies personal objectives to reinforce the development of good habits."
     bs_project_description: "The second demo Unity game with a “Pick 1 of 3” rogue-like style mechanic. Inspired by the game Vampire Survivors."
     fa_project_description: "A demo Unity game to implement game development and C-sharp concepts. Inspired by the game Flappy Bird."
+    game_projects_title: "Game Prototypes"
+    game_projects_description: "Games built to explore the foundations of game design and experiment with systems and gameplay mechanics."
+    game_projects_flavor: "Opportunities I took to turn a long-standing interest in game design into hands-on practice, enriching the foundation of the gamified products and experiences I build today."
   about:
     bio_availability: "Looking for opportunities"
     bio_role: "Solutions Engineer"

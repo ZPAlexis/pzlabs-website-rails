@@ -306,11 +306,14 @@
 
   max-width: var(--max-width-container);
   flex: 1;
-  margin: 80px 0 20px 0;
-  padding: 0 20px;
+  margin: 80px 20px 20px 20px;
 
   &.about-projects-container--about {
     margin: 20px 0;
+  }
+
+  &.about-projects-container--top {
+    margin-top: 110px;
   }
 }
 
@@ -650,6 +653,8 @@
     flex-direction: column;
     gap: 80px;
   }
+
+  .about-projects-container {}
 
   .project-summary-tags.portfolio {
     justify-self: center;

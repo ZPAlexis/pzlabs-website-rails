@@ -1,0 +1,23 @@
+<div class="projects-container">
+  <%# Born Survivor %>
+  <% unless local_assigns[:skip] == "born_survivor" %>
+    <%= render "shared/project_card", 
+        title: "Born Survivor", 
+        image_path: "/images/projects/born_survivor/BornSurvivor_AppIcon.png", 
+        tags: ["C#", "Unity"], 
+        path: pages_born_survivor_path, 
+        i18n_key: "projects.bs_project_description" 
+    %>
+  <% end %>
+
+  <%# Flappy Astronaut %>
+  <% unless local_assigns[:skip] == "flappy_astronaut" %>
+    <%= render "shared/project_card", 
+        title: "Flappy Astronaut", 
+        image_path: "/images/projects/flappy_astronaut/FlappyAstronaut_AppIcon.png", 
+        tags: ["C#", "Unity"], 
+        path: pages_flappy_astronaut_path, 
+        i18n_key: "projects.fa_project_description" 
+    %>
+  <% end %>
+</div>
