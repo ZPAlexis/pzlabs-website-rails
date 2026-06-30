@@ -18,7 +18,7 @@
 
     <%= tag.link rel: "manifest", href: pwa_manifest_path(format: :json) %>
 
-    <link rel="icon" type="image/svg+xml" href="/icons/coin-gold.svg">
+    <link rel="icon" type="image/svg+xml" href="<%= asset_path("icons/coin-gold.svg") %>">
     <link rel="apple-touch-icon" href="/icon.png">
 
     <%# Includes all stylesheet files in app/assets/stylesheets %>
@@ -26,7 +26,12 @@
     <%= javascript_importmap_tags %>
   </head>
 
-  <body data-locale="<%= I18n.locale %>">
+  <body data-locale="<%= I18n.locale %>"
+        data-icon-coin-idle="<%= asset_path('icons/coin_idle.gif') %>"
+        data-icon-coin-spin="<%= asset_path('icons/coin_spin.gif') %>"
+        data-icon-coin-gold="<%= asset_path('icons/coin-gold.svg') %>"
+        data-icon-arrow-fill-right="<%= asset_path('icons/arrow-fill-right.svg') %>"
+        data-rps-emojis="<%= { rock: asset_path('icons/rock-emoji.png'), paper: asset_path('icons/paper-emoji.png'), scissors: asset_path('icons/scissors-emoji.png') }.to_json %>">
     <%= render "shared/header" %>
 
     <%= yield %>

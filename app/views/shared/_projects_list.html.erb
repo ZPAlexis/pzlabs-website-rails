@@ -4,7 +4,7 @@
   <% unless local_assigns[:skip] == "jiko" %>
     <%= render "shared/project_card", 
         title: "JIKO App", 
-        image_path: "/images/projects/jiko/jiko_icon.png", 
+        image_path: "projects/jiko/jiko_icon.png", 
         tags: ["Ruby on Rails", "Docker", "PostgreSQL", "CI/CD"], 
         path: "#", 
         i18n_key: "projects.jiko_project_description",
@@ -17,7 +17,7 @@
   <% unless local_assigns[:skip] == "n8n_whatsapp" %>
     <%= render "shared/project_card",
         title: t('portfolio.n8n_whatsapp.title'),
-        image_path: "/images/projects/n8n_whatsapp/n8n_whatsapp_icon.png",
+        image_path: "projects/n8n_whatsapp/n8n_whatsapp_icon.png",
         tags: ["N8N", "Evolution API", "WhatsApp", "Docker"],
         path: pages_n8n_whatsapp_path,
         i18n_key: "projects.n8n_whatsapp_project_description",
@@ -29,7 +29,7 @@
   <% unless local_assigns[:skip] == "acoelho" %>
     <%= render "shared/project_card",
         title: "acoelho.dev",
-        image_path: "/images/projects/acoelho/acoelho_icon.png",
+        image_path: "projects/acoelho/acoelho_icon.png",
         tags: ["Ruby on Rails", "Docker", "PostgreSQL", "i18n"],
         path: pages_acoelho_path,
         i18n_key: "projects.acoelho_project_description_html"
@@ -40,7 +40,7 @@
   <% unless local_assigns[:skip] == "trofy" %>
     <%= render "shared/project_card", 
         title: "Trofy", 
-        image_path: "/images/projects/trofy/Trofy_AppIcon.png", 
+        image_path: "projects/trofy/Trofy_AppIcon.png", 
         tags: ["C#", "Unity", "iOS", "Android"], 
         path: pages_trofy_path, 
         i18n_key: "projects.trofy_project_description" 
@@ -50,7 +50,7 @@
   <%# Unity Games %>
   <%= render "shared/project_card", 
       title: t('projects.game_projects_title'),
-      image_path: "/images/projects/unity_games/unity_games_icon.png", 
+      image_path: "projects/unity_games/unity_games_icon.png", 
       tags: ["C#", "Unity"], 
       path: games_path, 
       i18n_key: "projects.game_projects_description" 

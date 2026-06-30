@@ -201,7 +201,7 @@ export const FillBarGame = {
     Elements.toggle(Elements.fillBarGoldCoin, 'hidden', true);
     Elements.fillBarBorder?.classList.remove('highlight');
     
-    const guideHtml = `${Elements.fillBarText.dataset.guideText} <img class="fill-bar-arrow" src="icons/arrow-fill-right.svg">`;
+    const guideHtml = `${Elements.fillBarText.dataset.guideText} <img class="fill-bar-arrow" src="${document.body.dataset.iconArrowFillRight}">`;
     this.updateBarText(guideHtml, false);
     
     Elements.fillTimerCont?.classList.add('hidden');

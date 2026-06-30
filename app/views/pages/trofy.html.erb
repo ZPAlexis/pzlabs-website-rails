@@ -4,7 +4,7 @@
 
 <main class="main-container">
   <section class="post-section">
-    <img class="post-banner-image cover" src="/images/projects/trofy/Cover_Trofy.jpg">
+    <%= image_tag "projects/trofy/Cover_Trofy.jpg", class: "post-banner-image cover" %>
     <div class="post-container">
       <h1 class="post-heading title center">Trofy</h1>
       <div class="post-intro-wrapper not-selectable">
@@ -84,9 +84,9 @@
       <div class="post-spacing-large"></div>
 
       <h2 class="post-heading" id="stack"><%= t('portfolio.trofy.tech') %></h2>
-      <a class="post-logo-link" href="https://unity.com/" target="_blank"><img class="post-logo" src="/images/unity_logo_white.png"></a>
+      <a class="post-logo-link" href="https://unity.com/" target="_blank"><%= image_tag "unity_logo_white.png", class: "post-logo" %></a>
       <p class="post-text"><%= t('portfolio.trofy.tech_1') %></p>
-      <a class="post-logo-link" href="https://www.w3schools.com/cs/index.php" target="_blank"><img class="post-logo" src="/images/csharp_logo_white.png"></a>
+      <a class="post-logo-link" href="https://www.w3schools.com/cs/index.php" target="_blank"><%= image_tag "csharp_logo_white.png", class: "post-logo" %></a>
       <p class="post-text"><%= t('portfolio.trofy.tech_2') %></p>
       <p class="post-text"><%= t('portfolio.trofy.tech_3_html') %></p>
 
@@ -122,7 +122,7 @@ public void GenerateDayList() {
         <li><%= t('portfolio.trofy.logic_8_html') %></li>
       </ol>
       <p class="post-text"><%= t('portfolio.trofy.logic_9') %></p>
-      <img class="post-image shadow half center" src="/images/projects/trofy/Trofy_LanguageChange_Portfolio_GIF.gif">
+      <%= image_tag "projects/trofy/Trofy_LanguageChange_Portfolio_GIF.gif", class: "post-image shadow half center" %>
       <p class="post-text"><%= t('portfolio.trofy.logic_10') %></p>
 
       <div class="post-spacing-large"></div>
@@ -131,14 +131,14 @@ public void GenerateDayList() {
       <%= image_tag t("portfolio.trofy.images.design"), class: "post-image shadow js-zoomable-image" %>
       <p class="post-text"><%= t('portfolio.trofy.design_1') %></p>
       <p class="post-text"><%= t('portfolio.trofy.design_2_html') %></p>
-      <img class="post-image half center" src="/images/projects/trofy/Trofy_character.png">
+      <%= image_tag "projects/trofy/Trofy_character.png", class: "post-image half center" %>
 
       <div class="post-spacing-large"></div>
 
       <h2 class="post-heading" id="wireframe"><%= t('portfolio.trofy.wireframe') %></h2>
       <%= image_tag t("portfolio.trofy.images.wireframe"), class: "post-image shadow js-zoomable-image" %>
       <p class="post-text"><%= t('portfolio.trofy.wireframe_1') %></p>
-      <img class="post-image shadow js-zoomable-image" src="/images/projects/trofy/Trofy_8_1_MVP_PZLabs_Portfolio.png">
+      <%= image_tag "projects/trofy/Trofy_8_1_MVP_PZLabs_Portfolio.png", class: "post-image shadow js-zoomable-image" %>
 
       <div class="post-spacing-large"></div>
 
@@ -162,7 +162,7 @@ public void GenerateDayList() {
       </div>
       <div class="post-spacing"></div>
       <p class="post-text half center"><%= t('portfolio.trofy.demo_1') %></p>
-      <img class="post-image half center" src="/images/projects/trofy/Trofy_AppIcon_Portfolio.png">
+      <%= image_tag "projects/trofy/Trofy_AppIcon_Portfolio.png", class: "post-image half center" %>
       <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/BornSurvivor-V0.1.0-PC-Demo" data-new-tab="true"><%= t('portfolio.trofy.demo_btn') %></button>
       <p class="post-text"><%= t('portfolio.trofy.demo_2') %></p>
 
@@ -180,7 +180,7 @@ public void GenerateDayList() {
         <li><%= t('portfolio.trofy.learnings_li_4_html') %></li>
         <li id="ai"><%= t('portfolio.trofy.learnings_li_5_html') %></li>
       </ol>
-      <img class="post-image half center" src="/images/projects/trofy/Trofy_Closing_Portfolio.png">
+      <%= image_tag "projects/trofy/Trofy_Closing_Portfolio.png", class: "post-image half center" %>
       <p class="post-text center"><%= t('portfolio.trofy.closing') %></p>
       <div class="post-spacing"></div>
       <div class="post-line"></div>

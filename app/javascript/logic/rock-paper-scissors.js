@@ -85,8 +85,9 @@ export const RPSGame = {
   async animateMoveResults(player, ai, result) {
     Elements.jsAvatarMove?.forEach(el => el.classList.remove('hidden'));
 
-    const playerHtml = `<img src="icons/${player}-emoji.png" class="move-icon">`;
-    const aiHtml = `<img src="icons/${ai}-emoji.png" class="move-icon">`;
+    const rpsEmojis = JSON.parse(document.body.dataset.rpsEmojis);
+    const playerHtml = `<img src="${rpsEmojis[player]}" class="move-icon">`;
+    const aiHtml = `<img src="${rpsEmojis[ai]}" class="move-icon">`;
     const resultHtml = `<p class="result-highlight">${Elements.jsResult.dataset[`${result}`]}</p>`;
 
     Animations.fadeUpdate(Elements.jsPlayerMove, playerHtml);

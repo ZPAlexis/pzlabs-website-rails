@@ -4,7 +4,7 @@
 
 <main class="main-container">
   <section class="post-section">
-    <img class="post-banner-image cover" src="/images/projects/flappy_astronaut/Portfolio_Flying_FlappyAstronaut.jpg">
+    <%= image_tag "projects/flappy_astronaut/Portfolio_Flying_FlappyAstronaut.jpg", class: "post-banner-image cover" %>
     <div class="post-container">
       <h1 class="post-heading title center">Flappy Astronaut</h1>
       <div class="post-intro-wrapper not-selectable">
@@ -37,7 +37,7 @@
       <h2 class="post-heading" id="objective"><%= t('portfolio.fa.objective') %></h2>
       <p class="post-text"><%= t('portfolio.fa.objective_1') %></p>
       <p class="post-text"><%= t('portfolio.fa.objective_2') %></p>
-      <img class="post-image shadow js-zoomable-image" src="/images/projects/flappy_astronaut/Portfolio_Cover_StartScreen_FlappyAstronaut.jpg">
+      <%= image_tag "projects/flappy_astronaut/Portfolio_Cover_StartScreen_FlappyAstronaut.jpg", class: "post-image shadow js-zoomable-image" %>
       <p class="post-text"><%= t('portfolio.fa.objective_3_html') %></p>
       <p class="post-text"><%= t('portfolio.fa.objective_4') %></p>
 
@@ -49,17 +49,17 @@
       <p class="post-text"><%= t('portfolio.fa.concepts_2') %></p>
       <p class="post-text"><%= t('portfolio.fa.concepts_3') %></p>
       <p class="post-text"><%= t('portfolio.fa.concepts_4') %></p>
-      <img class="post-image shadow js-zoomable-image" src="/images/projects/flappy_astronaut/Portfolio_Death_FlappyAstronaut.jpg">
+      <%= image_tag "projects/flappy_astronaut/Portfolio_Death_FlappyAstronaut.jpg", class: "post-image shadow js-zoomable-image" %>
 
       <div class="post-spacing-large"></div>
 
       <h2 class="post-heading" id="stack"><%= t('portfolio.fa.tech') %></h2>
-      <a class="post-logo-link" href="https://unity.com/" target="_blank"><img class="post-logo" src="/images/unity_logo_white.png"></a>
+      <a class="post-logo-link" href="https://unity.com/" target="_blank"><%= image_tag "unity_logo_white.png", class: "post-logo" %></a>
       <p class="post-text"><%= t('portfolio.fa.tech_1') %></p>
       <p class="post-text"><%= t('portfolio.fa.tech_2') %></p>
-      <a class="post-logo-link" href="https://www.w3schools.com/cs/index.php" target="_blank"><img class="post-logo" src="/images/csharp_logo_white.png"></a>
+      <a class="post-logo-link" href="https://www.w3schools.com/cs/index.php" target="_blank"><%= image_tag "csharp_logo_white.png", class: "post-logo" %></a>
       <p class="post-text"><%= t('portfolio.fa.tech_3') %></p>
-      <a class="post-logo-link" href="https://www.aseprite.org/" target="_blank"><img class="post-logo" src="/images/aseprite_logo_white.png"></a>
+      <a class="post-logo-link" href="https://www.aseprite.org/" target="_blank"><%= image_tag "aseprite_logo_white.png", class: "post-logo" %></a>
       <p class="post-text"><%= t('portfolio.fa.tech_4') %></p>
 
       <div class="post-spacing-large"></div>
@@ -68,7 +68,7 @@
       <%= image_tag t("portfolio.fa.images.logic"), class: "post-image shadow js-zoomable-image" %>
       <p class="post-text"><%= t('portfolio.fa.logic_1') %></p>
       <p class="post-text"><%= t('portfolio.fa.logic_2') %></p>
-      <img class="post-image half center shadow js-zoomable-image" src="/images/projects/flappy_astronaut/Portfolio_FlappyAstronaut_FolderStructure.png">
+      <%= image_tag "projects/flappy_astronaut/Portfolio_FlappyAstronaut_FolderStructure.png", class: "post-image half center shadow js-zoomable-image" %>
       <p class="post-text"><%= t('portfolio.fa.logic_3_html') %></p>
       <pre><code class="language-javascript">// Asteroid Movement Snippet
 
@@ -105,14 +105,14 @@ void Update() {
       </div>
       <div class="post-spacing"></div>
       <p class="post-text half center"><%= t('portfolio.fa.demo_1') %></p>
-      <img class="post-image half center" src="/images/projects/flappy_astronaut/Flappy_Astronaut_exe_art.png">
+      <%= image_tag "projects/flappy_astronaut/Flappy_Astronaut_exe_art.png", class: "post-image half center" %>
       <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/FlappyAstronaut-V1.0.0-PC-Demo" data-new-tab="true"><%= t('portfolio.fa.demo_btn') %></button>
       <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/FlappyAstronaut" data-new-tab="true"><%= t('portfolio.fa.dir_btn') %></button>
 
       <div class="post-spacing-large"></div>
 
       <h2 class="post-heading" id="learnings"><%= t('portfolio.fa.learnings') %></h2>
-      <img class="post-image shadow js-zoomable-image" src="/images/projects/flappy_astronaut/Portfolio_Oxygen_FlappyAstronaut.jpg">
+      <%= image_tag "projects/flappy_astronaut/Portfolio_Oxygen_FlappyAstronaut.jpg", class: "post-image shadow js-zoomable-image" %>
       <p class="post-text"></p>
       <p class="post-text"><%= t('portfolio.fa.learnings_1') %></p>
       <p class="post-text"><%= t('portfolio.fa.learnings_2') %></p>
@@ -123,7 +123,7 @@ void Update() {
         <li><%= t('portfolio.fa.learnings_li_4_html') %></li>
         <li><%= t('portfolio.fa.learnings_li_5_html') %></li>
       </ol>
-      <img class="post-image half center" src="/images/projects/flappy_astronaut/Flappy_Astronaut_Asteroid_art.png">
+      <%= image_tag "projects/flappy_astronaut/Flappy_Astronaut_Asteroid_art.png", class: "post-image half center" %>
       <p class="post-text center"><%= t('portfolio.fa.closing') %></p>
       <div class="post-spacing"></div>
       <div class="post-line"></div>

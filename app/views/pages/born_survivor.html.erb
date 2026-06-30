@@ -4,7 +4,7 @@
 
 <main class="main-container">
   <section class="post-section">
-    <img class="post-banner-image cover" src="/images/projects/born_survivor/Portfolio_Enemy_BornSurvivor.jpg">
+    <%= image_tag "projects/born_survivor/Portfolio_Enemy_BornSurvivor.jpg", class: "post-banner-image cover" %>
     <div class="post-container">
       <h1 class="post-heading title center">Born Survivor</h1>
       <div class="post-intro-wrapper not-selectable">
@@ -36,9 +36,9 @@
 
       <h2 class="post-heading" id="objective"><%= t('portfolio.bs.objective') %></h2>
       <p class="post-text"><%= t('portfolio.bs.objective_1') %></p>
-      <img class="post-image shadow js-zoomable-image" src="/images/projects/born_survivor/Portfolio_Cover_StartScreen_BornSurvivor.jpg">
+      <%= image_tag "projects/born_survivor/Portfolio_Cover_StartScreen_BornSurvivor.jpg", class: "post-image shadow js-zoomable-image" %>
       <p class="post-text"><%= t('portfolio.bs.objective_2') %></p>
-      <img class="post-image shadow center js-zoomable-image" src="/images/projects/born_survivor/Portfolio_Choices_BornSurvivor_zoom.png">
+      <%= image_tag "projects/born_survivor/Portfolio_Choices_BornSurvivor_zoom.png", class: "post-image shadow center js-zoomable-image" %>
       
 
       <div class="post-spacing-large"></div>
@@ -50,14 +50,14 @@
       <p class="post-text"><%= t('portfolio.bs.concepts_3') %></p>
       <p class="post-text"><%= t('portfolio.bs.concepts_4') %></p>
       <p class="post-text"><%= t('portfolio.bs.concepts_5') %></p>
-      <img class="post-image shadow js-zoomable-image" src="/images/projects/born_survivor/Portfolio_Choices_BornSurvivor.jpg">
+      <%= image_tag "projects/born_survivor/Portfolio_Choices_BornSurvivor.jpg", class: "post-image shadow js-zoomable-image" %>
 
       <div class="post-spacing-large"></div>
 
       <h2 class="post-heading" id="stack"><%= t('portfolio.bs.tech') %></h2>
-      <a class="post-logo-link" href="https://unity.com/" target="_blank"><img class="post-logo" src="/images/unity_logo_white.png"></a>
+      <a class="post-logo-link" href="https://unity.com/" target="_blank"><%= image_tag "unity_logo_white.png", class: "post-logo" %></a>
       <p class="post-text"><%= t('portfolio.bs.tech_1_html') %></p>
-      <a class="post-logo-link" href="https://www.w3schools.com/cs/index.php" target="_blank"><img class="post-logo" src="/images/csharp_logo_white.png"></a>
+      <a class="post-logo-link" href="https://www.w3schools.com/cs/index.php" target="_blank"><%= image_tag "csharp_logo_white.png", class: "post-logo" %></a>
       <p class="post-text"><%= t('portfolio.bs.tech_2') %></p>
 
       <div class="post-spacing-large"></div>
@@ -66,7 +66,7 @@
       <%= image_tag t("portfolio.bs.images.logic"), class: "post-image shadow js-zoomable-image" %>
       <p class="post-text"><%= t('portfolio.bs.logic_1') %></p>
       <p class="post-text"><%= t('portfolio.bs.logic_2_html') %></p>
-      <img class="post-image half center shadow js-zoomable-image" src="/images/projects/born_survivor/Portfolio_BornSurvivor_FolderStructure.png">
+      <%= image_tag "projects/born_survivor/Portfolio_BornSurvivor_FolderStructure.png", class: "post-image half center shadow js-zoomable-image" %>
       <p class="post-text"><%= t('portfolio.bs.logic_3') %></p>
       <pre><code class="language-javascript">//Increase Player Damage Percentage Snippet
 
@@ -119,14 +119,14 @@ public void GeneratePowerUpOptions() {
       </div>
       <div class="post-spacing"></div>
       <p class="post-text half center"><%= t('portfolio.bs.demo_1') %></p>
-      <img class="post-image half center" src="/images/projects/born_survivor/Born_Survivor_exe_icon.png">
+      <%= image_tag "projects/born_survivor/Born_Survivor_exe_icon.png", class: "post-image half center" %>
       <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/BornSurvivor-V0.1.0-PC-Demo" data-new-tab="true"><%= t('portfolio.bs.demo_btn') %></button>
       <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://github.com/ZPAlexis/BornSurvivor" data-new-tab="true"><%= t('portfolio.bs.dir_btn') %></button>
 
       <div class="post-spacing-large"></div>
 
       <h2 class="post-heading" id="learnings"><%= t('portfolio.bs.learnings') %></h2>
-      <img class="post-image shadow js-zoomable-image" src="/images/projects/born_survivor/Portfolio_Death_BornSurvivor.jpg">
+      <%= image_tag "projects/born_survivor/Portfolio_Death_BornSurvivor.jpg", class: "post-image shadow js-zoomable-image" %>
       <p class="post-text"><%= t('portfolio.bs.learnings_1_html') %></p>
       <p class="post-text"><%= t('portfolio.bs.learnings_2') %></p>
       <ol type="1" class="post-text post-text-large-marker">
@@ -135,7 +135,7 @@ public void GeneratePowerUpOptions() {
         <li><%= t('portfolio.bs.learnings_li_3_html') %></li>
         <li><%= t('portfolio.bs.learnings_li_4_html') %></li>
       </ol>
-      <img class="post-image half center" src="/images/projects/born_survivor/Born_Survivor_demo_cutout.png">
+      <%= image_tag "projects/born_survivor/Born_Survivor_demo_cutout.png", class: "post-image half center" %>
       <p class="post-text center"><%= t('portfolio.bs.closing') %></p>
       <div class="post-spacing"></div>
       <div class="post-line"></div>

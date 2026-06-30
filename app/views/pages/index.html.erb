@@ -6,7 +6,7 @@
   <div class="summary-menu-container">
     <div class="summary-menu-top-container">
       <div class="summary-title"><%= t('summary.title_html') %></div>
-      <div class="summary-menu-close-btn-container"><button class="js-animated-button js-summary-close-btn summary-menu-close-btn"><img class="button-icon" src="icons/icon_x_dark.png"></button></div>
+      <div class="summary-menu-close-btn-container"><button class="js-animated-button js-summary-close-btn summary-menu-close-btn"><%= image_tag "icons/icon_x_dark.png", class: "button-icon" %></button></div>
     </div>
     <div class="summary-tabs" data-tab-group="summary-menu">
       <div class="js-tab summary-you-tab selected"
@@ -20,8 +20,8 @@
       <div class="summary-menu-stats-container">
         <div class="summary-menu-stats-coin-1">
           <div class="summary-menu-coin-collect-container">
-            <img class="summary-menu-coin-collect-gray" src="icons/coin-gray.svg">
-            <img class="js-summary-menu-cover-gold-coin summary-menu-coin-collect-gold hidden" src="icons/coin_idle.gif">
+            <%= image_tag "icons/coin-gray.svg", class: "summary-menu-coin-collect-gray" %>
+            <%= image_tag "icons/coin_idle.gif", class: "js-summary-menu-cover-gold-coin summary-menu-coin-collect-gold hidden" %>
           </div>
           <div class="js-summary-menu-cover-text summary-menu-stat-text-container">
             <div class="summary-menu-stat-title"><%= t('summary.text_coin_1_html') %></div>
@@ -29,20 +29,20 @@
         </div>
         <div class="summary-menu-stats-coin-2">
           <div class="summary-menu-coin-collect-container">
-            <img class="summary-menu-coin-collect-gray" src="icons/coin-gray.svg">
-            <img class="js-summary-menu-fillbar-gold-coin summary-menu-coin-collect-gold hidden" src="icons/coin_idle.gif">
+            <%= image_tag "icons/coin-gray.svg", class: "summary-menu-coin-collect-gray" %>
+            <%= image_tag "icons/coin_idle.gif", class: "js-summary-menu-fillbar-gold-coin summary-menu-coin-collect-gold hidden" %>
           </div>
           <div class="js-summary-menu-fillbar-text summary-menu-stat-text-container">
             <div class="summary-menu-stat-title"><%= t('summary.text_coin_2_html') %></div>
             <div class="js-summary-menu-stat-timer-container summary-menu-stat-timer-container">
-              <img class="summary-timer-icon" src="icons/icon_timer_light.png"><p><%= t('summary.best_coin_2') %></p><div class="js-fill-bar-best-timer summary-timer-text">---</div>
+              <%= image_tag "icons/icon_timer_light.png", class: "summary-timer-icon" %><p><%= t('summary.best_coin_2') %></p><div class="js-fill-bar-best-timer summary-timer-text">---</div>
             </div>
           </div>
         </div>
         <div class="summary-menu-stats-coin-3">
           <div class="summary-menu-coin-collect-container">
-            <img class="summary-menu-coin-collect-gray" src="icons/coin-gray.svg">
-            <img class="js-summary-menu-rps-gold-coin summary-menu-coin-collect-gold hidden" src="icons/coin_idle.gif">
+            <%= image_tag "icons/coin-gray.svg", class: "summary-menu-coin-collect-gray" %>
+            <%= image_tag "icons/coin_idle.gif", class: "js-summary-menu-rps-gold-coin summary-menu-coin-collect-gold hidden" %>
           </div>
           <div class="js-summary-menu-rps-text summary-menu-stat-text-container">
             <div class="summary-menu-stat-title"><%= t('summary.text_coin_3_html') %></div>
@@ -64,15 +64,15 @@
         </div>
       </div>
       <div class="summary-menu-options-container">
-        <button class="js-animated-button js-summary-reset-score-button cta-button summary-reset-score-button"><img class="js-summary-lock-icon summary-lock-icon" src="icons/lock-icon-blue.png"><p class="small"><%= t('summary.reset_text_btn') %></p></button>
-        <div class="js-summary-unlock-text summary-menu-unlock-text"><img class="js-summary-lock-icon summary-lock-icon" src="icons/lock-icon-white.png"><p class="small"><%= t('summary.reset_text') %></p></div>
+        <button class="js-animated-button js-summary-reset-score-button cta-button summary-reset-score-button"><%= image_tag "icons/lock-icon-blue.png", class: "js-summary-lock-icon summary-lock-icon" %><p class="small"><%= t('summary.reset_text_btn') %></p></button>
+        <div class="js-summary-unlock-text summary-menu-unlock-text"><%= image_tag "icons/lock-icon-white.png", class: "js-summary-lock-icon summary-lock-icon" %><p class="small"><%= t('summary.reset_text') %></p></div>
       </div>
     </div>
     <div id="tab-contents-summary-everyone" class="js-tab-content tab-content hidden" data-tab-group="summary-menu">
       <div class="summary-menu-analytics-container">
         <div class="analytics-number-container">
           <p class="api-total-coins game-title analyics-number long-number">0</p>
-          <img class="analytics-coin" src="icons/coin_idle.gif">
+          <%= image_tag "icons/coin_idle.gif", class: "analytics-coin" %>
         </div>
         <p class="analytics-text body"><%= t('index.game_analytics_description_summary_html') %></p>
         <p class="js-analytics-coins-text analytics-text accent"
@@ -85,7 +85,7 @@
       <div class="summary-menu-analytics-container">
         <div class="analytics-number-container">
           <p class="api-total-percentage game-title analyics-number long-number">0%</p>
-          <img class="analytics-coin" src="icons/icon_trophy_gold.png">
+          <%= image_tag "icons/icon_trophy_gold.png", class: "analytics-coin" %>
         </div>
         <p class="analytics-text body"><%= t('index.game_analytics_description_percentage_summary_html') %></p>
         <p class="js-analytics-percentage-text analytics-text accent"
@@ -113,9 +113,9 @@
       <div class="intro-right-container not-selectable fade-in">
         <button class="cover-btn">
           <p class="js-cover-coin-collected-text cover-coin-collected-text"><%= t('index.coin_collected_text') %></p>
-          <img class="js-cover-box cover-box idle" src="images/cover-box.png">
+          <%= image_tag "cover-box.png", class: "js-cover-box cover-box idle" %>
           <div class="js-coin-container coin-container">
-            <img class="js-cover-coin js-coin-idle coin coin-idle" src="icons/coin_idle.gif">
+            <%= image_tag "icons/coin_idle.gif", class: "js-cover-coin js-coin-idle coin coin-idle" %>
             <img class="js-coin-spin coin coin-spin" src="">
           </div>
         </button>
@@ -126,9 +126,9 @@
   <section class="about-me-section">
     <div class="about-me-container">
       <div class="about-me-head-container not-selectable fade-up">
-        <img class="about-me-head cover-image" src="images/about-image.png">
+        <%= image_tag "about-image.png", class: "about-me-head cover-image" %>
         <div class="about-me-chat-bubble-container">
-          <img class="about-me-chat-bubble-prism" src="icons/chat-bubble-prism-light.svg">
+          <%= image_tag "icons/chat-bubble-prism-light.svg", class: "about-me-chat-bubble-prism" %>
           <div class="about-me-chat-bubble"><%= t('index.about_text_bubble') %></div>
         </div>
       </div>
@@ -146,15 +146,15 @@
           data-guide-text="<%= t('index.fill_bar_text_guide') %>">
         </div>
         <div class="fill-bar-coin">
-          <img class="js-fill-bar-gray-coin fill-bar-coin-image" src="icons/coin-gray.svg">
-          <img class="js-fill-bar-collected-coin fill-bar-collected-coin-image hidden" src="icons/coin-gold.svg">
+          <%= image_tag "icons/coin-gray.svg", class: "js-fill-bar-gray-coin fill-bar-coin-image" %>
+          <%= image_tag "icons/coin-gold.svg", class: "js-fill-bar-collected-coin fill-bar-collected-coin-image hidden" %>
         </div>
       </div>
     </div>
 
     <div class="fill-bar-button-timer-container fade-left">
       <div class="js-fill-bar-timer-container fill-bar-timer-container hidden">
-        <img class="fill-bar-timer-icon" src="icons/icon_timer_light.png">
+        <%= image_tag "icons/icon_timer_light.png", class: "fill-bar-timer-icon" %>
         <div class="js-fill-bar-timer">---</div>
         <p class="js-fill-bar-best-text fill-bar-best-text"><%= t('index.fill_bar_best_text') %></p>
       </div>
@@ -166,7 +166,7 @@
       </div>
       <div class="fill-bar-reset-button-wrapper">
         <button class="js-animated-button js-fill-bar-reset-button fill-bar-reset-button-container hidden">
-          <img class="fill-bar-reset-button" src="icons/reset-icon-blue.png">
+          <%= image_tag "icons/reset-icon-blue.png", class: "fill-bar-reset-button" %>
         </button>
       </div>
     </div>
@@ -233,19 +233,19 @@
       </div>
       <div class="rps-names-container">
         <p class="rps-name fade-right"><%= t('index.rps_you') %></p>
-        <img class="rps-vs-icon fade-up" src="icons/icon_vs_gold.png">
+        <%= image_tag "icons/icon_vs_gold.png", class: "rps-vs-icon fade-up" %>
         <p class="rps-name fade-left"><%= t('index.rps_ai') %></p>
       </div>
       <div class="rps-avatars-container">
         <div class="rps-avatar-wrapper">
           <div class="rps-avatar fade-right">
-            <img class="rps-avatar-image" src="images/rps-avatar-user.png">
+            <%= image_tag "rps-avatar-user.png", class: "rps-avatar-image" %>
           </div>
           <div class="js-avatar-move rps-avatar-move rps-player-move hidden fade-1s"><div class="js-player-move rps-player-move-content fade-1s"></div></div>
         </div>
         <div class="rps-avatar-wrapper">
           <div class="rps-avatar fade-left">
-            <img class="rps-avatar-image" style="transform: translateX(2px)" src="images/rps-avatar-ai.png">
+            <%= image_tag "rps-avatar-ai.png", class: "rps-avatar-image", style: "transform: translateX(2px)" %>
           </div>
           <div class="js-avatar-move rps-avatar-move rps-ai-move hidden fade-1s"><div class="js-ai-move rps-ai-move-content fade-1s"></div></div>
         </div>
@@ -259,21 +259,21 @@
       <div class="rock-paper-scissors-buttons-container">
         <div class="play-button">
           <button class="js-animated-button play-button-top blue-button" data-action="rps" data-value="rock">
-            <img src="icons/rock-emoji.png" class="move-icon">
+            <%= image_tag "icons/rock-emoji.png", class: "move-icon" %>
           </button>
           <div class="play-button-base"></div>
         </div>
 
         <div class="play-button">
           <button class="js-animated-button play-button-top blue-button" data-action="rps" data-value="paper">
-            <img src="icons/paper-emoji.png" class="move-icon">
+            <%= image_tag "icons/paper-emoji.png", class: "move-icon" %>
           </button>
           <div class="play-button-base"></div>
         </div>
 
         <div class="play-button">
           <button class="js-animated-button play-button-top blue-button" data-action="rps" data-value="scissors">
-              <img src="icons/scissors-emoji.png" class="move-icon">
+              <%= image_tag "icons/scissors-emoji.png", class: "move-icon" %>
           </button>
           <div class="play-button-base"></div>
         </div>
@@ -286,8 +286,8 @@
             data-win-goal-text="<%= t('index.rps_win_3_times') %>">
           </div>
           <div class="fill-bar-coin">
-            <img class="js-rps-gray-coin fill-bar-coin-image" src="icons/coin-gray.svg">
-            <img class="js-rps-collected-coin fill-bar-collected-coin-image hidden" src="icons/coin-gold.svg">
+            <%= image_tag "icons/coin-gray.svg", class: "js-rps-gray-coin fill-bar-coin-image" %>
+            <%= image_tag "icons/coin-gold.svg", class: "js-rps-collected-coin fill-bar-collected-coin-image hidden" %>
           </div>
         </div>
       </div>
@@ -297,7 +297,7 @@
   <section class="cta-section">
     <div class="cta-container fade-up">
       <p class="cta-message"><%= t('index.cta_text_html') %></p>
-      <p><img class="cta-icon not-selectable" src="icons/icon_email_thin_light.png"><a class="cta-link" href="mailto:alexis@pzlabs.tech" target="_blank">alexis@pzlabs.tech</a><br><img class="cta-icon not-selectable" src="icons/icon_wa_light.png"><a class="cta-link" href="https://wa.me/+5511995873453" target="_blank">WhatsApp</a></p>
+      <p><%= image_tag "icons/icon_email_thin_light.png", class: "cta-icon not-selectable" %><a class="cta-link" href="mailto:alexis@pzlabs.tech" target="_blank">alexis@pzlabs.tech</a><br><%= image_tag "icons/icon_wa_light.png", class: "cta-icon not-selectable" %><a class="cta-link" href="https://wa.me/+5511995873453" target="_blank">WhatsApp</a></p>
     </div>
   </section>
 
@@ -309,7 +309,7 @@
       <div class="analytics-container">
         <div class="analytics-number-container">
           <p class="api-total-coins js-analyics-number game-title analyics-number fade-in">0</p>
-          <img class="analytics-coin" src="icons/coin_idle.gif">
+          <%= image_tag "icons/coin_idle.gif", class: "analytics-coin" %>
         </div>
         <p class="analytics-text"><%= t('index.game_analytics_description_html') %></p>
       </div>
@@ -319,12 +319,12 @@
       </p>
       <button class="js-animated-button js-analytics-coin-summary coin-summary cta-button fixed-width">
         <div class="gold-coin-container">
-          <img class="summary-icon" src="icons/coin-gold.svg">
+          <%= image_tag "icons/coin-gold.svg", class: "summary-icon" %>
         </div>
         <div class="js-analytics-coin-amount coin-amount"></div>
       </button>
       <div id="hint-press-button" class="tutorial-hint up">
-        <img class="tutorial-box-arrow" src="icons/icon_halfarrow_up_blue.png">
+        <%= image_tag "icons/icon_halfarrow_up_blue.png", class: "tutorial-box-arrow" %>
         <p class="tutorial-text"><%= t('index.tutorial_press_hint') %></p>
       </div>
     </div>

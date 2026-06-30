@@ -6,7 +6,7 @@
   <section class="post-section">
     <div class="post-banner-cover">
       <div class="post-cover-coin-container">
-        <img class="post-cover-coin js-cover-idle" src="/icons/coin_idle.gif" draggable="false">
+        <%= image_tag "icons/coin_idle.gif", class: "post-cover-coin js-cover-idle", draggable: "false" %>
         <img class="post-cover-coin js-cover-spin" src="" draggable="false" style="opacity:0;position:absolute;">
       </div>
     </div>
@@ -19,7 +19,7 @@
           if (busy) return;
           busy = true;
           spin.src = '';
-          spin.src = '/icons/coin_spin.gif';
+          spin.src = '<%= asset_path("icons/coin_spin.gif") %>';
           spin.style.opacity = '1';
           idle.style.opacity = '0';
           setTimeout(function() {
@@ -137,7 +137,7 @@
       <h3 class="post-heading"><%= t('portfolio.acoelho.evolution_phase1_heading') %></h3>
       <p class="post-phase-label"><%= t('portfolio.acoelho.evolution_phase1_1') %></p>
       <button class="js-animated-button cta-button nav-button social post-self-start" data-action="navigate" data-target="https://github.com/ZPAlexis/pzlabs-website" data-new-tab="true">
-        <img class="button-icon" src="/icons/icon_github_dark.png">Phase 1 GitHub Repo
+        <%= image_tag "icons/icon_github_dark.png", class: "button-icon" %>Phase 1 GitHub Repo
       </button>
       <p class="post-text"><%= t('portfolio.acoelho.evolution_phase1_2') %></p>
       <p class="post-text"><%= t('portfolio.acoelho.evolution_phase1_3') %></p>
@@ -152,7 +152,7 @@
       <h3 class="post-heading"><%= t('portfolio.acoelho.evolution_phase2_heading') %></h3>
       <p class="post-phase-label"><%= t('portfolio.acoelho.evolution_phase2_1') %></p>
       <button class="js-animated-button cta-button nav-button social post-self-start" data-action="navigate" data-target="https://github.com/ZPAlexis/pzlabs-server" data-new-tab="true">
-        <img class="button-icon" src="/icons/icon_github_dark.png">Phase 2 GitHub Repo
+        <%= image_tag "icons/icon_github_dark.png", class: "button-icon" %>Phase 2 GitHub Repo
       </button>
       <p class="post-text"><%= t('portfolio.acoelho.evolution_phase2_2') %></p>
       <p class="post-text"><%= t('portfolio.acoelho.evolution_phase2_3') %></p>
@@ -175,7 +175,7 @@
       <h3 class="post-heading"><%= t('portfolio.acoelho.evolution_phase3_heading') %></h3>
       <p class="post-phase-label"><%= t('portfolio.acoelho.evolution_phase3_1') %></p>
       <button class="js-animated-button cta-button nav-button social post-self-start" data-action="navigate" data-target="https://github.com/ZPAlexis/pzlabs-website-rails" data-new-tab="true">
-        <img class="button-icon" src="/icons/icon_github_dark.png">Phase 3 GitHub Repo
+        <%= image_tag "icons/icon_github_dark.png", class: "button-icon" %>Phase 3 GitHub Repo
       </button>
       <p class="post-text"><%= t('portfolio.acoelho.evolution_phase3_2') %></p>
       <p class="post-text"><%= t('portfolio.acoelho.evolution_phase3_3') %></p>
@@ -252,7 +252,7 @@ async collectCoverCoin() {
   }
   return false;
 }</code></pre>
-      <img class="post-image xsmaller center" src="<%= t('portfolio.acoelho.images.coin_gif') %>">
+      <%= image_tag t('portfolio.acoelho.images.coin_gif'), class: "post-image xsmaller center" %>
 
       <div class="post-spacing-large"></div>
       <h2 class="post-heading" id="api"><%= t('portfolio.acoelho.api') %></h2>
@@ -279,7 +279,7 @@ end</code></pre>
       <div class="analytics-container post-analytics-center">
         <div class="analytics-number-container">
           <p class="api-total-coins js-analyics-number game-title analyics-number fade-in">0</p>
-          <img class="analytics-coin" src="/icons/coin_idle.gif">
+          <%= image_tag "icons/coin_idle.gif", class: "analytics-coin" %>
         </div>
         <p class="analytics-text"><%= t('index.game_analytics_description_html') %></p>
       </div>
@@ -320,7 +320,7 @@ end</code></pre>
         <li><%= t('portfolio.acoelho.learnings_li_5_html') %></li>
       </ol>
       <div class="post-cover-coin-container post-analytics-center">
-        <img class="post-cover-coin js-closing-idle" src="/icons/coin_idle.gif" draggable="false">
+        <%= image_tag "icons/coin_idle.gif", class: "post-cover-coin js-closing-idle", draggable: "false" %>
         <img class="post-cover-coin js-closing-spin" src="" draggable="false" style="opacity:0;position:absolute;">
       </div>
       <script nonce="<%= content_security_policy_nonce %>">
@@ -332,7 +332,7 @@ end</code></pre>
             if (busy) return;
             busy = true;
             spin.src = '';
-            spin.src = '/icons/coin_spin.gif';
+            spin.src = '<%= asset_path("icons/coin_spin.gif") %>';
             spin.style.opacity = '1';
             idle.style.opacity = '0';
             setTimeout(function() {

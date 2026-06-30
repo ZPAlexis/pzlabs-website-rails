@@ -100,7 +100,7 @@
       <h3 class="post-heading" id="workflows"><%= t('portfolio.n8n_whatsapp.workflows_heading') %></h3>
       <%= image_tag t('portfolio.n8n_whatsapp.images.flow'), class: "post-image drop-shadow js-zoomable-image" %>
       <button class="js-animated-button cta-button nav-button social post-self-center" data-action="navigate" data-target="https://github.com/ZPAlexis/n8n-evolution-whatsapp/tree/main/workflows" data-new-tab="true">
-        <img class="button-icon" src="/icons/icon_github_dark.png"><%= t('portfolio.n8n_whatsapp.workflows_json_btn') %>
+        <%= image_tag "icons/icon_github_dark.png", class: "button-icon" %><%= t('portfolio.n8n_whatsapp.workflows_json_btn') %>
       </button>
 
       <%# Workflow 1 %>
@@ -110,7 +110,7 @@
       <p class="post-text"><%= t('portfolio.n8n_whatsapp.wf1_intro') %></p>
       <%= image_tag t('portfolio.n8n_whatsapp.images.wf_participant'), class: "post-image drop-shadow js-zoomable-image" %>
       <button class="js-animated-button cta-button nav-button social post-self-center" data-action="navigate" data-target="https://github.com/ZPAlexis/n8n-evolution-whatsapp/blob/main/workflows/Participants%20Manager%20%2B%20Admin%20Messages.json" data-new-tab="true">
-        <img class="button-icon" src="/icons/icon_github_dark.png"><%= t('portfolio.n8n_whatsapp.workflow_json_btn') %>
+        <%= image_tag "icons/icon_github_dark.png", class: "button-icon" %><%= t('portfolio.n8n_whatsapp.workflow_json_btn') %>
       </button>
       <div class="post-spacing"></div>
       <ul class="post-bullet-list">
@@ -128,7 +128,7 @@
       <p class="post-text"><%= t('portfolio.n8n_whatsapp.wf2_intro') %></p>
       <%= image_tag t('portfolio.n8n_whatsapp.images.wf_rss'), class: "post-image drop-shadow js-zoomable-image" %>
       <button class="js-animated-button cta-button nav-button social post-self-center" data-action="navigate" data-target="https://github.com/ZPAlexis/n8n-evolution-whatsapp/blob/main/workflows/RSS%20Check.json" data-new-tab="true">
-        <img class="button-icon" src="/icons/icon_github_dark.png"><%= t('portfolio.n8n_whatsapp.workflow_json_btn') %>
+        <%= image_tag "icons/icon_github_dark.png", class: "button-icon" %><%= t('portfolio.n8n_whatsapp.workflow_json_btn') %>
       </button>
       <div class="post-spacing"></div>
       <ul class="post-bullet-list">
@@ -144,7 +144,7 @@
       <p class="post-text"><%= t('portfolio.n8n_whatsapp.wf3_intro_html') %></p>
       <%= image_tag t('portfolio.n8n_whatsapp.images.wf_send'), class: "post-image drop-shadow js-zoomable-image" %>
       <button class="js-animated-button cta-button nav-button social post-self-center" data-action="navigate" data-target="https://github.com/ZPAlexis/n8n-evolution-whatsapp/blob/main/workflows/Send%20Message%20to%20Participants.json" data-new-tab="true">
-        <img class="button-icon" src="/icons/icon_github_dark.png"><%= t('portfolio.n8n_whatsapp.workflow_json_btn') %>
+        <%= image_tag "icons/icon_github_dark.png", class: "button-icon" %><%= t('portfolio.n8n_whatsapp.workflow_json_btn') %>
       </button>
       <div class="post-spacing"></div>
       <ul class="post-bullet-list">
@@ -191,7 +191,7 @@
       <p class="post-text post-quote-box"><%= t('portfolio.n8n_whatsapp.closing_1') %></p>
       <div class="post-spacing-large"></div>
 
-      <img class="post-image xsmaller center" src="<%= t('portfolio.n8n_whatsapp.images.closing') %>">
+      <%= image_tag t('portfolio.n8n_whatsapp.images.closing'), class: "post-image xsmaller center" %>
       <div class="post-spacing"></div>
       <p class="post-text center"><%= t('portfolio.n8n_whatsapp.closing_2') %></p>
       <div class="post-spacing"></div>

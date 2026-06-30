@@ -76,9 +76,9 @@ export const Animations = {
     });
   },
 
-  coinStaticSrc: 'icons/coin-gold.svg',
-  coinSpinSrc: 'icons/coin_spin.gif',
-  coinIdleSrc: 'icons/coin_idle.gif',
+  get coinStaticSrc() { return document.body.dataset.iconCoinGold; },
+  get coinSpinSrc() { return document.body.dataset.iconCoinSpin; },
+  get coinIdleSrc() { return document.body.dataset.iconCoinIdle; },
   coinGifDuration: 3000,
 
   playIdleCoinSpin(idleEl, spinEl, onComplete) {

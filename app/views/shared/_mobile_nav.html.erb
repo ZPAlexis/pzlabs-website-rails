@@ -5,8 +5,8 @@
     <%# --- Home Button --- %>
     <button class="js-mobile-nav-button mobile-nav-button <%= 'active-tab' if current_page?(root_path) %>" data-action="navigate" data-target="<%= root_path %>">
       <div class="mobile-nav-icon-container">
-        <img class="mobile-nav-icon" src="/icons/icon_mobile_nav_home_light.png"> 
-        <img class="js-nav-toggle mobile-nav-icon <%= 'inactive' unless current_page?(root_path) %>" src="/icons/icon_mobile_nav_home_dark.png"> 
+        <%= image_tag "icons/icon_mobile_nav_home_light.png", class: "mobile-nav-icon" %> 
+        <%= image_tag "icons/icon_mobile_nav_home_dark.png", class: "js-nav-toggle mobile-nav-icon #{'inactive' unless current_page?(root_path)}" %>
       </div>
       <div class="js-nav-toggle mobile-nav-text <%= 'inactive' unless current_page?(root_path) %>"><%= t('mobile_nav.home_nav') %></div>
     </button>
@@ -16,8 +16,8 @@
     <% is_projects = request.path.match?(%r{\A/(en|pt)?/?projects}) %>
     <button class="js-mobile-nav-button mobile-nav-button <%= 'active-tab' if is_projects %>" data-action="navigate" data-target="<%= projects_path %>">
       <div class="mobile-nav-icon-container">
-        <img class="mobile-nav-icon" src="/icons/icon_mobile_nav_app_light.png">
-        <img class="js-nav-toggle mobile-nav-icon <%= 'inactive' unless is_projects %>" src="/icons/icon_mobile_nav_app_dark.png">
+        <%= image_tag "icons/icon_mobile_nav_app_light.png", class: "mobile-nav-icon" %>
+        <%= image_tag "icons/icon_mobile_nav_app_dark.png", class: "js-nav-toggle mobile-nav-icon #{'inactive' unless is_projects}" %>
       </div>
       <div class="js-nav-toggle mobile-nav-text <%= 'inactive' unless is_projects %>"><%= t('mobile_nav.projects_nav') %></div>
     </button>
@@ -25,8 +25,8 @@
     <%# --- About Button --- %>
     <button class="js-mobile-nav-button mobile-nav-button <%= 'active-tab' if current_page?(about_path) %>" data-action="navigate" data-target="<%= about_path %>">
       <div class="mobile-nav-icon-container">
-        <img class="mobile-nav-icon" src="/icons/icon_mobile_nav_about_light.png"> 
-        <img class="js-nav-toggle mobile-nav-icon <%= 'inactive' unless current_page?(about_path) %>" src="/icons/icon_mobile_nav_about_dark.png">
+        <%= image_tag "icons/icon_mobile_nav_about_light.png", class: "mobile-nav-icon" %> 
+        <%= image_tag "icons/icon_mobile_nav_about_dark.png", class: "js-nav-toggle mobile-nav-icon #{'inactive' unless current_page?(about_path)}" %>
       </div>
       <div class="js-nav-toggle mobile-nav-text <%= 'inactive' unless current_page?(about_path) %>"><%= t('mobile_nav.about_nav') %></div>
     </button>
