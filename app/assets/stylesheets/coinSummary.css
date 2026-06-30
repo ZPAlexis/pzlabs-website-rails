@@ -321,6 +321,8 @@
 
 .summary-reset-score-button.locked {
   background-color: var(--color-button-locked);
+  color: var(--color-shadow);
+  font-weight: 500;
 }
 
 .summary-menu-unlock-text {

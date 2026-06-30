@@ -91,10 +91,6 @@
 }
 
 @media (hover: hover) {
-  .cta-button:disabled:hover {
-    background-color: transparent;
-  }
-
   .cta-button:hover {
     background-color: var(--color-button-active);
   }

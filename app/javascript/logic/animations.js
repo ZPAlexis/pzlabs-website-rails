@@ -4,8 +4,8 @@ export const Animations = {
   initScrollReveals() {
     const revealConfigs = [
       { selector: '.fade-up', threshold: 0.1, className: 'fade-up' },
-      { selector: '.fade-left', threshold: 0.5, className: 'fade-left' },
-      { selector: '.fade-right', threshold: 0.5, className: 'fade-right' }
+      { selector: '.fade-left', threshold: 0.1, className: 'fade-left' },
+      { selector: '.fade-right', threshold: 0.1, className: 'fade-right' }
     ];
 
     revealConfigs.forEach(config => {

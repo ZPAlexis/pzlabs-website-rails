@@ -206,14 +206,14 @@
     </div> 
   </section>
 
-  <section class="about-projects-section fade-up">
+  <section class="about-projects-section js-trigger-coin-summary fade-up">
     <div class="about-projects-container">
       <h1 class="about-projects-title"><%= t('index.about_projects_title') %></h1>
       <p class="about-projects-description"><%= t('index.about_projects_description') %></p>
     </div>      
   </section>
 
-  <section class="projects-section">
+  <section class="projects-section js-trigger-coin-summary">
     <%= render "shared/projects_list" %>
   </section>
 
@@ -294,14 +294,14 @@
     </div>
   </section>
 
-  <section class="cta-section">
+  <section class="cta-section js-trigger-coin-summary">
     <div class="cta-container fade-up">
       <p class="cta-message"><%= t('index.cta_text_html') %></p>
       <p><%= image_tag "icons/icon_email_thin_light.png", class: "cta-icon not-selectable" %><a class="cta-link" href="mailto:alexis@pzlabs.tech" target="_blank">alexis@pzlabs.tech</a><br><%= image_tag "icons/icon_wa_light.png", class: "cta-icon not-selectable" %><a class="cta-link" href="https://wa.me/+5511995873453" target="_blank">WhatsApp</a></p>
     </div>
   </section>
 
-  <section class="game-analytics-section not-selectable">
+  <section class="game-analytics-section js-trigger-coin-summary not-selectable">
     <div class="game-container">
       <div class="game-title-container">
         <p class="game-title"><%= t('index.game_analytics_title') %></p>
