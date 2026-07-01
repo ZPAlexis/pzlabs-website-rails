@@ -23,6 +23,9 @@ const App = {
     this.setupEventListeners();
     this.setupScrollObservers();
     this.refreshApp();
+    requestAnimationFrame(() => {
+      document.querySelector('.coin-summary-wrapper')?.classList.remove('no-transition');
+    });
     this.openSummaryFromUrl();
 
     fetchAndDisplayMetrics();

@@ -156,7 +156,7 @@
 }
 
 .result {
-  font-size: var(--font-size-body);
+  font-size: var(--font-size-medium);
   font-family: var(--font-family-base);
   font-weight: regular;
   margin: 0;
@@ -174,7 +174,7 @@
 }
 
 .result-highlight {
-  font-size: var(--font-size-h3);
+  font-size: var(--font-size-body);
   font-weight: 400;
   text-shadow: var(--text-shadow-sm) var(--color-shadow);
 }

@@ -1,3 +1,21 @@
+.coin-summary-wrapper {
+  max-width: 108px;
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+  transition: max-width 0.3s ease, padding-left 0.3s ease;
+}
+
+.coin-summary-wrapper:has(.coin-summary.hidden) {
+  max-width: 0;
+  padding-left: 0;
+}
+
+.coin-summary-wrapper.no-transition,
+.coin-summary-wrapper.no-transition .coin-summary {
+  transition: none;
+}
+
 .coin-summary {
   cursor: pointer;
   height: 44px;
@@ -10,6 +28,8 @@
   justify-content: center;
   opacity: 1;
   pointer-events: auto;
+
+  transition: var(--btn-transition), opacity 0.25s ease 0.3s;
 }
 
 .coin-summary.highlight {
@@ -19,6 +39,7 @@
 .coin-summary.hidden {
   opacity: 0;
   pointer-events: none;
+  transition: opacity 0.15s ease;
 }
 
 .summary-icon {

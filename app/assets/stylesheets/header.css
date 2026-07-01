@@ -33,6 +33,10 @@
   gap: 16px;
 }
 
+.header-right-controls {
+  gap: 0;
+}
+
 .header-menu-nav-drawer {
   position: absolute;
   display: flex;

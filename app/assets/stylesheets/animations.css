@@ -78,7 +78,7 @@
 
 @keyframes borderHighlight {
   0%, 10%, 100% {
-    background-color: color-mix(in srgb, var(--color-mobile-nav) 85%, transparent);
+    background-color: color-mix(in srgb, var(--color-mobile-nav) 75%, transparent);
     border-color: var(--color-button-border);
     box-shadow: var(--shadow-md) var(--color-button-base-shadow);
     transform: rotate(0deg);

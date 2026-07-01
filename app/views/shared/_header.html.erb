@@ -23,26 +23,30 @@
           </button>
         </div>
       </div>
-      <div class="js-header-menu">
-        <button class="js-animated-button js-menu-toggle cta-button language-fix-width nav-button glass-button">
-          <%= image_tag "icons/icon_language_dark.png", class: "button-icon" %>
-          <%= image_tag "icons/icon_down_dark.png", class: "button-icon small" %>
-        </button>
-
-        <div class="js-header-drawer header-menu-nav-drawer">
-          <%= link_to 'EN', url_for(request.params.merge(locale: 'en')), class: "js-animated-button cta-button nav-button glass-button language-fix-width" %>
-
-          <%= link_to 'PT', url_for(request.params.merge(locale: 'pt')), class: "js-animated-button cta-button nav-button glass-button language-fix-width" %>
-        </div>
-      </div>
     </div>
     <div class="header-menu-container column">
-      <button class="js-animated-button js-coin-summary coin-summary cta-button fixed-width glass-button hidden">
-        <div class="gold-coin-container">
-          <%= image_tag "icons/coin-gold.svg", class: "summary-icon" %>
+      <div class="header-menu-container header-right-controls">
+        <div class="js-header-menu">
+          <button class="js-animated-button js-menu-toggle cta-button language-fix-width nav-button glass-button">
+            <%= image_tag "icons/icon_language_dark.png", class: "button-icon" %>
+            <%= image_tag "icons/icon_down_dark.png", class: "button-icon small" %>
+          </button>
+
+          <div class="js-header-drawer header-menu-nav-drawer">
+            <%= link_to 'EN', url_for(request.params.merge(locale: 'en')), class: "js-animated-button cta-button nav-button glass-button language-fix-width" %>
+
+            <%= link_to 'PT', url_for(request.params.merge(locale: 'pt')), class: "js-animated-button cta-button nav-button glass-button language-fix-width" %>
+          </div>
         </div>
-        <div class="js-coin-amount coin-amount"></div>
-      </button>
+        <div class="coin-summary-wrapper no-transition">
+          <button class="js-animated-button js-coin-summary coin-summary cta-button fixed-width glass-button hidden">
+            <div class="gold-coin-container">
+              <%= image_tag "icons/coin-gold.svg", class: "summary-icon" %>
+            </div>
+            <div class="js-coin-amount coin-amount"></div>
+          </button>
+        </div>
+      </div>
       <div class="js-notification-container notification-container closed">
         <div class="js-notification-close-btn notification-close-btn-container">
           <button class="notification-close-btn"><%= image_tag "icons/icon_x_dark_thin.png", class: "button-icon small" %></button>

@@ -5,7 +5,7 @@
   text-align: center;
   font-family: var(--font-family-accent);
   font-size: var(--font-size-body);
-  background-color: color-mix(in srgb, var(--color-mobile-nav) 85%, transparent);
+  background-color: color-mix(in srgb, var(--color-mobile-nav) 75%, transparent);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
   color: var(--color-text-dark);
