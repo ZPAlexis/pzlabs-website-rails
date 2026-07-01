@@ -135,7 +135,6 @@ const App = {
     const isHidden = Elements.summaryOverlay.classList.toggle('hidden', shouldHide);
     
     Elements.toggle(document.body, 'no-scroll', !isHidden);
-    Elements.toggle(Elements.summaryCoinContainer, 'hidden', !isHidden);
   },
 
   resetCoins() {
