@@ -24,7 +24,7 @@
 .post-list-container {
   display: flex;
   flex-direction: column;
-  align-self: start;
+  align-self: center;
   width: 294px;
 }
 
@@ -231,6 +231,10 @@ h2.post-heading[id] {
   max-width: 280px;
 }
 
+.post-image.small {
+  max-width: 320px;
+}
+
 .post-image.smaller {
   max-width: 600px;
 }
@@ -250,6 +254,10 @@ h2.post-heading[id] {
 
 .post-image.center {
   margin: 0 auto;
+}
+
+.post-image.app {
+  border-radius: 20%;
 }
 
 .post-image-row {
@@ -364,7 +372,7 @@ h2.post-heading[id] {
 }
 
 .post-quote-box {
-  background-color: var(--color-primary-highlight-fade);
+  background: linear-gradient(160deg, var(--color-primary-darker99) 0%, var(--color-primary-dark) 100%);
   border-radius: 14px;
   padding: 16px 20px;
   font-weight: 400;
@@ -497,6 +505,15 @@ code[class*="language-"] {
 }
 
 @media (max-width: 720px) {
+  .post-intro-wrapper {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .post-list-container {
+    width: fit-content;
+  }
+
   .post-list-container.center {
     text-align: center;
   }

@@ -2,14 +2,12 @@
 
   <%# Jiko %>
   <% unless local_assigns[:skip] == "jiko" %>
-    <%= render "shared/project_card", 
-        title: "JIKO App", 
-        image_path: "projects/jiko/jiko_icon.png", 
-        tags: ["Ruby on Rails", "Docker", "PostgreSQL", "CI/CD"], 
-        path: "#", 
-        i18n_key: "projects.jiko_project_description",
-        button_text: t('projects.status.coming_soon'),
-        disabled: true
+    <%= render "shared/project_card",
+        title: "JIKO App",
+        image_path: "projects/jiko/jiko_icon.png",
+        tags: ["Ruby on Rails", "PG", "Railway", "GitHub"],
+        path: pages_jiko_path,
+        i18n_key: "projects.jiko_project_description"
     %>
   <% end %>
 

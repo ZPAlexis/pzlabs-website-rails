@@ -1,5 +1,144 @@
-<% content_for :title, t("projects.jiko.title") + " | PZLabs" %>
+<main class="main-container">
+  <section class="post-section">
+    <%= image_tag t('portfolio.jiko.images.cover'), class: "post-banner-image cover" %>
+    <div class="post-container">
+      <h1 class="post-heading title center">JIKO App</h1>
+      <p class="post-text center"><%= t('portfolio.jiko.tagline') %></p>
 
-<main class="post-container">
-  <p><%= t("coming_soon", default: "Coming soon.") %></p>
+      <div class="post-intro-wrapper not-selectable">
+        <div class="post-list-container center gap">
+          <div>
+            <p class="post-text"><%= t('portfolio.jiko.stack_html') %></p>
+            <div class="project-summary-tags portfolio not-selectable">
+              <div class="stack-tag portfolio">Ruby on Rails</div>
+              <div class="stack-tag portfolio">PostgreSQL</div>
+              <div class="stack-tag portfolio">Railway</div>
+              <div class="stack-tag portfolio">GitHub Actions</div>
+            </div>
+          </div>
+        </div>
+        <div class="post-spacing"></div>
+        <div class="post-list-container">
+          <h3 class="post-text text-highlight"><%= t('portfolio.jiko.index') %></h3>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#about"><%= t('portfolio.jiko.about') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#concepts"><%= t('portfolio.jiko.concepts') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#stack"><%= t('portfolio.jiko.stack') %></a></p>
+          <p class="post-list-item post-text gold">><a class="post-list-item post-text" href="#plan"><%= t('portfolio.jiko.plan') %></a></p>
+        </div>
+      </div>
+
+      <div class="post-spacing"></div>
+
+      <p class="post-text"><%= t('portfolio.jiko.status_html') %></p>
+
+      <div class="post-spacing"></div>
+
+      <%= image_tag t('portfolio.jiko.images.icon-app'), class: "post-image shadow app xsmaller center" %>
+
+      <div class="post-spacing"></div>
+
+      <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="#" <%= 'disabled="disabled"' %> data-new-tab="true"><%= t('projects.status.coming_soon') %></button>
+
+      <div class="post-spacing"></div>
+
+      <h2 class="post-heading" id="about"><%= t('portfolio.jiko.about') %></h2>
+      <p class="post-text"><%= t('portfolio.jiko.about_1') %></p>
+      <%= image_tag t('portfolio.jiko.images.card'), class: "post-image small center js-zoomable-image" %>
+      <p class="post-text"><%= t('portfolio.jiko.about_2') %></p>
+
+      <div class="post-spacing"></div>
+      <%= image_tag t('portfolio.jiko.images.loop'), class: "post-image drop-shadow js-zoomable-image" %>
+      <div class="post-spacing"></div>
+
+      <p class="post-text"><%= t('portfolio.jiko.about_3') %></p>
+      <ul class="post-bullet-list">
+        <li><%= t('portfolio.jiko.about_li_1_html') %></li>
+        <li><%= t('portfolio.jiko.about_li_2_html') %></li>
+        <li><%= t('portfolio.jiko.about_li_3_html') %></li>
+        <li><%= t('portfolio.jiko.about_li_4_html') %></li>
+      </ul>
+
+      <div class="post-spacing"></div>
+      <p class="post-text post-quote-box"><%= t('portfolio.jiko.about_quote_html') %></p>
+      <div class="post-spacing"></div>
+
+      <p class="post-text"><%= t('portfolio.jiko.about_4') %></p>
+
+      <div class="post-spacing"></div>
+      <%= image_tag t('portfolio.jiko.images.task'), class: "post-image half border shadow center js-zoomable-image" %>
+      <div class="post-spacing"></div>
+
+      <p class="post-text"><%= t('portfolio.jiko.about_5_html') %></p>
+
+      <div class="post-spacing-large"></div>
+
+      <h2 class="post-heading" id="concepts"><%= t('portfolio.jiko.concepts') %></h2>
+      <p class="post-text"><%= t('portfolio.jiko.concepts_intro') %></p>
+      <%= image_tag t('portfolio.jiko.images.concepts'), class: "post-image drop-shadow js-zoomable-image" %>
+      <div class="post-spacing"></div>
+
+      <h3 class="post-heading"><%= t('portfolio.jiko.concepts_1_heading') %></h3>
+      <p class="post-text"><%= t('portfolio.jiko.concepts_1') %></p>
+      <p class="post-text post-quote-box"><%= t('portfolio.jiko.concepts_1_quote_html') %></p>
+      <div class="post-spacing"></div>
+
+      <h3 class="post-heading"><%= t('portfolio.jiko.concepts_2_heading') %></h3>
+      <p class="post-text"><%= t('portfolio.jiko.concepts_2') %></p>
+      <p class="post-text"><%= t('portfolio.jiko.concepts_2_2') %></p>
+      <div class="post-spacing"></div>
+
+      <h3 class="post-heading"><%= t('portfolio.jiko.concepts_3_heading') %></h3>
+      <p class="post-text"><%= t('portfolio.jiko.concepts_3') %></p>
+
+      <div class="post-spacing-large"></div>
+
+      <h2 class="post-heading" id="stack"><%= t('portfolio.jiko.stack') %></h2>
+      <p class="post-text"><%= t('portfolio.jiko.stack_1') %></p>
+
+      <div class="post-spacing"></div>
+      <%= image_tag t('portfolio.jiko.images.stack'), class: "post-image drop-shadow js-zoomable-image" %>
+      <div class="post-spacing"></div>
+
+      <p class="post-text"><%= t('portfolio.jiko.stack_intro') %></p>
+      <ul class="post-bullet-list">
+        <li><%= t('portfolio.jiko.stack_li_1_html') %></li>
+        <li><%= t('portfolio.jiko.stack_li_2_html') %></li>
+        <li><%= t('portfolio.jiko.stack_li_3_html') %></li>
+        <li><%= t('portfolio.jiko.stack_li_4_html') %></li>
+        <li><%= t('portfolio.jiko.stack_li_5_html') %></li>
+      </ul>
+
+      <div class="post-spacing-large"></div>
+
+      <h2 class="post-heading" id="plan"><%= t('portfolio.jiko.plan') %></h2>
+      <p class="post-text"><%= t('portfolio.jiko.plan_1_html') %></p>
+
+      <div class="post-spacing"></div>
+      <%= image_tag t('portfolio.jiko.images.plan'), class: "post-image drop-shadow js-zoomable-image" %>
+      <div class="post-spacing"></div>
+
+      <p class="post-text"><%= t('portfolio.jiko.plan_2') %></p>
+      <div class="post-spacing"></div>
+
+      <p class="post-text"><%= t('portfolio.jiko.plan_3') %></p>
+
+      <div class="post-spacing"></div>
+
+      <p class="post-text"><%= t('portfolio.jiko.plan_4') %></p>
+
+      <div class="post-spacing-large"></div>
+
+      <%= image_tag t('portfolio.jiko.images.icon'), class: "post-image xsmaller center" %>
+      <p class="post-text center"><%= t('portfolio.jiko.closing') %></p>
+      <div class="post-spacing"></div>
+      <div class="post-line"></div>
+    </div>
+  </section>
+
+  <section class="post-references-section">
+    <div class="post-references-container">
+      <p class="post-text center half text-highlight"><%= t('about.cta_projects') %></p>
+      <%= render "shared/projects_list", skip: "jiko" %>
+    </div>
+  </section>
 </main>
