@@ -38,3 +38,9 @@ footer {
   margin-bottom: 40px;
   opacity: 0.2;
 }
+
+@media (max-width: 720px) {
+  .footer-container {
+    padding-bottom: 80px;
+  }
+}
