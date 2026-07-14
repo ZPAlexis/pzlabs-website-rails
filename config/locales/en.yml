@@ -49,8 +49,7 @@ en:
     focus_auto_text_3: "My focus"
     focus_text_3: "identifying and implementing the correct approach for each application's specific context."
     about_text_bubble: "Hi!"
-    about_text_html: "I'm <span>Alexis Coelho</span>, a <span>Solutions Engineer</span>, with a focus on user engagement tools and the application of gamification elements and interactive design.
-    com foco em ferramentas para engajar usuários utilizando elementos de gamificação e design interativo."
+    about_text_html: "I'm <span>Alexis Coelho</span>, a <span>Solutions Engineer</span>, with a focus on user engagement tools and the application of gamification elements and interactive design."
     about_learn_more_btn: "VIEW MY PROFILE"
     about_projects_title: "Projects"
     about_projects_description: "A list of the projects I built, from production web apps to gamified experiences and gameplay systems."
