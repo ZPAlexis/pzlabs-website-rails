@@ -44,9 +44,9 @@
     </div>
   </section>
 
-  <section class="about-text-section fade-up">
+  <section class="about-text-section post-section fade-up">
     <div class="about-text-container">
-      <h1 class="about-text-title"><%= t('about.services_title') %></h1>
+      <h1 class="about-text-title post-heading" id="services"><%= t('about.services_title') %></h1>
       <p class="about-text-description"><%= t('about.intro_4') %></p>
       <div class="about-skills-container">
         <div class="about-skills-cards-container">
@@ -78,11 +78,11 @@
     </div>
   </section>
 
-  <section class="about-text-section fade-up">
+  <section class="about-text-section post-section fade-up">
     <div class="about-text-container">
-      <h1 class="about-text-title"><%= t('index.about_projects_title') %></h1>
+      <h1 class="about-text-title post-heading" id="projects"><%= t('index.about_projects_title') %></h1>
       <p class="about-text-description"><%= t('index.about_projects_description') %></p>
-    </div>      
+    </div>
   </section>
 
   <section class="projects-section fade-up">
@@ -95,12 +95,69 @@
     </button>
   </section>
 
-  <section class="about-text-section fade-up">
+  <section class="about-text-section post-section fade-up">
     <div class="about-text-container">
-      <h1 class="about-text-title"><%= t('about.skills_title') %></h1>
-      <p class="about-text-description"=><%= t('about.intro_5') %></p>
+      <h1 class="about-text-title post-heading" id="skills"><%= t('about.skills_title') %></h1>
+      <p class="about-text-description"><%= t('about.intro_5') %></p>
       <div class="about-skills-container">
+        <div class="about-skills-tier-title"><%= t('about.skills_core_title') %></div>
         <div class="about-skills-cards-container">
+          <div class="about-skills-card small-card fade-up">
+            <div class="about-skills-card-title-wrapper">
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_salesforce_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills">Salesforce</div>
+            </div>
+          </div>
+
+          <div class="about-skills-card small-card fade-up">
+            <div class="about-skills-card-title-wrapper">
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_funnel_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills">CRM</div>
+            </div>
+          </div>
+
+          <div class="about-skills-card small-card fade-up">
+            <div class="about-skills-card-title-wrapper">
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_kpis_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills"><%= t('about.intro_kpis') %></div>
+            </div>
+          </div>
+
+          <div class="about-skills-card small-card fade-up">
+            <div class="about-skills-card-title-wrapper">
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_api_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills">APIs</div>
+            </div>
+          </div>
+
+          <div class="about-skills-card small-card fade-up">
+            <div class="about-skills-card-title-wrapper">
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_n8n_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills">N8N</div>
+            </div>
+          </div>
+
+          <div class="about-skills-card small-card fade-up">
+            <div class="about-skills-card-title-wrapper">
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_zapier_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills">Zapier</div>
+            </div>
+          </div>
+
+          <div class="about-skills-card small-card fade-up">
+            <div class="about-skills-card-title-wrapper">
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_aws_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills">AWS</div>
+            </div>
+          </div>
+
+          <div class="about-skills-card small-card fade-up">
+            <div class="about-skills-card-title-wrapper">
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_vps_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills">Cloud VPS</div>
+            </div>
+          </div>
+
           <div class="about-skills-card small-card fade-up">
             <div class="about-skills-card-title-wrapper">
               <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_rails_dark.png", class: "icon" %></div>
@@ -131,29 +188,8 @@
 
           <div class="about-skills-card small-card fade-up">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_html_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills">HTML5</div>
-            </div>
-          </div>
-
-          <div class="about-skills-card small-card fade-up">
-            <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_css_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills">CSS3</div>
-            </div>
-          </div>
-
-          <div class="about-skills-card small-card fade-up">
-            <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_csharp_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills">C#</div>
-            </div>
-          </div>
-
-          <div class="about-skills-card small-card fade-up">
-            <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_api_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills">APIs</div>
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_node_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills">Node.js</div>
             </div>
           </div>
 
@@ -163,105 +199,74 @@
               <div class="about-skills-card-title skills">AI Frameworks</div>
             </div>
           </div>
+        </div>
 
-          <div class="about-skills-card small-card fade-up">
+        <div class="about-skills-tier-title secondary"><%= t('about.skills_secondary_title') %></div>
+        <div class="about-skills-cards-container">
+          <div class="about-skills-card small-card secondary fade-up">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_node_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills">Node.js</div>
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_html_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills">HTML5</div>
             </div>
           </div>
 
-          <div class="about-skills-card small-card fade-up">
+          <div class="about-skills-card small-card secondary fade-up">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_n8n_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills">N8N</div>
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_css_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills">CSS3</div>
             </div>
           </div>
 
-          <div class="about-skills-card small-card fade-up">
+          <div class="about-skills-card small-card secondary fade-up">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_zapier_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills">Zapier</div>
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_csharp_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills">C#</div>
             </div>
           </div>
 
-          <div class="about-skills-card small-card fade-up">
-            <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_vps_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills">Cloud VPS</div>
-            </div>
-          </div>
-
-          <div class="about-skills-card small-card fade-up">
-            <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_aws_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills">AWS</div>
-            </div>
-          </div>
-
-          <div class="about-skills-card small-card fade-up">
-            <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_uiux_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills">UI/UX Design</div>
-            </div>
-          </div>
-
-          <div class="about-skills-card small-card fade-up">
-            <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_prototype_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills"><%= t('about.intro_prototyping') %></div>
-            </div>
-          </div>
-
-          <div class="about-skills-card small-card fade-up">
-            <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_figma_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills">Figma</div>
-            </div>
-          </div>
-
-          <div class="about-skills-card small-card fade-up">
+          <div class="about-skills-card small-card secondary fade-up">
             <div class="about-skills-card-title-wrapper">
               <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_unity_dark.png", class: "icon" %></div>
               <div class="about-skills-card-title skills">Unity</div>
             </div>
           </div>
 
-          <div class="about-skills-card small-card fade-up">
+          <div class="about-skills-card small-card secondary fade-up">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_kpis_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills"><%= t('about.intro_kpis') %></div>
-            </div>
-          </div> 
-
-          <div class="about-skills-card small-card fade-up">
-            <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_funnel_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills">CRM</div>
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_uiux_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills">UI/UX Design</div>
             </div>
           </div>
 
-          <div class="about-skills-card small-card fade-up">
+          <div class="about-skills-card small-card secondary fade-up">
             <div class="about-skills-card-title-wrapper">
-              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_salesforce_dark.png", class: "icon" %></div>
-              <div class="about-skills-card-title skills">Salesforce</div>
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_prototype_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills"><%= t('about.intro_prototyping') %></div>
             </div>
-          </div>  
+          </div>
+
+          <div class="about-skills-card small-card secondary fade-up">
+            <div class="about-skills-card-title-wrapper">
+              <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_figma_dark.png", class: "icon" %></div>
+              <div class="about-skills-card-title skills">Figma</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="about-text-section fade-up">
+  <section class="about-text-section post-section fade-up">
     <div class="about-text-container">
-      <h1 class="about-text-title"><%= t('about.background_title') %></h1>
+      <h1 class="about-text-title post-heading" id="background"><%= t('about.background_title') %></h1>
       <p class="about-text-description"><%= t('about.background_1') %></p>
       <p class="about-text-description"><%= t('about.background_2') %></p>
-      <p class="about-text-description"><%= t('about.background_3') %></p>
+      <p class="about-text-description"><%= t('about.background_3_html') %></p>
       <p class="about-text-description"><%= t('about.background_4') %></p>
       <p class="about-text-description"><%= t('about.background_5_html') %></p>
-      <p class="about-text-description"><%= t('about.background_6') %></p>
+      <p class="about-text-description"><%= t('about.background_6_html') %></p>
       <p class="about-text-description"><%= t('about.background_7') %></p>
+      <p class="about-text-description"><%= t('about.background_8') %></p>
       <div class="about-skills-card about-quote fade-up">
         <div class="about-skills-card-title-wrapper">
           <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_quote_dark.png", class: "icon" %></div>
@@ -269,18 +274,37 @@
         </div>
         <div class="about-skills-card-description about-quote"><%= t('about.background_quote') %></div>
       </div>
-    </div> 
+    </div>
+  </section>
+
+  <section class="about-text-section post-section fade-up">
+    <div class="about-text-container">
+      <h1 class="about-text-title post-heading" id="ai"><%= t('about.ai_title') %></h1>
+      <p class="about-text-description"><%= t('about.ai_1') %></p>
+      <p class="about-text-description"><%= t('about.ai_2') %></p>
+      <p class="about-text-description"><%= t('about.ai_3') %></p>
+      <p class="about-text-description"><%= t('about.ai_4') %></p>
+    </div>
   </section>
 
   <section class="about-text-section fade-up">
     <div class="about-text-container">
-      <h1 class="about-text-title"><%= t('about.interests_title') %></h1>
+      <button class="js-animated-button cta-button nav-button social" data-action="navigate" data-target="<%= projects_path %>"><%= t('about.projects_btn') %></button>
+    </div>
+  </section>
+
+  <hr class="about-section-divider">
+
+  <section class="about-text-section post-section beyond-work-section fade-up">
+    <div class="about-text-container">
+      <h1 class="about-text-title post-heading" id="beyond-the-work"><%= t('about.interests_title') %></h1>
+      <p class="about-text-description"><%= t('about.interests_intro') %></p>
       <p class="about-text-description"><%= t('about.interests_1') %></p>
       <p class="about-text-description"><%= t('about.interests_2') %></p>
       <p class="about-text-description"><%= t('about.interests_3') %></p>
       <p class="about-text-description"><%= t('about.interests_4') %></p>
       <p class="about-text-description"><%= t('about.interests_5') %></p>
-      
+
       <div class="about-skills-cards-container">
         <div class="about-skills-card fade-up">
           <div class="about-skills-card-title-wrapper">
@@ -322,23 +346,7 @@
           <div class="about-skills-card-description"><%= t('about.interests_fitness') %></div>
         </div>
       </div>
-    </div> 
-  </section>
-
-  <section class="about-text-section fade-up">
-    <div class="about-text-container">
-      <h1 class="about-text-title" id="ai"><%= t('about.ai_title') %></h1>
-      <p class="about-text-description"><%= t('about.ai_1') %></p>
-      <p class="about-text-description"><%= t('about.ai_2') %></p>
-      <p class="about-text-description"><%= t('about.ai_3') %></p>
-      <p class="about-text-description"><%= t('about.ai_4') %></p>
-    </div> 
-  </section>
-
-  <section class="about-text-section fade-up">
-    <div class="about-text-container">
-      <button class="js-animated-button cta-button nav-button social" data-action="navigate" data-target="<%= projects_path %>"><%= t('about.projects_btn') %></button>
-    </div> 
+    </div>
   </section>
 
   <section class="about-text-section fade-up">

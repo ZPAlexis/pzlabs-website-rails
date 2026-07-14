@@ -176,6 +176,37 @@
   gap: 8px;
 }
 
+.about-skills-card.secondary {
+  background-color: transparent;
+  box-shadow: var(--shadow-md) var(--color-border);
+  color: var(--color-text);
+  opacity: 0.8;
+}
+
+.about-skills-tier-title {
+  font-size: var(--font-size-medium);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-accent);
+  width: 100%;
+  margin-top: 8px;
+}
+
+.about-skills-tier-title.secondary {
+  color: var(--color-text);
+  opacity: 0.7;
+}
+
+.about-section-divider {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin: 40px auto;
+  border: none;
+  border-top: 2px solid var(--color-border);
+  opacity: 0.5;
+}
+
 .about-skills-card.about-quote {
   font-family: var(--font-family-accent);
   flex: none;
