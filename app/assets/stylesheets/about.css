@@ -146,6 +146,11 @@
   max-width: var(--max-width-container);
 }
 
+.about-skills-container.stacked {
+  align-self: stretch;
+  width: 100%;
+}
+
 .about-skills-cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -155,12 +160,21 @@
   max-width: var(--max-width-container);
 }
 
+.about-skills-cards-container.stacked {
+  flex-direction: column;
+  width: 100%;
+}
+
+.about-skills-cards-container.stacked .about-skills-card {
+  width: 100%;
+}
+
 .about-skills-card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 14px;
-  gap: 4px;
+  gap: 0px;
   box-sizing: border-box;
   border-radius: 8px;
 
@@ -168,19 +182,19 @@
   box-shadow: var(--shadow-md) var(--color-accent);
   color: var(--color-background);
 
-  flex: 1 1;
   min-width: 240px;
+}
+
+.about-skills-card.small-card {
+  width: 240px;
+}
+
+.about-skills-card.flex {
+  flex: 1 1;
 }
 
 .about-skills-card.extra-gap {
   gap: 8px;
-}
-
-.about-skills-card.secondary {
-  background-color: transparent;
-  box-shadow: var(--shadow-md) var(--color-border);
-  color: var(--color-text);
-  opacity: 0.8;
 }
 
 .about-skills-tier-title {
@@ -189,13 +203,10 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: var(--color-accent);
+  text-shadow: var(--text-shadow-sm) var(--color-accent-shadow);
   width: 100%;
-  margin-top: 8px;
-}
-
-.about-skills-tier-title.secondary {
-  color: var(--color-text);
-  opacity: 0.7;
+  margin-top: 40px;
+  margin-bottom: 10px;
 }
 
 .about-section-divider {
@@ -248,9 +259,8 @@
   font-size: var(--font-size-body);
   font-family: var(--font-family-accent);
   font-weight: 400;
-  line-height: 150%;
+  line-height: 140%;
   white-space: normal;
-  max-width: 400px;
   min-height: 60px;
 }
 
@@ -275,7 +285,8 @@
   .about-skills-card.small-card {
     padding: 8px;
     justify-content: center;
-    min-width: 150px;
+    min-width: auto;
+    width: 150px;
   }
 
   .about-bio-name {
