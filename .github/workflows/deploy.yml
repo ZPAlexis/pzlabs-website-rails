@@ -9,7 +9,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up SSH key
         run: |
@@ -30,7 +30,7 @@ jobs:
           ssh -i ~/.ssh/deploy_key "$DEST" "chmod 600 ~/pzlabs-website/config/master.key"
 
       - name: Deploy to VPS
-        uses: nick-fields/retry@v3
+        uses: nick-fields/retry@v4
         with:
           timeout_minutes: 15
           max_attempts: 3
