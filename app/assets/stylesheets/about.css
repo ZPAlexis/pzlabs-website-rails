@@ -189,8 +189,9 @@
   width: 240px;
 }
 
-.about-skills-card.flex {
+.about-skills-card.interests {
   flex: 1 1;
+  min-width: 260px;
 }
 
 .about-skills-card.extra-gap {

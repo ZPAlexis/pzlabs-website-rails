@@ -40,7 +40,7 @@
     <div class="about-text-container">
       <p class="about-text-description"><%= t('about.intro_1') %></p>
       <p class="about-text-description"><%= t('about.intro_2') %></p>
-      <p class="about-text-description"><%= t('about.intro_3') %></p>
+      <p class="about-text-description"><%= t('about.intro_3_html') %></p>
     </div>
   </section>
 
@@ -85,7 +85,7 @@
     </div>
   </section>
 
-  <section class="projects-section fade-up">
+  <section class="projects-section">
     <%= render "shared/projects_list" %>
   </section>
 
@@ -278,8 +278,9 @@
       <p class="about-text-description"><%= t('about.background_4') %></p>
       <p class="about-text-description"><%= t('about.background_5_html') %></p>
       <p class="about-text-description"><%= t('about.background_6_html') %></p>
-      <p class="about-text-description"><%= t('about.background_7') %></p>
+      <p class="about-text-description"><%= t('about.background_7_html') %></p>
       <p class="about-text-description"><%= t('about.background_8') %></p>
+      <p class="about-text-description"><%= t('about.background_9') %></p>
       <div class="about-skills-card about-quote fade-up">
         <div class="about-skills-card-title-wrapper">
           <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_quote_dark.png", class: "icon" %></div>
@@ -300,42 +301,14 @@
     </div>
   </section>
 
-  <section class="about-text-section post-section beyond-work-section fade-up">
+  <section class="about-text-section post-section interests-section fade-up">
     <div class="about-text-container">
-      <h1 class="about-text-title post-heading" id="beyond-the-work"><%= t('about.interests_title') %></h1>
-      <p class="about-text-description"><%= t('about.interests_intro') %></p>
+      <h1 class="about-text-title post-heading" id="interests"><%= t('about.interests_title') %></h1>
       <p class="about-text-description"><%= t('about.interests_1') %></p>
       <p class="about-text-description"><%= t('about.interests_2') %></p>
-      <p class="about-text-description"><%= t('about.interests_3') %></p>
-      <p class="about-text-description"><%= t('about.interests_4') %></p>
-      <p class="about-text-description"><%= t('about.interests_5') %></p>
 
       <div class="about-skills-cards-container">
-        <div class="about-skills-card flex fade-up">
-          <div class="about-skills-card-title-wrapper">
-            <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_tech_dark.png", class: "icon" %></div>
-            <div class="about-skills-card-title"><%= t('about.interests_technology_title') %></div>
-          </div>
-          <div class="about-skills-card-description"><%= t('about.interests_technology') %></div>
-        </div>
-
-        <div class="about-skills-card flex fade-up">
-          <div class="about-skills-card-title-wrapper">
-            <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_gaming_dark.png", class: "icon" %></div>
-            <div class="about-skills-card-title"><%= t('about.interests_gaming_title') %></div>
-          </div>
-          <div class="about-skills-card-description"><%= t('about.interests_gaming') %></div>
-        </div>
-
-        <div class="about-skills-card flex fade-up">
-          <div class="about-skills-card-title-wrapper">
-            <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_fantasy_dark.png", class: "icon" %></div>
-            <div class="about-skills-card-title"><%= t('about.interests_fantasy_title') %></div>
-          </div>
-          <div class="about-skills-card-description"><%= t('about.interests_fantasy') %></div>
-        </div>
-
-        <div class="about-skills-card flex fade-up">
+        <div class="about-skills-card interests fade-up">
           <div class="about-skills-card-title-wrapper">
             <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_3dp_dark.png", class: "icon" %></div>
             <div class="about-skills-card-title"><%= t('about.interests_3dp_title') %></div>
@@ -343,7 +316,23 @@
           <div class="about-skills-card-description"><%= t('about.interests_3dp') %></div>
         </div>
 
-        <div class="about-skills-card flex fade-up">
+        <div class="about-skills-card interests fade-up">
+          <div class="about-skills-card-title-wrapper">
+            <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_fantasy_dark.png", class: "icon" %></div>
+            <div class="about-skills-card-title"><%= t('about.interests_fantasy_title') %></div>
+          </div>
+          <div class="about-skills-card-description"><%= t('about.interests_fantasy') %></div>
+        </div>
+
+        <div class="about-skills-card interests fade-up">
+          <div class="about-skills-card-title-wrapper">
+            <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_gaming_dark.png", class: "icon" %></div>
+            <div class="about-skills-card-title"><%= t('about.interests_gaming_title') %></div>
+          </div>
+          <div class="about-skills-card-description"><%= t('about.interests_gaming') %></div>
+        </div>
+
+        <div class="about-skills-card interests fade-up">
           <div class="about-skills-card-title-wrapper">
             <div class="about-skills-card-icon not-selectable"><%= image_tag "icons/icon_fitness_dark.png", class: "icon" %></div>
             <div class="about-skills-card-title"><%= t('about.interests_fitness_title') %></div>
