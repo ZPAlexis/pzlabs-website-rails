@@ -146,6 +146,11 @@
   max-width: var(--max-width-container);
 }
 
+.about-skills-container.stacked {
+  align-self: stretch;
+  width: 100%;
+}
+
 .about-skills-cards-container {
   display: flex;
   flex-wrap: wrap;
@@ -155,12 +160,21 @@
   max-width: var(--max-width-container);
 }
 
+.about-skills-cards-container.stacked {
+  flex-direction: column;
+  width: 100%;
+}
+
+.about-skills-cards-container.stacked .about-skills-card {
+  width: 100%;
+}
+
 .about-skills-card {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   padding: 14px;
-  gap: 4px;
+  gap: 0px;
   box-sizing: border-box;
   border-radius: 8px;
 
@@ -168,12 +182,41 @@
   box-shadow: var(--shadow-md) var(--color-accent);
   color: var(--color-background);
 
-  flex: 1 1;
   min-width: 240px;
+}
+
+.about-skills-card.small-card {
+  width: 240px;
+}
+
+.about-skills-card.interests {
+  flex: 1 1;
+  min-width: 260px;
 }
 
 .about-skills-card.extra-gap {
   gap: 8px;
+}
+
+.about-skills-tier-title {
+  font-size: var(--font-size-medium);
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: var(--color-accent);
+  text-shadow: var(--text-shadow-sm) var(--color-accent-shadow);
+  width: 100%;
+  margin-top: 40px;
+  margin-bottom: 10px;
+}
+
+.about-section-divider {
+  width: 100%;
+  max-width: var(--max-width-container);
+  margin: 40px auto;
+  border: none;
+  border-top: 2px solid var(--color-border);
+  opacity: 0.5;
 }
 
 .about-skills-card.about-quote {
@@ -217,9 +260,8 @@
   font-size: var(--font-size-body);
   font-family: var(--font-family-accent);
   font-weight: 400;
-  line-height: 150%;
+  line-height: 140%;
   white-space: normal;
-  max-width: 400px;
   min-height: 60px;
 }
 
@@ -244,7 +286,8 @@
   .about-skills-card.small-card {
     padding: 8px;
     justify-content: center;
-    min-width: 150px;
+    min-width: auto;
+    width: 150px;
   }
 
   .about-bio-name {
