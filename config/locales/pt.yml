@@ -95,7 +95,7 @@ pt:
     bio_role: "Engenheiro de Soluções"
     bio_location: "São Paulo, Brasil"
     services: "Soluções"
-    intro_1: "Meu nome é Alexis Coelho, sou Engenheiro de Soluções focado em transformar necessidades de negócio em soluções técnicas, tanto para equipes internas quanto para clientes externos."
+    intro_1: "Meu nome é Alexis Coelho, sou Engenheiro de Soluções focado em transformar necessidades de negócio em soluções técnicas, para clientes internos e externos."
     intro_2: "Minha trajetória inclui consultoria em operações de vendas em quatro países, atuação como elo técnico entre times de Produto e Vendas, e desenvolvimento de aplicações full-stack."
     intro_3_html: "Minha especialidade é transformar programas de retenção, workflows internos e monitoramento de performance em sistemas que as pessoas realmente querem usar. Gamificação e design interativo são áreas que me fascinam, e conceitos que exploro ativamente em aplicações como o <a class='link' href='/pt/projects/jiko'>JIKO</a> e o <a class='link' href='/pt/projects/trofy'>Trofy</a>, desenvolvidos no PZLabs."
     services_title: "Soluções"

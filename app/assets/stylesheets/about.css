@@ -185,6 +185,12 @@
   min-width: 240px;
 }
 
+.about-skills-card.emphasis {
+  background-color: var(--color-primary-dark80);
+  box-shadow: inset var(--shadow-spread) var(--color-mobile-nav-shadow);
+  color: var(--color-text);
+}
+
 .about-skills-card.small-card {
   width: 240px;
 }
