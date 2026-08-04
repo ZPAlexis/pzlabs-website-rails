@@ -74,14 +74,21 @@
 }
 
 .about-hero-socials-container {
-  display: flex;
-  flex-wrap: wrap-reverse;
-  flex-direction: row;
-  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(4, auto);
   justify-content: center;
+  justify-items: center;
   align-items: center;
-  gap: 30px;
+  flex: 1;
+  gap: clamp(10px, 4vw, 30px);
   max-width: var(--max-width-container);
+  margin: 0 20px;
+}
+
+@media (max-width: 700px) {
+  .about-hero-socials-container {
+    grid-template-columns: repeat(2, auto);
+  }
 }
 
 .social-link-container {
@@ -154,9 +161,9 @@
 .about-skills-cards-container {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: start;
   align-items: stretch;
-  gap: 20px;
+  gap: clamp(8px, 2vw, 20px);
   max-width: var(--max-width-container);
 }
 
@@ -189,10 +196,18 @@
   background-color: var(--color-primary-dark80);
   box-shadow: inset var(--shadow-spread) var(--color-mobile-nav-shadow);
   color: var(--color-text);
+  padding-bottom: 20px;
+}
+
+.about-skills-card.emphasis .about-skills-card-title {
+  color: var(--color-accent);
+  text-shadow: var(--text-shadow-sm) var(--color-accent-shadow);
 }
 
 .about-skills-card.small-card {
-  width: 240px;
+  flex: 0 1 clamp(160px, 30%, 260px);
+  min-width: 160px;
+  max-width: 260px;
 }
 
 .about-skills-card.interests {
@@ -233,7 +248,7 @@
 .about-skills-card-title-wrapper {
   display: flex;
   align-items: center;
-  gap: 10px;
+  gap: 6px;
   width: 100%;
 }
 
@@ -266,9 +281,10 @@
   font-size: var(--font-size-body);
   font-family: var(--font-family-accent);
   font-weight: 400;
+  letter-spacing: 0.5px;
   line-height: 140%;
   white-space: normal;
-  min-height: 60px;
+  
 }
 
 .about-skills-card-description.about-quote {
@@ -292,8 +308,6 @@
   .about-skills-card.small-card {
     padding: 8px;
     justify-content: center;
-    min-width: auto;
-    width: 150px;
   }
 
   .about-bio-name {
