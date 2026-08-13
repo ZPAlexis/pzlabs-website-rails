@@ -1,7 +1,9 @@
 <% 
   btn_text = local_assigns.fetch(:button_text, t('index.learn_more_btn'))
-  is_disabled = local_assigns[:disabled] == true 
+  is_disabled = local_assigns[:disabled] == true
   is_short_text = local_assigns[:short_text] == true
+  secondary_path = local_assigns[:secondary_path]
+  secondary_icon = local_assigns[:secondary_icon]
 %>
 
 <div class="project-container fade-right">
@@ -17,11 +19,25 @@
             <div class="stack-tag"><%= tag %></div>
           <% end %>
         </div>
-        <button class="js-animated-button cta-button project-cta" data-action="navigate" 
-          data-target="<%= path %>"
-          <%= 'disabled="disabled"' if is_disabled %>>
-        <%= btn_text %>
-      </button>
+        <% if secondary_path.present? %>
+          <div class="project-cta-row">
+            <button class="js-animated-button cta-button project-cta" data-action="navigate"
+              data-target="<%= path %>"
+              <%= 'disabled="disabled"' if is_disabled %>>
+            <%= btn_text %>
+          </button>
+            <button class="js-animated-button cta-button project-cta round" data-action="navigate"
+              data-target="<%= secondary_path %>" data-new-tab="true">
+            <%= image_tag secondary_icon, class: "button-icon small" %>
+          </button>
+          </div>
+        <% else %>
+          <button class="js-animated-button cta-button project-cta" data-action="navigate"
+            data-target="<%= path %>"
+            <%= 'disabled="disabled"' if is_disabled %>>
+          <%= btn_text %>
+        </button>
+        <% end %>
       </div>
     </div>
   </div>

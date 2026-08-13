@@ -558,7 +558,7 @@ en:
       stack: "Stack"
       plan: "Plan"
       tagline: "Productivity web app to monitor your focus sessions in real time and track your long-term performance trends."
-      status_html: "<span class='text-highlight'>Status:</span> In closed testing. This page will expand with more details as JIKO reaches its version 1.0 release."
+      status_html: "<span class='text-highlight'>Status:</span> Live and open to the public. This page will expand with more details as JIKO reaches its version 1.0 release."
       try_it_btn: "Try it!"
       about_1: "JIKO is a gamified productivity app designed to track focus sessions and visualize personal growth on the things that you really care about."
       about_2: "Track an exercise objective, a reading habit, or how long a side project is taking. Instead of guessing, JIKO provides you with an honest record of your own progress over time, surfacing data that you can look back on and actually improve from, through a simple loop of completing tasks, analyzing progress, and reviewing your objectives."

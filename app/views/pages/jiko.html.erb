@@ -1,8 +1,12 @@
 <main class="main-container">
   <section class="post-section">
-    <%= image_tag t('portfolio.jiko.images.cover'), class: "post-banner-image cover" %>
+    <div class="post-banner-cover jiko">
+      <button class="js-animated-button post-cover-play-button" data-action="navigate" data-target="https://gojiko.app" data-new-tab="true">
+        <%= image_tag "projects/jiko/jiko_play_icon.svg", class: "post-cover-play-icon", draggable: "false" %>
+      </button>
+    </div>
     <div class="post-container">
-      <h1 class="post-heading title center">JIKO App</h1>
+      <h1 class="post-heading title center large">JIKO</h1>
       <p class="post-text center"><%= t('portfolio.jiko.tagline') %></p>
 
       <div class="post-intro-wrapper not-selectable">
@@ -29,17 +33,15 @@
 
       <div class="post-spacing"></div>
 
-      <p class="post-text"><%= t('portfolio.jiko.status_html') %></p>
-
-      <div class="post-spacing"></div>
-
       <%= image_tag t('portfolio.jiko.images.icon-app'), class: "post-image shadow app xsmaller center" %>
 
-      <div class="post-spacing"></div>
+      <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="https://gojiko.app" data-new-tab="true"><%= t('portfolio.jiko.try_it_btn') %></button>
 
-      <button class="js-animated-button cta-button post-cta-button" data-action="navigate" data-target="#" <%= 'disabled="disabled"' %> data-new-tab="true"><%= t('projects.status.coming_soon') %></button>
+      <div class="post-spacing-large"></div>
 
-      <div class="post-spacing"></div>
+      <p class="post-text"><%= t('portfolio.jiko.status_html') %></p>
+
+      <div class="post-spacing-large"></div>
 
       <h2 class="post-heading" id="about"><%= t('portfolio.jiko.about') %></h2>
       <p class="post-text"><%= t('portfolio.jiko.about_1') %></p>
