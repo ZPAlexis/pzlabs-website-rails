@@ -267,10 +267,14 @@
   text-transform: uppercase;
   font-weight: bold;
   width: 100%;
+  line-height: 100%;
+  letter-spacing: 0px;
 }
 
 .about-skills-card-title.skills {
   font-size: clamp(var(--font-size-medium), 2vw, var(--font-size-body));
+  text-transform: none;
+  letter-spacing: -0.04em;
 }
 
 .about-skills-card-title.about-quote {
