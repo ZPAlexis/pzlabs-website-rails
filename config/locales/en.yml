@@ -117,6 +117,7 @@ en:
     intro_crm_architecture: "CRM Architecture"
     intro_pipeline_design: "Pipeline & Funnel Design"
     intro_revenue_forecasting: "Revenue Forecasting"
+    intro_data_enrichment: "Data Enrichment"
     interests_title: "Interests"
     interests_1: "I've been tinkering with computers and hardware since I was a kid, my parents gave me my first home computer at the age of 11, and a few years later I was assembling and disassembling machines and setting up private servers for online games. That hands-on curiosity went quiet for a while, though. I drifted away from programming through high school and university, and only picked it back up seriously when I focused on API and automations through my Sales Operations roles. Getting back to it meant taking several steps back to rebuild solid development foundations before I felt qualified to ship production-ready solutions."
     interests_2: "I've been a nerd since I can remember. Like any good nerd, gaming has been another constant interest I've had my entire life. It started as a way to disconnect from reality, but it evolved into a fascination with how interactive experiences can be purposefully crafted to create unforgettable moments. That same curiosity carries into a few other areas of my life:"
