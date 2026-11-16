@@ -1,0 +1,13 @@
+<meta property="og:site_name" content="<%= t('meta.site_name') %>">
+<meta property="og:type" content="website">
+<meta property="og:title" content="<%= page_title %>">
+<meta property="og:description" content="<%= page_description %>">
+<meta property="og:url" content="<%= request.base_url + request.path %>">
+<meta property="og:locale" content="<%= t('meta.og_locale') %>">
+<% (I18n.available_locales - [ I18n.locale ]).each do |locale| %>
+<meta property="og:locale:alternate" content="<%= t('meta.og_locale', locale: locale) %>">
+<% end %>
+<% if (share_image = share_image_url) %>
+<meta property="og:image" content="<%= share_image %>">
+<% end %>
+<meta name="twitter:card" content="summary_large_image">

@@ -1,6 +1,39 @@
 en:
   meta:
     description: "Alexis Coelho, a Go-to-Market Engineer building the systems that generate and manage revenue pipeline, for internal and external clients."
+    default_title: "Alexis Coelho"
+    site_name: "Alexis Coelho"
+    html_lang: "en"
+    og_locale: "en_US"
+    pages:
+      index:
+        title: "Alexis Coelho | GTM Engineer"
+      about:
+        title: "About | Alexis Coelho"
+      projects:
+        title: "Projects | Alexis Coelho"
+        description: "A list of the projects I built, from production web apps to gamified experiences and gameplay systems."
+      games:
+        title: "Game Prototypes | Alexis Coelho"
+        description: "Games built to explore the foundations of game design and experiment with systems and gameplay mechanics."
+      jiko:
+        title: "JIKO | Alexis Coelho"
+        description: "Productivity web app to monitor your focus sessions in real time and track your long-term performance trends."
+      n8n_whatsapp:
+        title: "WhatsApp Feed Automation | Alexis Coelho"
+        description: "An automation engine that delivers RSS updates via WhatsApp, with participant management."
+      acoelho:
+        title: "acoelho.dev | Alexis Coelho"
+        description: "Full-stack portfolio website and showcase of gamified elements and experiences."
+      trofy:
+        title: "Trofy | Alexis Coelho"
+        description: "To-do style mobile app that gamifies personal objectives to reinforce the development of good habits."
+      born_survivor:
+        title: "Born Survivor | Alexis Coelho"
+        description: "The second demo Unity game with a “Pick 1 of 3” rogue-like style mechanic. Inspired by the game Vampire Survivors."
+      flappy_astronaut:
+        title: "Flappy Astronaut | Alexis Coelho"
+        description: "A demo Unity game to implement game development and C-sharp concepts. Inspired by the game Flappy Bird."
   buttons:
     rps_info_url: "https://en.wikipedia.org/wiki/Rock_paper_scissors"
   header:
@@ -142,7 +175,7 @@ en:
     background_quote_title: "Mary Poppins said this in 1964:"
     background_quote: "“In every job that must be done, there's an element of fun. You find the fun, and the job is a game!”"
     ai_title: "My usage of AI"
-    ai_1: "I've learned from personal experience that offloading critical tasks leads to a slippery slope of knowledge retention issues and work quality maintenance. I use AI tools the same way I used Google searches, forum deep-dives, and Youtube videos in the past. It's a way to review and improve instead of an avenue for creation and decision-making. None of my applications are defined or built by AI tools and prompts, they are only reviewed and improved by carefully planned interfacing with these tools."
+    ai_1: "I've learned from personal experience that offloading critical tasks leads to a slippery slope of knowledge retention issues and work quality maintenance. I always own the critical parts: the scope, architecture and design decisions are always mine; AI writes code under my direction, and I review and verify everything it produces."
     ai_2: "Being a millenial, I grew up in the early stages of the internet. The only way to find information at the time was through mIRC channels and hidden forums. Since then, the way we access information online evolved quickly from Google searches, Stack Overflow conversations, Youtube tutorial videos, Reddit and other social communities, and now Artificial Intelligence."
     ai_3: "What was once a large amount of data publicly available to be consumed by anyone is now diluted by predictive systems that are designed to detect, learn, and re-produce based existing data. While this makes it easier and faster to find information, it also brings worrying questions on the way these systems are trained and the future implications they could have."
     ai_4: "In practice, this means that I document an idea and build out my own structure and logic before introducing AI into the process. Once that foundation exists, AI optimizes, refactors, and helps me reach a polished final version much faster than I could alone. I still wrestle with the tension between ownership, speed, and control, but I keep landing in the same place: used carefully and methodically, AI raises the quality of what I ship, it doesn't replace the thinking that gets me there."

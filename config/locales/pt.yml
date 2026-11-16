@@ -1,6 +1,39 @@
 pt:
   meta:
     description: "Alexis Coelho, GTM Engineer focado em construir os sistemas que geram e gerenciam pipeline de receita, para clientes internos e externos."
+    default_title: "Alexis Coelho"
+    site_name: "Alexis Coelho"
+    html_lang: "pt-BR"
+    og_locale: "pt_BR"
+    pages:
+      index:
+        title: "Alexis Coelho | GTM Engineer"
+      about:
+        title: "Sobre | Alexis Coelho"
+      projects:
+        title: "Projetos | Alexis Coelho"
+        description: "Uma lista dos projetos que desenvolvi, de aplicações web em produção a sistemas de gamificação e jogabilidade."
+      games:
+        title: "Protótipos de Jogos | Alexis Coelho"
+        description: "Jogos criados para explorar os fundamentos de game design e experimentar sistemas e mecânicas de jogabilidade."
+      jiko:
+        title: "JIKO | Alexis Coelho"
+        description: "App web de produtividade para monitorar sessões de foco e ajudar na análise de performance pessoal."
+      n8n_whatsapp:
+        title: "Automação de Feed WhatsApp | Alexis Coelho"
+        description: "Uma automação que entrega atualizações de RSS via WhatsApp, com gerenciamento de participantes."
+      acoelho:
+        title: "acoelho.dev | Alexis Coelho"
+        description: "Website full-stack para portfólio e demonstração de elementos de gamificação."
+      trofy:
+        title: "Trofy | Alexis Coelho"
+        description: "Mobile app de tarefas que gamifica objetivos pessoais para desenvolvimento de bons hábitos."
+      born_survivor:
+        title: "Born Survivor | Alexis Coelho"
+        description: "O segundo jogo demo feito em Unity com uma mecânica no estilo “escolha 1 de 3”. Inspirado em Vampire Survivors."
+      flappy_astronaut:
+        title: "Flappy Astronaut | Alexis Coelho"
+        description: "Um jogo demo feito em Unity para aplicar conceitos de game-dev e C-sharp. Inspirado em Flappy Bird."
   buttons:
     rps_info_url: "https://pt.wikipedia.org/wiki/Pedra,_papel_e_tesoura"
   header:
@@ -82,8 +115,8 @@ pt:
       coming_soon: "Em Breve"
     back: "Ver Outros Projetos"
     jiko_project_description: "App web de produtividade para monitorar sessões de foco e ajudar na análise de performance pessoal."
-    n8n_whatsapp_project_description: "Uma automação que entrega atualizações de RSS via WhatsApp, com gerênciamento de participantes."
-    acoelho_project_description_html: "<b>Este site!</b><br>Website full-stack para portfolio e demonstração de elementos de gamificação."
+    n8n_whatsapp_project_description: "Uma automação que entrega atualizações de RSS via WhatsApp, com gerenciamento de participantes."
+    acoelho_project_description_html: "<b>Este site!</b><br>Website full-stack para portfólio e demonstração de elementos de gamificação."
     trofy_project_description: "Mobile app de tarefas que gamifica objetivos pessoais para desenvolvimento de bons hábitos."
     bs_project_description: "O segundo jogo demo feito em Unity com uma mecânica no estilo “escolha 1 de 3”. Inspirado em Vampire Survivors."
     fa_project_description: "Um jogo demo feito em Unity para aplicar conceitos de game-dev e C-sharp. Inspirado em Flappy Bird."
@@ -142,7 +175,7 @@ pt:
     background_quote_title: "Mary Poppins já dizia em 1964:"
     background_quote: "“Em todo trabalho que precisa ser feito, existe um elemento de diversão. Você encontra a diversão e o trabalho vira um jogo!”"
     ai_title: "Meu uso de IA"
-    ai_1: "Aprendi na prática que repassar tarefas críticas para ferramentas de IA acaba criando problemas de retenção de conhecimento e dificuldade de manter uma qualidade uniforme do trabalho. Hoje, uso essas ferramentas da mesma forma que antes usava pesquisas no Google, em fóruns, e em vídeos do YouTube. É uma maneira de revisar e melhorar, e não fonte de criação ou tomada de decisão. Nenhuma das minhas aplicações é definida ou construída por ferramentas de IA ou prompts, elas apenas são revisadas e aprimoradas através de um uso cuidadoso dessas ferramentas."
+    ai_1: "Aprendi na prática que repassar tarefas críticas para ferramentas de IA acaba criando problemas de retenção de conhecimento e dificuldade de manter uma qualidade uniforme do trabalho. Eu sempre mantenho controle de partes críticas: o escopo, a arquitetura e as decisões de design são sempre meus; a IA escreve código sob a minha direção, e eu reviso e verifico tudo o que ela produz."
     ai_2: "Sendo um millennial, cresci nos primeiros anos da internet. Na época, a única forma de encontrar informação era em canais de mIRC e fóruns escondidos. Desde então, o jeito como acessamos informação online evoluiu rapidamente de buscas no Google, conversas no Stack Overflow, vídeos tutoriais no YouTube, comunidades como Reddit, e agora, a Inteligência Artificial."
     ai_3: "O que antes era uma grande quantidade de dados disponíveis publicamente para qualquer pessoa consumir agora está diluído por sistemas preditivos, projetados para detectar, aprender e reproduzir com base em dados existentes. Embora isso torne mais fácil e rápido encontrar informação, também levanta questões preocupantes sobre como esses sistemas são treinados e quais implicações futuras eles podem ter."
     ai_4: "Na prática, isso significa que eu documento uma ideia e construo minha própria estrutura e lógica antes de introduzir IA no processo. Uma vez que essa base está criada, a IA otimiza, refatora, e me ajuda a chegar a uma versão final polida muito mais rápido do que conseguiria sozinho. Ainda lido com a tensão entre autoria, velocidade e controle, mas sempre chego à mesma conclusão: usada com cuidado e método, a IA eleva a qualidade do que eu entrego, sem substituir o raciocínio que me leva até lá."
