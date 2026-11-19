@@ -1,0 +1,52 @@
+flowchart TB
+  role(["`Uma vaga acompanhada,
+  na própria página
+  de carreiras da empresa`"])
+  subgraph free["`Gratuito primeiro`"]
+    direction TB
+    api{{"`O job board da empresa
+    tem uma API pública?`"}}
+    readapi["`Lê a lista
+    pela API, exata
+    e sem custo`"]
+    changed{{"`Os links das vagas mudaram,
+    ou a última leitura
+    tem mais de 14 dias?`"}}
+    reuse["`Reaproveita a
+    última leitura,
+    sem custo`"]
+  end
+  readai["`Lê a página
+  em um navegador real,
+  com a IA: pago,
+  com o custo registrado`"]
+  list["`A lista de vagas,
+  e quantas
+  a página diz ter`"]
+  whole{{"`A lista inteira foi lida?
+  Até o fim da API,
+  ou até o total da página,
+  e nunca uma página vazia`"}}
+  noanswer["`Sem resposta:
+  a vaga vai para
+  revisão humana`"]
+  inlist{{"`A vaga está
+  na lista?`"}}
+  listed["`Ainda publicada`"]
+  closed["`Encerrada`"]
+
+  role --> api
+  api -- "`sim`" --> readapi
+  api -- "`não`" --> changed
+  changed -- "`não`" --> reuse
+  changed -- "`sim`" --> readai
+  readapi --> list
+  reuse --> list
+  readai --> list
+  list --> whole
+  whole -- "`não`" --> noanswer
+  whole -- "`sim`" --> inlist
+  inlist -- "`sim`" --> listed
+  inlist -- "`não`" --> closed
+  class whole gate
+  class readai paid

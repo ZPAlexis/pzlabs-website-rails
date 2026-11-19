@@ -1,5 +1,19 @@
 <div class="projects-container">
 
+  <%# Provenance Pipeline %>
+  <% unless local_assigns[:skip] == "provenance_pipeline" %>
+    <%= render "shared/project_card",
+        title: t('portfolio.provenance_pipeline.title'),
+        image_path: "projects/provenance_pipeline/provenance_pipeline_icon.png",
+        tags: ["Ruby on Rails", "Python", "Claude API", "MCP"],
+        path: pages_provenance_pipeline_path,
+        i18n_key: "projects.provenance_pipeline_project_description",
+        short_text: true,
+        secondary_path: "https://github.com/ZPAlexis/provenance-pipeline",
+        secondary_icon: "icons/icon_github_dark.png"
+    %>
+  <% end %>
+
   <%# Jiko %>
   <% unless local_assigns[:skip] == "jiko" %>
     <%= render "shared/project_card",

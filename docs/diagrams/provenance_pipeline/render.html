@@ -1,0 +1,178 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Provenance Pipeline diagrams</title>
+  <style>
+    body { background: #1a202c; color: #e2e8f0; font-family: Arial, Helvetica, sans-serif; margin: 24px; }
+    .result { margin: 24px 0; }
+    .result img { display: block; max-width: 100%; margin-top: 8px; }
+    .error { color: #f08a8a; white-space: pre-wrap; }
+  </style>
+</head>
+<body>
+  <p id="status">Rendering…</p>
+  <div id="results"></div>
+
+  <script type="module">
+    // Renders each Mermaid source in this folder to an SVG in the site's palette, on the plain
+    // background the hand-made diagrams use, with their heading (the project name and the diagram's
+    // name, top left, in Archivo Black), and asks render_server.py to save it into the image slots.
+    import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@11.4.1/dist/mermaid.esm.min.mjs";
+    import opentype from "https://cdn.jsdelivr.net/npm/opentype.js@1.3.4/dist/opentype.module.js";
+
+    const FONT = "Arial, Helvetica, sans-serif";
+    const COLORS = {
+      bg: "#1c1e21", node: "#0a2460", nodeBorder: "#5386fd", heading: "#e2e8f0",
+      text: "#e2e8f0", gold: "#FAC036", refusalFill: "#3b1024", refusalBorder: "#f08a8a", refusalText: "#ffd9d9",
+    };
+
+    // The heading is drawn as outlines, since a web font can't load inside an <img>.
+    const HEADING_FONT = await opentype.load(
+      "https://cdn.jsdelivr.net/npm/@fontsource/archivo-black@5.1.0/files/archivo-black-latin-400-normal.woff");
+    const HEADING_TITLE = ["PROVENANCE", "PIPELINE"];
+
+    const DIAGRAMS = [
+      { src: "governance.en.mmd", out: "en/Provenance_Governance_EN.svg", name: "Governance" },
+      { src: "governance.pt.mmd", out: "pt/Provenance_Governance_PT.svg", name: "Governança" },
+      { src: "architecture.en.mmd", out: "en/Provenance_Architecture_EN.svg", name: "System Architecture" },
+      { src: "architecture.pt.mmd", out: "pt/Provenance_Architecture_PT.svg", name: "Arquitetura do Sistema" },
+      { src: "verification.en.mmd", out: "en/Provenance_Verification_EN.svg", name: "Source Verification" },
+      { src: "verification.pt.mmd", out: "pt/Provenance_Verification_PT.svg", name: "Verificação na Fonte" },
+    ];
+
+    // Appended to every source, so the .mmd files stay readable.
+    const STYLE = `
+  classDef default fill:${COLORS.node},stroke:${COLORS.nodeBorder},stroke-width:1.5px,color:${COLORS.text}
+  classDef gate fill:${COLORS.bg},stroke:${COLORS.gold},stroke-width:3px,color:${COLORS.gold},font-weight:bold
+  classDef refusal fill:${COLORS.refusalFill},stroke:${COLORS.refusalBorder},stroke-width:1.5px,color:${COLORS.refusalText}
+  classDef person fill:${COLORS.gold},stroke:${COLORS.gold},color:#1a202c,font-weight:bold
+  classDef paid fill:${COLORS.node},stroke:${COLORS.gold},stroke-width:2px,stroke-dasharray:8 6,color:${COLORS.text}`;
+    // A dashed group, for sources that have one (the verification's "Free first").
+    const GROUP_STYLE = (id) =>
+      `\n  style ${id} fill:transparent,stroke:${COLORS.nodeBorder},stroke-width:1.5px,stroke-dasharray:8 6,color:${COLORS.text}`;
+
+    mermaid.initialize({
+      startOnLoad: false,
+      theme: "base",
+      htmlLabels: false,
+      markdownAutoWrap: false,
+      flowchart: { htmlLabels: false, wrappingWidth: 900, curve: "basis", padding: 26, nodeSpacing: 60, rankSpacing: 72 },
+      themeVariables: {
+        fontFamily: FONT, fontSize: "30px",
+        background: COLORS.bg, primaryColor: COLORS.node, primaryTextColor: COLORS.text,
+        primaryBorderColor: COLORS.nodeBorder, lineColor: COLORS.gold, textColor: COLORS.text,
+        clusterBkg: "transparent", clusterBorder: COLORS.nodeBorder, titleColor: COLORS.gold,
+        edgeLabelBackground: COLORS.bg,
+      },
+    });
+
+    const NS = "http://www.w3.org/2000/svg";
+    const measure = (text, font) => {
+      const ctx = document.createElement("canvas").getContext("2d");
+      ctx.font = font;
+      return ctx.measureText(text).width;
+    };
+
+    // Mermaid wraps group titles and edge labels at a fixed width, whatever the config says.
+    // Rejoin each one onto a single line and re-centre it.
+    function unwrapLabels(doc) {
+      const LINE = 37, FONT_PX = `30px ${FONT}`;
+      const oneLine = (group) => {
+        const rows = [...group.querySelectorAll(".text-outer-tspan")].filter((r) => r.textContent.trim());
+        if (rows.length < 2) return null;
+        const text = rows.map((r) => r.textContent.trim()).join(" ");
+        const inner = doc.createElementNS(NS, "tspan");
+        inner.setAttribute("class", "text-inner-tspan");
+        inner.textContent = text;
+        rows[0].replaceChildren(inner);
+        rows.slice(1).forEach((r) => r.remove());
+        const width = measure(text, FONT_PX);
+        const bg = group.querySelector("rect.background");
+        if (bg) { bg.setAttribute("width", width + 4); bg.setAttribute("height", LINE); }
+        return width;
+      };
+      doc.querySelectorAll(".edgeLabel").forEach((edge) => {
+        const width = oneLine(edge);
+        if (width !== null) edge.querySelector("g.label").setAttribute("transform", `translate(${-width / 2}, ${-LINE / 2})`);
+      });
+      doc.querySelectorAll(".cluster").forEach((cluster) => {
+        const label = cluster.querySelector(".cluster-label");
+        const box = cluster.querySelector(":scope > rect");
+        const width = label && oneLine(label);
+        if (!width || !box) return;
+        const ty = (label.getAttribute("transform").match(/,\s*([-\d.]+)\)/) || [0, 8])[1];
+        const x = Number(box.getAttribute("x")) + (Number(box.getAttribute("width")) - width) / 2;
+        label.setAttribute("transform", `translate(${x}, ${ty})`);
+      });
+    }
+
+    // Pads the diagram, adds the heading top left, and puts it all on a plain, rounded background.
+    // The hand-made diagrams are 1920 px wide with a 42 px title and a 24 px subtitle; the heading is
+    // scaled by this image's width, so on the page it shows at the same size as theirs.
+    function frame(svgText, { name }) {
+      const doc = new DOMParser().parseFromString(svgText, "image/svg+xml");
+      const svg = doc.documentElement;
+      unwrapLabels(doc);
+      const [x, y, w, h] = svg.getAttribute("viewBox").split(/\s+/).map(Number);
+      const PAD = 64;
+      const width = w + PAD * 2, k = width / 1920;
+      const titleSize = 42 * k, subSize = 24 * k, left = 52 * k, top = 36 * k;
+      const ascent = HEADING_FONT.ascender / HEADING_FONT.unitsPerEm;
+      const titleLine = titleSize * 1.02;
+      const headHeight = top + titleLine * HEADING_TITLE.length + subSize * 1.3 + 48 * k;
+      const vx = x - PAD, vy = y - PAD - headHeight, height = h + PAD * 2 + headHeight;
+
+      svg.setAttribute("viewBox", `${vx} ${vy} ${width} ${height}`);
+      svg.setAttribute("width", Math.round(width));
+      svg.setAttribute("height", Math.round(height));
+      svg.removeAttribute("style");
+
+      const bg = doc.createElementNS(NS, "rect");
+      // Square corners: the page rounds and borders every diagram, hand-made or rendered.
+      Object.entries({ x: vx, y: vy, width, height, fill: COLORS.bg }).forEach(([key, v]) => bg.setAttribute(key, v));
+      const heading = doc.createElementNS(NS, "g");
+      const outline = (text, size, baseline) => {
+        const path = doc.createElementNS(NS, "path");
+        path.setAttribute("d", HEADING_FONT.getPath(text, vx + left, baseline, size).toPathData(2));
+        path.setAttribute("fill", COLORS.heading);
+        heading.appendChild(path);
+      };
+      HEADING_TITLE.forEach((line, i) => outline(line, titleSize, vy + top + titleSize * ascent * 0.9 + i * titleLine));
+      outline(name, subSize, vy + top + titleLine * HEADING_TITLE.length + subSize * 1.05);
+      svg.insertBefore(heading, svg.firstChild);
+      svg.insertBefore(bg, svg.firstChild);
+      return new XMLSerializer().serializeToString(svg);
+    }
+
+    const results = document.getElementById("results");
+    let n = 0, failed = 0;
+    for (const d of DIAGRAMS) {
+      const box = document.createElement("div");
+      box.className = "result";
+      box.textContent = d.out;
+      results.appendChild(box);
+      try {
+        let code = await (await fetch(d.src, { cache: "no-store" })).text();
+        code += STYLE;
+        for (const [, id] of code.matchAll(/^\s*subgraph\s+(\w+)/gm)) code += GROUP_STYLE(id);
+        const { svg } = await mermaid.render(`pp-diagram-${n++}`, code);
+        const framed = frame(svg, d);
+        const saved = await fetch(`/save?file=${encodeURIComponent(d.out)}`, { method: "POST", body: framed });
+        if (!saved.ok) throw new Error(`save failed: ${saved.status}`);
+        const img = document.createElement("img");
+        img.src = URL.createObjectURL(new Blob([framed], { type: "image/svg+xml" }));
+        box.appendChild(img);
+      } catch (e) {
+        failed++;
+        const err = document.createElement("div");
+        err.className = "error";
+        err.textContent = String(e && e.stack || e);
+        box.appendChild(err);
+      }
+    }
+    document.getElementById("status").textContent = failed ? `Done, ${failed} failed.` : "Done: all diagrams saved.";
+    document.body.dataset.done = failed ? "failed" : "ok";
+  </script>
+</body>
+</html>

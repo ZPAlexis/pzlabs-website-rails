@@ -29,6 +29,9 @@ class PagesController < ApplicationController
   def jiko
   end
 
+  def provenance_pipeline
+  end
+
   def games
   end
 end

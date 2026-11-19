@@ -479,12 +479,21 @@ h2.post-heading[id] {
   transition: background-color 0.3s ease, color 0.3s ease;
 }
 
+.post-code-link.bg {
+  background-color: transparent;
+}
+
 .post-code.break, .post-code-link.break {
   white-space: wrap;
 }
 
 @media (hover: hover) {
   .post-code-link:hover {
+    background-color: var(--color-link);
+    color: var(--color-background);
+  }
+
+  .post-code-link.bg:hover {
     background-color: var(--color-link);
     color: var(--color-background);
   }
@@ -563,5 +572,262 @@ code[class*="language-"] {
 
   .post-list-container.center {
     text-align: center;
+  }
+}
+
+/* Provenance Pipeline: tables, results and diagram placeholders */
+.post-table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0;
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-body);
+  line-height: 150%;
+  letter-spacing: 1px;
+  background: linear-gradient(160deg, var(--color-primary-darker99) 0%, var(--color-primary-dark) 100%);
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-spread) var(--color-button-text-shadow);
+}
+
+.post-table th {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-body);
+  font-weight: 700;
+  text-align: left;
+  color: var(--color-accent);
+  text-shadow: var(--text-shadow-sm) var(--color-accent-shadow);
+  padding: 14px 16px;
+  border-bottom: 1px solid var(--color-primary-highlight-fade);
+}
+
+.post-table td {
+  vertical-align: top;
+  padding: 12px 16px;
+  border-bottom: 1px solid var(--color-primary-highlight-fade);
+}
+
+.post-table tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.post-table .post-table-key {
+  font-weight: 700;
+  width: 30%;
+}
+
+.post-table-note {
+  display: block;
+  font-weight: 400;
+  font-size: var(--font-size-medium);
+  color: var(--color-text-inactive);
+}
+
+.post-quote-box.titled {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.post-quote-box.titled p {
+  margin: 0;
+}
+
+.post-results {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  width: 100%;
+}
+
+.post-result-card {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 20px;
+  align-items: center;
+  padding: 20px;
+  border-radius: var(--radius-md);
+  background: linear-gradient(160deg, var(--color-primary-darker99) 0%, var(--color-primary-dark) 100%);
+  box-shadow: var(--shadow-spread) var(--color-button-text-shadow);
+}
+
+.post-result-figure {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 120%;
+  white-space: nowrap;
+  text-align: center;
+  color: var(--color-accent);
+  text-shadow: var(--text-shadow-sm) var(--color-accent-shadow);
+}
+
+.post-result-body {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.post-result-label {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-small);
+  font-weight: 700;
+  text-transform: uppercase;
+  color: var(--color-accent);
+}
+
+.post-result-text {
+  margin: 0;
+  font-family: var(--font-family-accent);
+  font-size: var(--font-size-medium);
+  line-height: 150%;
+  letter-spacing: 0.5px;
+}
+
+.post-result-date {
+  margin: 0;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-xsmall);
+  color: var(--color-text-inactive);
+}
+
+.post-image-placeholder {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  aspect-ratio: 16/9;
+  box-sizing: border-box;
+  padding: 20px;
+  margin-bottom: 10px;
+  border: 2px dashed var(--color-primary-highlight-fade);
+  border-radius: 12px;
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-medium);
+  text-align: center;
+  color: var(--color-text-inactive);
+}
+
+.nav-button.social.doc-button {
+  height: auto;
+  min-height: 44px;
+  padding: 8px 18px;
+}
+
+.doc-button-text {
+  line-height: 130%;
+  text-align: left;
+}
+
+.doc-button-path {
+  font-family: var(--font-family-base);
+  font-weight: 600;
+  letter-spacing: -0.5px;
+}
+
+.post-result-parts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  width: fit-content;
+  margin: 0 auto;
+}
+
+.post-result-part {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  align-items: baseline;
+  gap: 10px;
+}
+
+.post-result-part .post-result-figure {
+  display: block;
+  font-size: 1.75rem;
+  text-align: right;
+}
+
+.post-result-part-label {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-xsmall);
+  color: var(--color-text);
+}
+
+@media (max-width: 720px) {
+  .post-table,
+  .post-table thead,
+  .post-table tbody,
+  .post-table tr,
+  .post-table th,
+  .post-table td {
+    display: block;
+  }
+
+  .post-table thead {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    overflow: hidden;
+    clip: rect(0 0 0 0);
+  }
+
+  .post-table tr {
+    padding: 12px 0;
+    border-bottom: 1px solid var(--color-primary-highlight-fade);
+  }
+
+  .post-table tbody tr:last-child {
+    border-bottom: none;
+  }
+
+  .post-table td,
+  .post-table .post-table-key {
+    width: auto;
+    padding: 4px 16px;
+    border-bottom: none;
+  }
+
+  .post-table td::before {
+    content: attr(data-label);
+    display: block;
+    font-family: var(--font-family-base);
+    font-size: var(--font-size-small);
+    font-weight: 700;
+    text-transform: uppercase;
+    color: var(--color-accent);
+  }
+
+  .doc-button-path {
+    display: block;
+  }
+
+  .post-result-card {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+}
+
+/* Provenance Pipeline page: quote boxes, tables and diagrams as dark panels with a light border,
+   matching the page's diagrams. Scoped to the page; other project pages keep the blue gradient. */
+.pp-page .post-quote-box,
+.pp-page .post-table,
+.pp-page .post-result-card {
+  background: var(--color-diagram);
+  border: 1px solid var(--color-panel-border);
+}
+
+.pp-page .post-table th,
+.pp-page .post-table td {
+  border-bottom-color: var(--color-panel-line);
+}
+
+.pp-page img.js-zoomable-image {
+  border: 1px solid var(--color-panel-border);
+}
+
+@media (max-width: 720px) {
+  .pp-page .post-table tr {
+    border-bottom-color: var(--color-panel-line);
   }
 }
