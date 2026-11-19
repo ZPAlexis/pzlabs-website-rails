@@ -16,6 +16,7 @@ Rails.application.routes.draw do
     get "projects/acoelho", to: "pages#acoelho", as: :pages_acoelho
     get "projects/n8n_whatsapp", to: "pages#n8n_whatsapp", as: :pages_n8n_whatsapp
     get "projects/jiko", to: "pages#jiko", as: :pages_jiko
+    get "projects/provenance_pipeline", to: "pages#provenance_pipeline", as: :pages_provenance_pipeline
 
     root "pages#index"
   end

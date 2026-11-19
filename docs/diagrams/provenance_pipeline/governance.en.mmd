@@ -1,0 +1,20 @@
+flowchart TB
+  issue["`A credential is issued for the run,
+  holding only that run's permissions`"]
+  write["`The agent tries a write`"]
+  check{{"`The check, where the write happens:
+  is this record, action and field allowed?`"}}
+  ok["`Written, and logged with who made it,
+  under which credential, and why`"]
+  refused["`Refused, and the refusal is kept,
+  even when the transaction rolls back`"]
+  log[("`Append-only audit log`")]
+  revoke["`The credential is revoked`"]
+  issue --> write --> check
+  check -- "`allowed`" --> ok
+  check -- "`refused`" --> refused
+  ok --> log
+  refused --> log
+  log -. "`when the run ends`" .-> revoke
+  class check gate
+  class refused refusal

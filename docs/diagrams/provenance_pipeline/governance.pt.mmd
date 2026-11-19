@@ -1,0 +1,20 @@
+flowchart TB
+  issue["`Uma credencial é emitida para a execução,
+  só com as permissões dela`"]
+  write["`O agente tenta uma gravação`"]
+  check{{"`A verificação, onde a gravação acontece:
+  este registro, ação e campo são permitidos?`"}}
+  ok["`Gravada, com registro de quem a fez,
+  com qual credencial e por quê`"]
+  refused["`Recusada, e a recusa fica registrada,
+  mesmo quando a transação é revertida`"]
+  log[("`Log de auditoria imutável`")]
+  revoke["`A credencial é revogada`"]
+  issue --> write --> check
+  check -- "`permitida`" --> ok
+  check -- "`recusada`" --> refused
+  ok --> log
+  refused --> log
+  log -. "`quando a execução termina`" .-> revoke
+  class check gate
+  class refused refusal

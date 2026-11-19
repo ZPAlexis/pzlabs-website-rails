@@ -1,0 +1,50 @@
+flowchart TB
+  role(["`A tracked role, at the
+  employer's own careers page`"])
+  subgraph free["`Free first`"]
+    direction TB
+    api{{"`Does the company's job board
+    have a public API?`"}}
+    readapi["`Read the list
+    through the API,
+    exact and free`"]
+    changed{{"`Did the role links change,
+    or is the last read
+    over 14 days old?`"}}
+    reuse["`Reuse the
+    last read, free`"]
+  end
+  readai["`Read the page
+  in a real browser,
+  with the AI: paid,
+  its cost recorded`"]
+  list["`The list of roles,
+  and how many
+  the page says it has`"]
+  whole{{"`Was the whole list read?
+  To the end of the API,
+  or up to the page's total,
+  and never an empty page`"}}
+  noanswer["`No answer:
+  the role goes
+  to human review`"]
+  inlist{{"`Is the role
+  in the list?`"}}
+  listed["`Still listed`"]
+  closed["`Closed`"]
+
+  role --> api
+  api -- "`yes`" --> readapi
+  api -- "`no`" --> changed
+  changed -- "`no`" --> reuse
+  changed -- "`yes`" --> readai
+  readapi --> list
+  reuse --> list
+  readai --> list
+  list --> whole
+  whole -- "`no`" --> noanswer
+  whole -- "`yes`" --> inlist
+  inlist -- "`yes`" --> listed
+  inlist -- "`no`" --> closed
+  class whole gate
+  class readai paid

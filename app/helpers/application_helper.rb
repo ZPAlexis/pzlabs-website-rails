@@ -12,7 +12,8 @@ module ApplicationHelper
   end
 
   def share_image_url
-    image_url(DEFAULT_SHARE_IMAGE) if asset_exists?(DEFAULT_SHARE_IMAGE)
+    image = content_for(:share_image).presence || DEFAULT_SHARE_IMAGE
+    image_url(image) if asset_exists?(image)
   end
 
   def asset_exists?(path)

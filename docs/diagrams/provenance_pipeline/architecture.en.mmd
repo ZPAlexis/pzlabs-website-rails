@@ -1,0 +1,35 @@
+flowchart TB
+  user(["`The user`"])
+  pages["`The app's pages
+  (Rails)`"]
+  client["`Claude Desktop,
+  or another MCP client`"]
+  mcp["`MCP server
+  30 tools · 9 prompts`"]
+  services["`The app's services
+  (Rails)`"]
+  check{{"`The check on every agent write`"}}
+  db[("`PostgreSQL
+  the record, and an
+  append-only audit log`")]
+  agents["`Python agents (Playwright)
+  never touch the database:
+  Rails checks every result`"]
+  web["`Employers' careers pages
+  and job-board APIs`"]
+  claude["`Claude API
+  Haiku 4.5 reads and weighs
+  Opus 5.5 writes`"]
+
+  user --> pages
+  user --> client
+  client -- "`MCP`" --> mcp
+  pages --> services
+  mcp --> services
+  services --> check --> db
+  services -- "`what to check`" --> agents
+  agents -- "`results`" --> services
+  agents --> web
+  agents --> claude
+  class check gate
+  class user person
