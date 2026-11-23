@@ -122,7 +122,7 @@ The reasoning behind each: [Learnings](https://acoelho.dev/en/projects/acoelho#l
 
 ## Run it locally
 
-It needs Ruby 3.4.12 and PostgreSQL. Chrome is needed for the system tests.
+It needs Ruby 3.4.13 and PostgreSQL. Chrome is needed for the system tests.
 
 ```bash
 bundle install
